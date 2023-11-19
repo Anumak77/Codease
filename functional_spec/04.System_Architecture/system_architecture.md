@@ -1,3 +1,3 @@
-# 4. System Architecture Diagram
+# 4. System Architecture
 
 ![System Architecture Diagram](system_architecture.png)
