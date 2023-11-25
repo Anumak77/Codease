@@ -26,7 +26,7 @@ Note - may not be applicable to all projects
 
 ## 1.3 Glossary
 
-- Drag and drop   
+### Drag and drop   
 In graphical user interfaces for computers, drag and drop is a gesture performed with a pointing device. It involves the user selecting a virtual object by "grabbing" it and then moving or dropping it to a different location or onto another virtual object.
 
 ---
