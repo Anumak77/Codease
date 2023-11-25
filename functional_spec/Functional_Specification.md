@@ -69,15 +69,16 @@ A critical consideration pertains to whether the template modifications should b
 
 ### Dependencies with Other Requirements
 
-Template Library:
+Template Library:  
 Templates crafted through the Template Editor will appear in the Template Library if set to public visibility.
-Users can select a template from the library, create a clone, and subsequently make modifications using the Template Editor.
+Users can select a template from the library, create a clone, and subsequently make modifications using the Template Editor.  
 
-Main Page:
+Main Page:  
 Templates, whether created or edited by a user, will be showcased on the user's main page.
 Users can either download these templates or continue to make further modifications.
-The main page conveniently offers an option for users to access and open the Template Editor.
-Template Description:
+The main page conveniently offers an option for users to access and open the Template Editor.  
+
+Template Description:  
 The Template Description feature provides users with the ability to duplicate a template and initiate modifications using the Template Editor.
 
 ## 3.2 Template Library
