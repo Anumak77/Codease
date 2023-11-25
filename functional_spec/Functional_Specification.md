@@ -266,8 +266,6 @@ Users can access the template description of a template from the Template Librar
 Main Page:  
 Users can access template descriptions for their own templates and recommended templates displayed on the Main Page to view details of the templates.  
 
----
-
 ## 3.6 User Account Settings
 
 ### Description
@@ -339,6 +337,8 @@ Tutorial guides users on navigating to the Template Library and how they can edi
 
 Main Page:  
 Tutorial guides users on navigating to different pages through the Main Page.
+
+---
 
 # 4. System Architecture
 
