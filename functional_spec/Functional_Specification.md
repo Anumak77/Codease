@@ -14,6 +14,8 @@
 
 7. [Appendices]()
 
+---
+
 # 1. Introduction  
 
 # 2. General Description
