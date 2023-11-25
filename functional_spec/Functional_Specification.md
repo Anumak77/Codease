@@ -18,13 +18,21 @@
 
 # 1. Introduction  
 
+---
+
 # 2. General Description
 
+---
+
 # 3. Functional Requirements
+
+---
 
 # 4. System Architecture
 
 ![System Architecture Diagram](diagrams/system_architecture.png)
+
+---
 
 # 5. High-Level Design
 
@@ -36,6 +44,8 @@
 
 ## Data Flow Diagram
 ![Data Flow Diagram](diagrams/data_flow_diagram.png)
+
+---
 
 # 6. Preliminary Schedule
 
