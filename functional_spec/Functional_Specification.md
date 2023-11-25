@@ -41,28 +41,44 @@ In graphical user interfaces for computers, drag and drop is a gesture performed
 
 ### Description
 
-Template editor allows users to create or modify HTML elements in the web page template.  
+The Template Editor empowers users to create or modify HTML elements within webpage templates.
 
-Template editor provides basic templates with different page layouts for user to choose from.
-Each template has a different combination and layout of HTML elements.  
+Basic Templates:  
+The editor offers a variety of basic templates, each featuring distinct page layouts. These templates are designed to provide users with a diverse combination and arrangement of HTML elements.
 
-Users may customise the template to their likings.
-Template editor provides a list of preset HTML elements such as navigation bars, sections, paragraphs and lists.
-Users can select elements from the list and place on the template through [drag and drop](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#drag-and-drop).
-They can then edit the elements placed on the template.
-For example, for text elements such as headers, paragraphs and lists, users can double-click on an element and type texts in the container.
-Additionally, users can upload and insert images and videos into the template and place them through drag and drop.  
+Customization Options:  
+Users have the flexibility to customize their chosen template. The Template Editor provides a comprehensive list of preset HTML elements, including navigation bars, sections, paragraphs, and lists. Through a simple [drag and drop](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#drag-and-drop) interface, users can select elements from the list and position them on the template. Once placed, users can easily edit the content of these elements. For text elements like headers, paragraphs, and lists, a double-click allows users to enter and modify the text within the container. Additionally, users can upload images and videos, placing them in the template through [drag and drop](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#drag-and-drop) actions.
 
-Users can create a colour palette. The colours will be automatically applied to the template as font colours or background colours.
-The font colour or background colour of each element can also be edited through a colour picker.
+Color Palette:  
+The editor enables users to create a personalized color palette. These colors are automatically applied to the template, serving as font colors or background colors. Users can further refine the appearance by using a color picker to edit the font color or background color of each individual element.
 
-### Criticality
+Saving and Exporting:  
+Upon completing the template edits, users can save their work to the system database. Furthermore, the editor facilitates the export of templates in a convenient zip file format. This file includes HTML, CSS, and JavaScript files, along with any uploaded image and video files, providing users with a comprehensive package for their customized templates.
 
-High
+### Criticality: High
+
+The Template Editor stands as the paramount feature within our application. Given that our application is expressly designed to offer a user-friendly tool for non-programmers to create and edit webpage designs, the Template Editor plays a pivotal role in fulfilling this core objective. 
 
 ### Technical Issues
 
+The design of the Template Editor interface should prioritize ease of learning and memorization. Given that the application caters to non-programmers, it's essential to replace technical terms like HTML tags with more user-friendly language to enhance the overall learnability of the interface.  
+
+To provide users with a greater degree of flexibility in template design, the Template Editor should offer a diverse range of HTML elements.  
+
+A critical consideration pertains to whether the template modifications should be automatically updated in the system database or manually saved by the user after clicking the "save" button. While autosaving is more convenient for users, it's crucial to assess its potential impact on server workload and system performance. Balancing convenience with performance implications is paramount in making an informed decision regarding the save mechanism.  
+
 ### Dependencies with Other Requirements
+
+Template Library:
+Templates crafted through the Template Editor will appear in the Template Library if set to public visibility.
+Users can select a template from the library, create a clone, and subsequently make modifications using the Template Editor.
+
+Main Page:
+Templates, whether created or edited by a user, will be showcased on the user's main page.
+Users can either download these templates or continue to make further modifications.
+The main page conveniently offers an option for users to access and open the Template Editor.
+Template Description:
+The Template Description feature provides users with the ability to duplicate a template and initiate modifications using the Template Editor.
 
 ## 3.2 Template Library
 
