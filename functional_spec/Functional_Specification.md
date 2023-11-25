@@ -1,3 +1,19 @@
+# Table of Contents
+
+1. Introduction
+
+2. General Description
+
+3. Functional Requirements
+
+4. System Architecture
+
+5. High-Level Design
+
+6. Preliminary Schedule
+
+7. Appendices
+
 # 4. System Architecture
 
 ![System Architecture Diagram](diagrams/system_architecture.png)
