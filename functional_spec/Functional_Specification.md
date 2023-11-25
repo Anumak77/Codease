@@ -6,13 +6,21 @@
 
 3. [Functional Requirements](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#3-functional-requirements)
 
+    1. [Template Editor](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#31-template-editor)
+    2. [Template Library](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#32-template-library)
+    3. [Login](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#33-login)
+    4. [Main Page](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#34-main-page)
+    5. [Template Description](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#35-template-description)
+    6. [User Account Settings](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#36-user-account-settings)
+    7. [Tutorial](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#37-tutorial)
+
 4. [System Architecture](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#4-system-architecture)  
 
 5. [High-Level Design](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#5-high-level-design)
 
 6. [Preliminary Schedule](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#6-preliminary-schedule)
 
-7. [Appendices]()
+7. [Appendices](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#7-appendix)
 
 ---
 
