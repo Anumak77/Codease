@@ -14,6 +14,12 @@
 
 7. [Appendices]()
 
+# 1. Introduction  
+
+# 2. General Description
+
+# 3. Functional Requirements
+
 # 4. System Architecture
 
 ![System Architecture Diagram](diagrams/system_architecture.png)
