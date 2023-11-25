@@ -1,18 +1,18 @@
 # Table of Contents
 
-1. Introduction
+1. [Introduction]()
 
-2. General Description
+2. [General Description]()
 
-3. Functional Requirements
+3. [Functional Requirements]()
 
-4. System Architecture
+4. [System Architecture](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#4-system-architecture)  
 
-5. High-Level Design
+5. [High-Level Design](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#5-high-level-design)
 
-6. Preliminary Schedule
+6. [Preliminary Schedule](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#6-preliminary-schedule)
 
-7. Appendices
+7. [Appendices]()
 
 # 4. System Architecture
 
