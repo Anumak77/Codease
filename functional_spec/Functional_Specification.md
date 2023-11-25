@@ -42,8 +42,19 @@ In graphical user interfaces for computers, drag and drop is a gesture performed
 ### Description
 
 Template editor allows users to create or modify HTML elements in the web page template.  
-Template editor provides a list of HTML elements such as navigation bars, sections, paragraphs and images.
+
+Template editor provides basic templates with different page layouts for user to choose from.
+Each template has a different combination and layout of HTML elements.  
+
+Users may customise the template to their likings.
+Template editor provides a list of preset HTML elements such as navigation bars, sections, paragraphs and lists.
 Users can select elements from the list and place on the template through [drag and drop](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#drag-and-drop).
+They can then edit the elements placed on the template.
+For example, for text elements such as headers, paragraphs and lists, users can double-click on an element and type texts in the container.
+Additionally, users can upload and insert images and videos into the template and place them through drag and drop.  
+
+Users can create a colour palette. The colours will be automatically applied to the template as font colours or background colours.
+The font colour or background colour of each element can also be edited through a colour picker.
 
 ### Criticality
 
