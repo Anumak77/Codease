@@ -116,20 +116,25 @@ The user community consists of users with little to no programming knowledge but
 
 The objectives for the system from the user's perspective are - 
 
-Convenience
-Providing a platform that doesn't require any programming skill, allowing users to navigate, edit, and manage a webpage efficiently with little to no effort. 
+- Convenience
 
-Collaborative Environment
-Assist in the progress of creating a sense of community through collaboration from the Template Library. Allowing users to browse, edit, and share templates
+    Providing a platform that doesn't require any programming skill, allowing users to navigate, edit, and manage a webpage efficiently with little to no effort. 
 
-Account Security
-Adding login and account setting features to ensure users that their accounts are secure, also allowing users to personalise their profiles, and manage and/or recover passwords.
+- Collaborative Environment
 
-Tutorial
-Providing learning support for first-time users to accustom themselves to the platform's features and functionalities.
+    Assist in the progress of creating a sense of community through collaboration from the Template Library. Allowing users to browse, edit, and share templates
 
-Template Description
-Allowing users to describe and modify their template details in the template description, allows for clearer communication and understanding of shared templates within the community.
+- Account Security
+
+    Adding login and account setting features to ensure users that their accounts are secure, also allowing users to personalise their profiles, and manage and/or recover passwords.
+
+- Tutorial
+
+    Providing learning support for first-time users to accustom themselves to the platform's features and functionalities.
+
+- Template Description
+
+    Allowing users to describe and modify their template details in the template description, allows for clearer communication and understanding of shared templates within the community.
 
 
 Our product entails user-friendly navigation, template management and collaboration within a secure and supportive environment, these align with user expectations. Furthermore, it ensures simplicity for non-programmers to empower users to create and share their customers' interactive webpage designs. 
