@@ -144,7 +144,7 @@ Our product entails user-friendly navigation, template management and collaborat
 
 _Template Customization_
 
-The user will access the template Ediotr from the main page. They will then select a basic template and start customizing by dragging and dropping elements into the template. The users can change colours, change fonts, add images, add different forms of media, and arrange and rearrange the sections using the simple interface. Once the user is satisfied they will save the template to their account. 
+The user will access the template Editor from the main page. They will then select a basic template and start customizing by dragging and dropping elements into the template. The users can change colours, change fonts, add images, add different forms of media, and arrange and rearrange the sections using the simple interface. Once the user is satisfied they will save the template to their account. 
 
 _Template Library_
 
