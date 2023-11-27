@@ -32,21 +32,103 @@
 
 ## 1.1 Overview
 
+This project involved creating a product that allows users to develop an interactive web application, allowing users to create and customize webpage templates with little to no effort. Our main aim throughout this project was to cater to users with little to no coding experience, this may be due to a lack of time or lack of interest in the field, however through this product users who wish to create websites can still do so without having to go through multiple classes to learn languages like HTML, CSS, Javascript. This product makes the entire process a comfortable experience for the user. 
+The product allows users to modify HTML elements within the template for elements like navigation bars, texts and all forms of media, things being done through the drag-and-drop functionality. This allows for an intuitive editing space for new users who are just using this but also for experienced users, we hope to create a space that requires little to no training period to learn how to use. 
+
+Moreover, in order to create a sense of community within the world of editing web pages, there is also a collaborative feature. The collaborative feature allows users to upload their own templates, this will entail not only publishing their final website but also including details such as what the website design entails, aesthetics they feel it appeals to and much more. This feature will also allow users to get inspiration from published templates, users can download templates other users have downloaded and edit the webpage to fit their specific criteria of what they are looking for. 
+
+
 ## 1.2 Business Context
 
-Note - may not be applicable to all projects
+Not applicable.
 
 ## 1.3 Glossary
 
 ### Drag and drop   
 In graphical user interfaces for computers, drag and drop is a gesture performed with a pointing device. It involves the user selecting a virtual object by "grabbing" it and then moving or dropping it to a different location or onto another virtual object.
 
+### HTML
+Stands for Hypertext Markup Language, allows for a consistent way to add style and links to text files for web pages.
+
+### CSS
+Stands for Cascading Style Sheets is a style sheet language. Mainly used for defining the presentation of any markup language, in this case, it will be HTML. 
+
+### JavaScript
+An object-oriented computer programming language. It is often used to create interactive features within web browsers.
+
+### Pagination
+Where a user navigates between pages by using links such as "next", "previous", and page numbers. 
+
+### Infinite Scroll
+A feature that allows users to load pictures only on the part of the website where the users are currently on and load more once users scroll down.
+
+### Repository
+Digital storage space that developers use to make and manage changes to a source code.
+
+### Access Rights
+The rights held by a user or computer program to view, alter, or remove data.
+
+### Encryption Protocols
+A method by which information is converted into secret code that hides the information's true meaning.
+
+### User-Friendly Interface
+A software where the user can understand with ease and navigate through the application with little to no problems.
+
 ---
 
 # 2. General Description
 
----
+## 2.1 Product / System Functions
 
+At its core, the main idea of our product is the development of a dynamic web application. Our target demographic for our project is people without any programming expertise, to allow them to easily craft and tweak webpage designs. The core features of our product are listed below. 
+
+Template Editor
+The Template Editor is a feature that allows users to manipulate HTML elements within the webpage.  The customization feature allows users to create their very own version of their webpage, furthermore, the editor also allows users to save and export templates. 
+
+Template Library
+The template library is a library we created for users who may need help when it comes to creating their own custom websites. The library allows users to browse, preview, and edit templates. Users can also filter, sort and search through this library 
+
+Login page
+The login page provides a level of safety when it comes to users' accounts. Each account has their own username and password that is unique to their account. We also have a recovering lost password in case users forget. First-time users can sign up here as well. 
+
+Main Page
+The main page allows access to all other pages, it acts as a home that users will constantly come back to. This is where users can access the template editor, and the template library, access their own templates, view recommended templates, view their account settings and for first-time users they will receive a tutorial on how to navigate the main page with ease. 
+
+Template Description
+Each template will have a template description, users who wish to publish their templates can change the details and settings of their template to allow other users to understand what the template is about. 
+
+User Account Settings
+The user account page allows users to change their profile details such as email, password and user image. 
+
+Our main aim is to ensure the interface is user-friendly to allow smooth navigation and effortless template management. We encourage collaboration through our template library feature. 
+All features join together to create perfectly and guarantee a seamless and intuitive user experience.
+
+
+##2.2 User Characteristics and Objectives
+
+The user community consists of users with little to no programming knowledge but who wish to create personalised and interactive web page designs. The aim is to create a system that caters to these individuals and create an intuitive, user-friendly platform for easy template customization. 
+
+The objectives for the system from the user's perspective are - 
+
+Convenience
+Providing a platform that doesn't require any programming skill, allowing users to navigate, edit, and manage a webpage efficiently with little to no effort. 
+
+Collaborative Environment
+Assist in the progress of creating a sense of community through collaboration from the Template Library. Allowing users to browse, edit, and share templates
+
+Account Security
+Adding login and account setting features to ensure users that their accounts are secure, also allowing users to personalise their profiles, and manage and/or recover passwords.
+
+Tutorial
+Providing learning support for first-time users to accustom themselves to the platform's features and functionalities.
+
+Template Description
+Allowing users to describe and modify their template details in the template description, allows for clearer communication and understanding of shared templates within the community.
+
+
+Our product entails user-friendly navigation, template management and collaboration within a secure and supportive environment, these align with user expectations. Furthermore, it ensures simplicity for non-programmers to empower users to create and share their customers' interactive webpage designs. 
+
+---
 # 3. Functional Requirements
 
 ## 3.1 Template Editor
