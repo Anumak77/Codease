@@ -142,23 +142,23 @@ Our product entails user-friendly navigation, template management and collaborat
 ## 2.3 Operational Scenarios
 
 
-_Template Customization _
+_Template Customization_
 
 The user will access the template Ediotr from the main page. They will then select a basic template and start customizing by dragging and dropping elements into the template. The users can change colours, change fonts, add images, add different forms of media, and arrange and rearrange the sections using the simple interface. Once the user is satisfied they will save the template to their account. 
 
-_Template Library _
+_Template Library_
 
 Starting from the main page, the user will navigate to the Template Library. Users can filter through templates based on categories, sort by popularity and search for specific designs. After the users find a template they are interested in, they will read the description to get a better understanding of the overall layout of the structure and design. Once the users decide on their template after careful consideration, the user will then proceed to clone the template into their own template editor. the user will then move to the Template Editor and make alterations to the cloned template. 
 
-_Account Management _
+_Account Management_
 
 The user goes to User Account Settings which is easily accessible from the main page. This is where they will modify their profile details, change the profile image and update the email addresses they wish to associate with. As a security measure, the user can change their password by following the steps mentioned in the setting to ensure a safe change in passwords. 
 
-_Template Description and Publishing _
+_Template Description and Publishing_
 
 After creating a unique template using the Template Editor, the user will make their way to the template description section. Here they will provide a detailed description, select visibility options and ensure the template settings align with their intentions to share with the public. once published, other users in the community can view, clone and collaborate on the template. 
 
-_First-time User Tutorial _
+_First-time User Tutorial_
 
 After registering, the user will be directed to the main page where they will be offered a tutorial option. The users who choose the tutorial will be introduced to how to navigate the different sections, go through the Template Editor, and Template Library and manage their account settings. After the tutorial users will feel confident in navigating the platform. 
 
@@ -166,11 +166,11 @@ After registering, the user will be directed to the main page where they will be
 ## 2.4 Constraints
 
 
-_Performance and Speed Requirements _
+_Performance and Speed Requirements_
 
 Ensuring that webpages created using the system load quickly to provide a seamless user experience. Furthermore, The Template Editor should respond swiftly to user interactions like drag and drop, ensuring a smooth editing experience. 
 
-_Industry Standards _
+_Industry Standards_
 
 Adhere to industry-standard HTML, CSS, and JavaScript practices for compatibility across all different types of devices. Also, implement security measures to protect user data, especially during login. 
 
@@ -178,11 +178,11 @@ _Compatibility with Platforms_
 
 Ensure the system works well across all various devices such as desktops, laptops, tablets, and mobile phones and also across all major web browsers such as Chrome, Firefox, Safari, Edge, etc.
 
-_User Interface _
+_User Interface_
 
 Encouraging users with disabilities to navigate and use the system effectively by following usability best practices to create an intuitive and user-friendly interface.
 
-_Development Constraints _
+_Development Constraints_
 
 Use technologies that align with the project's goal and are also scalable for future enhancements, these would entail considering budgetary and time constraints
 
