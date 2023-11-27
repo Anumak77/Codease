@@ -104,7 +104,7 @@ Our main aim is to ensure the interface is user-friendly to allow smooth navigat
 All features join together to create perfectly and guarantee a seamless and intuitive user experience.
 
 
-##2.2 User Characteristics and Objectives
+## 2.2 User Characteristics and Objectives
 
 The user community consists of users with little to no programming knowledge but who wish to create personalised and interactive web page designs. The aim is to create a system that caters to these individuals and create an intuitive, user-friendly platform for easy template customization. 
 
