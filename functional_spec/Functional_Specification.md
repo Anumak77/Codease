@@ -83,6 +83,7 @@ A software where the user can understand with ease and navigate through the appl
 At its core, the main idea of our product is the development of a dynamic web application. Our target demographic for our project is people without any programming expertise, to allow them to easily craft and tweak webpage designs. The core features of our product are listed below. 
 
 _Template Editor_
+
     The Template Editor is a feature that allows users to manipulate HTML elements within the webpage.  The customization feature allows users to create their very own version of their webpage, furthermore, the editor also allows users to save and export templates. 
 
 - Template Library
