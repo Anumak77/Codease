@@ -3,19 +3,14 @@
 1. [Introduction](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#1-introduction)
 
     1. [Overview](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md#11-overview)
-
     2. [Business Context](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md#12-business-context)
-
     3. [Glossary](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md#13-glossary)
 
 2. [General Description](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#2-general-description)
 
     1. [Product / System Functions](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md#21-product-system-functions)
-
     2. [User Characteristics and Objectives](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md#22-user-characteristics-and-objectives)
-
     3. [Operational Scenarios](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md#23-operational-scenarios)
-
     4. [Constraints](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md#24-constraints)
 
 3. [Functional Requirements](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#3-functional-requirements)
