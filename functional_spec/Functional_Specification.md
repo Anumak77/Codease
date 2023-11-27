@@ -82,23 +82,24 @@ A software where the user can understand with ease and navigate through the appl
 
 At its core, the main idea of our product is the development of a dynamic web application. Our target demographic for our project is people without any programming expertise, to allow them to easily craft and tweak webpage designs. The core features of our product are listed below. 
 
-Template Editor
-The Template Editor is a feature that allows users to manipulate HTML elements within the webpage.  The customization feature allows users to create their very own version of their webpage, furthermore, the editor also allows users to save and export templates. 
+- Template Editor
+    
+    The Template Editor is a feature that allows users to manipulate HTML elements within the webpage.  The customization feature allows users to create their very own version of their webpage, furthermore, the editor also allows users to save and export templates. 
 
-Template Library
-The template library is a library we created for users who may need help when it comes to creating their own custom websites. The library allows users to browse, preview, and edit templates. Users can also filter, sort and search through this library 
+- Template Library
+    The template library is a library we created for users who may need help when it comes to creating their own custom websites. The library allows users to browse, preview, and edit templates. Users can also filter, sort and search through this library 
 
-Login page
-The login page provides a level of safety when it comes to users' accounts. Each account has their own username and password that is unique to their account. We also have a recovering lost password in case users forget. First-time users can sign up here as well. 
+- Login page
+    The login page provides a level of safety when it comes to users' accounts. Each account has their own username and password that is unique to their account. We also have a recovering lost password in case users forget. First-time users can sign up here as well. 
 
-Main Page
-The main page allows access to all other pages, it acts as a home that users will constantly come back to. This is where users can access the template editor, and the template library, access their own templates, view recommended templates, view their account settings and for first-time users they will receive a tutorial on how to navigate the main page with ease. 
+- Main Page
+    The main page allows access to all other pages, it acts as a home that users will constantly come back to. This is where users can access the template editor, and the template library, access their own templates, view recommended templates, view their account settings and for first-time users they will receive a tutorial on how to navigate the main page with ease. 
 
-Template Description
-Each template will have a template description, users who wish to publish their templates can change the details and settings of their template to allow other users to understand what the template is about. 
+- Template Description
+    Each template will have a template description, users who wish to publish their templates can change the details and settings of their template to allow other users to understand what the template is about. 
 
-User Account Settings
-The user account page allows users to change their profile details such as email, password and user image. 
+- User Account Settings
+    The user account page allows users to change their profile details such as email, password and user image. 
 
 Our main aim is to ensure the interface is user-friendly to allow smooth navigation and effortless template management. We encourage collaboration through our template library feature. 
 All features join together to create perfectly and guarantee a seamless and intuitive user experience.
