@@ -33,8 +33,6 @@
 
 6. [Preliminary Schedule](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#6-preliminary-schedule)
 
-7. [Appendices](https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator/-/blob/main/functional_spec/Functional_Specification.md?ref_type=heads#7-appendix)
-
 ---
 
 # 1. Introduction 
@@ -515,6 +513,3 @@ Tutorial guides users on navigating to different pages through the Main Page.
 # 6. Preliminary Schedule
 
 ![Gantt Chart](diagrams/gantt_chart.png)
-
-# 7. Appendix
-
