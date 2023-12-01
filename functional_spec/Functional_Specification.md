@@ -494,6 +494,7 @@ Tutorial guides users on navigating to different pages through the Main Page.
 # 4. System Architecture
 
 ![System Architecture Diagram](diagrams/system_architecture.png)
+A visual representation that illustrates the structure of what will happen once work is uploaded via server and how multiple users can view this. The diagram also includes how data will be updates and accessed continuously from MySQL database.  
 
 ---
 
@@ -501,15 +502,19 @@ Tutorial guides users on navigating to different pages through the Main Page.
 
 ## Use Case Diagram
 ![Use Case Diagram](diagrams/use_case_diagram.png)
+A graphical representation that illustrates features a user can do such as login, browsing created templates, create blank template, browse template library, view user account 
 
 ## Class Diagram
 ![Class Diagram](diagrams/class_diagram.png)
+A static structure diagram that represents the structure of the website, this entails what classes we will be using and attributes these classes will have, along with functions and how each of the classes are interlinked together. 
 
 ## Data Flow Diagram
 ![Data Flow Diagram](diagrams/data_flow_diagram.png)
+A graphical representation that illustrates the flow of data within the website. It showcases different processes a user can go through such as login, create template, etc and how these processes can be achieved, such as a user putting in email and their password to login. 
 
 ---
 
 # 6. Preliminary Schedule
 
 ![Gantt Chart](diagrams/gantt_chart.png)
+A bar chart that visualises this schedule for this project, as it shows tasks plotted against time from 13th December to 18th February.  
