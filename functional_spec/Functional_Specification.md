@@ -502,7 +502,7 @@ A visual representation that illustrates the structure of what will happen once 
 
 ## Use Case Diagram
 ![Use Case Diagram](diagrams/use_case_diagram.png)
-A graphical representation that illustrates features a user can do such as login, browsing created templates, create blank template, browse template library, view user account 
+A Graphical representation that illustrates features a user can do such as login, browsing created templates, create blank template, browse template library, view user account 
 
 ## Class Diagram
 ![Class Diagram](diagrams/class_diagram.png)
