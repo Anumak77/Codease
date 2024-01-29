@@ -9,7 +9,7 @@ body {
   background-color: azure;
 }
 
-.container {
+.element {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -23,12 +23,8 @@ body {
   user-select: none;
 }
 
-.container header {
+.element header {
   font-weight: 600;
   text-transform: uppercase;
   border-bottom: 1px solid black;
-}
-
-.draggable-container {
-  margin: 10px 0;
 }

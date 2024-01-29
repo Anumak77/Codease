@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { useState } from 'react';
+import TopNavbar from './components/navbar';
 import Editor from './components/editor';
+import Element from './components/element';
 
 function App() {
   const [component, setComponent] = useState(null);
@@ -19,8 +21,10 @@ function App() {
     return (
         <div className="App">
             <div className="App-content container-fluid">
-                {<Editor id={1} />}
-                {<Editor id={2}/>}
+                {<TopNavbar/>}
+                {<Editor/>}
+                {<Element id={1} />}
+                {<Element id={2}/>}
                 <p>hi</p>
             </div>
         </div>
