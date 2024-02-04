@@ -6,7 +6,11 @@ import Editor from './components/editor';
 import Element from './components/element';
 
 function App() {
-  const [component, setComponent] = useState(null);
+    const [component, setComponent] = useState(null);
+    if (component == null) {
+        setComponent(<Editor/>)
+    }
+
     const handleClick = (event, component) => {
         let buttons = document.getElementsByClassName("nav-link");
         for (var button of buttons) {
@@ -22,9 +26,9 @@ function App() {
         <div className="App">
             <div className="App-content container-fluid">
                 {<TopNavbar/>}
-                {<Editor/>}
-                {<Element id={1} />}
-                {<Element id={2}/>}
+                {component}
+                {/* {<Element id={1} />}
+                {<Element id={2}/>} */}
                 <p>hi</p>
             </div>
         </div>
