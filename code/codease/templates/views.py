@@ -1,19 +1,12 @@
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
-from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
-from django.contrib.auth import login
 from .forms import CustomRegistrationForm
 
-
+from .models import *
+from rest_framework import viewsets
+from .serializers import *
 
 def index(request):
     return render(request, 'index.html')
@@ -47,3 +40,7 @@ def register(request):
         form = CustomRegistrationForm()
 
     return render(request, 'register.html', {'form': form})
+
+class ElementViewSet(viewsets.ModelViewSet):
+    serializer_class = ElementSerializer
+    queryset = Element.objects.all()

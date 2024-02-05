@@ -1,7 +1,11 @@
 # yourapp/urls.py
-from django.urls import path
-from .views import index, custom_login, success_page_view, register
+from django.urls import path, include
+from .views import *
+from rest_framework import routers
 
+
+router = routers.DefaultRouter()
+router.register(r'/elements', ElementViewSet)
 
 # from django.contrib.auth.views import LoginView
 
@@ -10,5 +14,5 @@ urlpatterns = [
     path('login/', custom_login, name='custom_login'),
     path('register/', register, name='register'),
     path('success/', success_page_view, name='success_page'),
-    
+    path('api', include(router.urls)),
 ]
