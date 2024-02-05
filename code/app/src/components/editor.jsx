@@ -62,8 +62,8 @@ function Editor() {
             function onMouseDrag(event) {
                 let leftValue = event.clientX;
                 let topValue = event.clientY;
-                event.toElement.style.left = `${leftValue}px`;
-                event.toElement.style.top = `${topValue}px`;
+                event.srcElement.style.left = `${leftValue}px`;
+                event.srcElement.style.top = `${topValue}px`;
             }
         }
     })
