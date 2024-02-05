@@ -4,6 +4,7 @@ from django.contrib.auth.admin import UserAdmin
 from .models import *
 
 admin.site.register(Element)
+admin.site.register(Template)
 
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):

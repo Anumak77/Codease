@@ -44,3 +44,7 @@ def register(request):
 class ElementViewSet(viewsets.ModelViewSet):
     serializer_class = ElementSerializer
     queryset = Element.objects.all()
+
+class TemplateViewSet(viewsets.ModelViewSet):
+    serializer_class = TemplateSerializer
+    queryset = Template.objects.all()
