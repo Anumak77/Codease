@@ -27,9 +27,6 @@ function App() {
             <div className="App-content container-fluid">
                 {<TopNavbar/>}
                 {component}
-                {/* {<Element id={1} />}
-                {<Element id={2}/>} */}
-                <p>hi</p>
             </div>
         </div>
     );
