@@ -1,0 +1,13 @@
+<!-- success_page.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success Page</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <h1>Welcome, {{ user.username }}! You have successfully logged in.</h1>
+        <!-- Add content specific to the authenticated user -->
+    {% endif %}
+</body>
+</html>
