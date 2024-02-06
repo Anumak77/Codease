@@ -1,20 +1,14 @@
 import { useState, useEffect } from "react";
 
-function Element({id, elem, html=null}) {
+function Element({id, elem}) {
     const [element, setElement] = useState("");
-    console.log(html);
+
     useEffect(() => {
-        console.log(html);
-        if (html == null) {
-            fetch("http://127.0.0.1:8000/api/elements/" + elem + "/") 
-            .then(response => response.json())
-            .then(data => {
-                setElement(data.html);
-            });
-        }
-        else {
-            setElement(html);
-        }
+        fetch("http://127.0.0.1:8000/api/elements/" + elem + "/") 
+        .then(response => response.json())
+        .then(data => {
+            setElement(data);
+        });
         
         const container = document.getElementById("elem" + id);    
         container.addEventListener("mousedown", () => {
@@ -34,15 +28,7 @@ function Element({id, elem, html=null}) {
 
     const container = document.getElementById("elem" + id);   
     if (container != null) {
-        console.log(html);
-        if (html != null) {
-            console.log(html);
-            container.outerHTML = html;
-            console.log(container.outerHTML);
-        }
-        else {
-            container.innerHTML = element;
-        }   
+        container.innerHTML = element.html;
     }
 
     return (

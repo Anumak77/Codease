@@ -12,51 +12,53 @@ function Editor() {
     }
 
     function save() {
-        const elems = document.getElementsByClassName("element");
-        var html = "";
-        for (var elem of elems) {
-            html = html.concat(elem.outerHTML, "%^&*%");
-        }
-
-        var data = {
-            "name": "Template",
-            "elements": html,
+        console.log(document.getElementById("Template").innerHTML);
+        let template = {
+            "name": "template",
+            "elements": document.getElementById("Template").innerHTML
         }
 
         fetch("http://127.0.0.1:8000/api/templates/", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+            "Content-Type": "application/json",
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify(template),
         })
-        .then(response => {
-            console.log(response);
-        })
+        .then(response => response.json())
         .then(data => {
             console.log("Success:", data);
             setElements([]);
-            setKey(0);
         })
         .catch(err=>console.log(err))
     }
 
     function load(temp) {
         setElements([]);
-        setKey(0);
 
         fetch("http://127.0.0.1:8000/api/templates/" + temp + "/") 
         .then(response => response.json())
         .then(data => {
-            var elems = data.elements.split("%^&*%");
+            document.getElementById("Template").innerHTML = data.elements;
+            var elems = document.getElementsByClassName("element");
             console.log(elems);
-            
-            for (var elem of elems) 
+            setKey(elems.length);
+            for (const elem of elems) 
             {
-                if (elem == "") { continue; }
                 console.log(elem);
-                setElements(elements.concat(<Element id={key} html={elem}/>));
-                setKey(key + 1);
+                elem.addEventListener("mousedown", () => {
+                    document.addEventListener("mousemove", onMouseDrag);
+                });
+                document.addEventListener("mouseup", () => {
+                    document.removeEventListener("mousemove", onMouseDrag);
+                });  
+
+                function onMouseDrag(event) {
+                    let leftValue = event.clientX;
+                    let topValue = event.clientY;
+                    elem.style.left = `${leftValue}px`;
+                    elem.style.top = `${topValue}px`;
+                }
             }
         }); 
     }
@@ -67,9 +69,10 @@ function Editor() {
             <button onClick={() => addElement(1)}>Add Element</button>
             <button onClick={() => addElement(2)}>Add Element</button>
             <button onClick={() => addElement(3)}>Add Element</button>
-            <div id="Template">{elements}</div>
             <button onClick={() => save()}>Save</button>
-            <button onClick={() => load(2)}>Load</button>
+            <button onClick={() => load(3)}>Load</button>
+            <div id="Template">{elements}</div>
+            
         </div>
     )
 }
