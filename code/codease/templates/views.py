@@ -51,4 +51,4 @@ class TemplateViewSet(viewsets.ModelViewSet):
 
 class TemplateElementViewSet(viewsets.ModelViewSet):
     serializer_class = TemplateElementSerializer
-    queryset = Template.objects.all()
+    queryset = TemplateElement.objects.all()

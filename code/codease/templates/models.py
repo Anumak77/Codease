@@ -64,4 +64,4 @@ class TemplateElement(models.Model):
 class Template(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
-    elements = models.ForeignKey(TemplateElement, on_delete=models.CASCADE)
+    elements = models.TextField()

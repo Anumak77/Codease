@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 
 function Element({id, elem, html=null}) {
     const [element, setElement] = useState("");
-
+    console.log(html);
     useEffect(() => {
         console.log(html);
         if (html == null) {
             fetch("http://127.0.0.1:8000/api/elements/" + elem + "/") 
             .then(response => response.json())
             .then(data => {
-                setElement(data);
+                setElement(data.html);
             });
         }
         else {
@@ -34,7 +34,15 @@ function Element({id, elem, html=null}) {
 
     const container = document.getElementById("elem" + id);   
     if (container != null) {
-        container.innerHTML = element.html;
+        console.log(html);
+        if (html != null) {
+            console.log(html);
+            container.outerHTML = html;
+            console.log(container.outerHTML);
+        }
+        else {
+            container.innerHTML = element;
+        }   
     }
 
     return (
