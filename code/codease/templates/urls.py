@@ -7,6 +7,7 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 router.register(r'/elements', ElementViewSet)
 router.register(r'/templates', TemplateViewSet)
+router.register(r'/template_elements', TemplateElementViewSet)
 
 # from django.contrib.auth.views import LoginView
 

@@ -52,19 +52,8 @@ function Editor() {
         for (var elem of elems) 
         {
             console.log(elem);
-            elem.addEventListener("mousedown", () => {
-                document.addEventListener("mousemove", onMouseDrag);
-            });
-            document.addEventListener("mouseup", () => {
-                document.removeEventListener("mousemove", onMouseDrag);
-            });  
-
-            function onMouseDrag(event) {
-                let leftValue = event.clientX;
-                let topValue = event.clientY;
-                event.srcElement.style.left = `${leftValue}px`;
-                event.srcElement.style.top = `${topValue}px`;
-            }
+            setElements(elements.concat(<Element id={key} html={elem}/>));
+            setKey(key + 1);
         }
     })
 

@@ -1,14 +1,20 @@
 import { useState, useEffect } from "react";
 
-function Element({id, elem}) {
+function Element({id, elem, html=null}) {
     const [element, setElement] = useState("");
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/elements/" + elem + "/") 
-        .then(response => response.json())
-        .then(data => {
-            setElement(data);
-        });
+        console.log(html);
+        if (html == null) {
+            fetch("http://127.0.0.1:8000/api/elements/" + elem + "/") 
+            .then(response => response.json())
+            .then(data => {
+                setElement(data);
+            });
+        }
+        else {
+            setElement(html);
+        }
         
         const container = document.getElementById("elem" + id);    
         container.addEventListener("mousedown", () => {

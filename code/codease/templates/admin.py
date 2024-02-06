@@ -5,6 +5,7 @@ from .models import *
 
 admin.site.register(Element)
 admin.site.register(Template)
+admin.site.register(TemplateElement)
 
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
