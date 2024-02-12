@@ -37,3 +37,17 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+class Element(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=255)
+    html = models.TextField()
+
+class TemplateElement(models.Model):
+    id = models.AutoField(primary_key=True)
+    html = models.TextField()
+
+class Template(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=255)
+    elements = models.TextField()

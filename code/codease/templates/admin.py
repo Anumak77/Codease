@@ -1,6 +1,10 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import CustomUser
+from .models import *
+
+admin.site.register(Element)
+admin.site.register(Template)
+admin.site.register(TemplateElement)
 
 class CustomUserAdmin(UserAdmin):
     # list_display = ('email', 'username', 'is_active', 'is_staff')  # Updated list_display

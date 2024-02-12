@@ -1,16 +1,7 @@
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
-from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
-from django.contrib.auth import login
 from .forms import CustomRegistrationForm
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
@@ -47,6 +38,9 @@ from django.core.mail import send_mail
 from django.core.mail import send_mail
 from .forms import CustomRegistrationForm
 from .models import CustomUser
+from .models import *
+from rest_framework import viewsets
+from .serializers import *
 
 def register(request):
     if request.method == 'POST':
@@ -171,3 +165,14 @@ def register(request):
 #     )
     
 #     return HttpResponse('Test email sent successfully!')
+class ElementViewSet(viewsets.ModelViewSet):
+    serializer_class = ElementSerializer
+    queryset = Element.objects.all()
+
+class TemplateViewSet(viewsets.ModelViewSet):
+    serializer_class = TemplateSerializer
+    queryset = Template.objects.all()
+
+class TemplateElementViewSet(viewsets.ModelViewSet):
+    serializer_class = TemplateElementSerializer
+    queryset = TemplateElement.objects.all()

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: azure;
+}
+
+.element {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-height: 2rem;
+  width: 15rem;
+  padding: 10px;
+  background-color: rgb(218, 255, 194);
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  cursor: move;
+  user-select: none;
+}
+
+.element header {
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}

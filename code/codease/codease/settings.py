@@ -34,6 +34,10 @@ AUTH_USER_MODEL = 'templates.CustomUser'
 
 SESSION_COOKIE_AGE = 1209600  # 2 weeks in seconds
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000", # node on port 3000
+    "http://127.0.0.1:3000"  # node on port 3000
+]
 
 # Application definition
 
@@ -45,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'templates',
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'codease.urls'
@@ -142,3 +149,10 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'v35355166@gmail.com'  # Your Gmail address
 EMAIL_HOST_PASSWORD = 'pfzi adpn hkqk dtuo'  # Your Gmail password or an app-specific password if you have 2-step verification enabled
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ]
+}
