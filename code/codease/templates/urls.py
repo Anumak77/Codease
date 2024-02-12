@@ -1,4 +1,5 @@
 # yourapp/urls.py
+<<<<<<< HEAD
 from django.urls import path
 from .views import index, custom_login, success_page_view, register, verify_otp
 from django.urls import path, include
@@ -13,6 +14,17 @@ router = routers.DefaultRouter()
 router.register(r'elements', ElementViewSet)
 router.register(r'templates', TemplateViewSet)
 router.register(r'template_elements', TemplateElementViewSet)
+=======
+from django.urls import path, include
+from .views import *
+from rest_framework import routers
+
+
+router = routers.DefaultRouter()
+router.register(r'/elements', ElementViewSet)
+router.register(r'/templates', TemplateViewSet)
+router.register(r'/template_elements', TemplateElementViewSet)
+>>>>>>> remotes/origin/frontend
 
 # from django.contrib.auth.views import LoginView
 

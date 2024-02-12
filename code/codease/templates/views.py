@@ -41,6 +41,9 @@ from .models import CustomUser
 from .models import *
 from rest_framework import viewsets
 from .serializers import *
+from .models import *
+from rest_framework import viewsets
+from .serializers import *
 
 def register(request):
     if request.method == 'POST':
@@ -90,6 +93,7 @@ def verify_otp(request):
         form = OTPVerificationForm()
 
     return render(request, 'verify_otp.html', {'form': form})
+
 
 def index(request):
     return render(request, 'index.html')
@@ -176,3 +180,4 @@ class TemplateViewSet(viewsets.ModelViewSet):
 class TemplateElementViewSet(viewsets.ModelViewSet):
     serializer_class = TemplateElementSerializer
     queryset = TemplateElement.objects.all()
+
