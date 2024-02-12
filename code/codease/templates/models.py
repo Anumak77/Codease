@@ -1,4 +1,5 @@
-# models.py
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 
@@ -20,35 +21,19 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
-    name = models.CharField(max_length=255, blank=True)
+    # username = models.CharField(max_length=150, unique=True)
+    # username = models.CharField(max_length=150, unique=True, default='default_username')
     is_active = models.BooleanField(default=True)
-
-    # Additional fields
-    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+    is_staff = models.BooleanField(default=False)
+    name = models.CharField(max_length=255, blank=True)
+    otp = models.CharField(max_length=6, blank=True, null=True)
+    # profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
 
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
+    # REQUIRED_FIELDS = ['username', 'name']
     REQUIRED_FIELDS = ['name']
-
-    groups = models.ManyToManyField(
-        'auth.Group',
-        related_name='customuser_set',
-        related_query_name='customuser',
-        blank=True,
-        verbose_name='groups',
-        help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.',
-    )
-    
-    user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        related_name='customuser_set',
-        related_query_name='customuser',
-        blank=True,
-        verbose_name='user permissions',
-        help_text='Specific permissions for this user.',
-    )
 
     def __str__(self):
         return self.email
-

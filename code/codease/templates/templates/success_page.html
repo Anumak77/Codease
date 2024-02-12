@@ -1,4 +1,3 @@
-<!-- success_page.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +5,16 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-        <h1>Welcome, {{ user.username }}! You have successfully logged in.</h1>
-        <!-- Add content specific to the authenticated user -->
+    <h1>Welcome, {{ user.name }}! You have successfully logged in.</h1>
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <!-- Displaying password for testing purposes (remove in production!) -->
+    <p>Password: {{ user.password }}</p>
+    <!-- Add content specific to the authenticated user -->
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
     {% endif %}
 </body>
 </html>
