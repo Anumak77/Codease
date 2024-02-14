@@ -1,5 +1,4 @@
 # yourapp/urls.py
-<<<<<<< HEAD
 from django.urls import path
 from .views import index, custom_login, success_page_view, register, verify_otp
 from django.urls import path, include
@@ -10,23 +9,12 @@ from .views import ElementViewSet, TemplateElementViewSet, TemplateViewSet
 
 
 
-router = routers.DefaultRouter()
-router.register(r'elements', ElementViewSet)
-router.register(r'templates', TemplateViewSet)
-router.register(r'template_elements', TemplateElementViewSet)
-=======
-from django.urls import path, include
-from .views import *
-from rest_framework import routers
-
 
 router = routers.DefaultRouter()
 router.register(r'/elements', ElementViewSet)
 router.register(r'/templates', TemplateViewSet)
 router.register(r'/template_elements', TemplateElementViewSet)
->>>>>>> remotes/origin/frontend
 
-# from django.contrib.auth.views import LoginView
 
 urlpatterns = [
     path('home', index, name='index'),
@@ -36,13 +24,3 @@ urlpatterns = [
     path('success/', success_page_view, name='success_page'),
     path('api', include(router.urls)),
 ]
-
-
-# from django.urls import path
-# from .views import testing
-
-# urlpatterns = [
-#     # Other URL patterns...
-#     path('testing/', testing, name='testing'),
-# ]
-

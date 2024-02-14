@@ -13,20 +13,16 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-wfxt*$#lg5h(ru@li6@59%uvs6%e*n*6*hpe!ta9=tne76j=_5'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = 'django-insecure-wfxt*$#lg5h(ru@li6@59%uvs6%e*n*6*hpe!ta9=tne76j=_5' #keep the secret key used in production secret!
+
+
+DEBUG = True #don't run with debug turned on in production!
 
 ALLOWED_HOSTS = []
 
@@ -130,28 +126,18 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
 STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# settings.py
 
-# Email Configuration for Gmail SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'v35355166@gmail.com'  # Your Gmail address
-EMAIL_HOST_PASSWORD = 'pfzi adpn hkqk dtuo'  # Your Gmail password or an app-specific password if you have 2-step verification enabled
+EMAIL_HOST_USER = 'v35355166@gmail.com'  
+EMAIL_HOST_PASSWORD = 'pfzi adpn hkqk dtuo'  
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
     ]

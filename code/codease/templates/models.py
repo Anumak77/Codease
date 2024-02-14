@@ -21,22 +21,20 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
-    # username = models.CharField(max_length=150, unique=True)
-    # username = models.CharField(max_length=150, unique=True, default='default_username')
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     name = models.CharField(max_length=255, blank=True)
     otp = models.CharField(max_length=6, blank=True, null=True)
-    # profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
-
+    
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
-    # REQUIRED_FIELDS = ['username', 'name']
     REQUIRED_FIELDS = ['name']
 
     def __str__(self):
         return self.email
+    
+    
 
 class Element(models.Model):
     id = models.AutoField(primary_key=True)
