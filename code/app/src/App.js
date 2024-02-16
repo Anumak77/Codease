@@ -24,7 +24,7 @@ function App() {
 
     return (
         <div className="App">
-            <div className="App-content container-fluid">
+            <div className="App-content container-fluid" style={{ margin: 0 }}>
                 {<TopNavbar/>}
                 {component}
             </div>

@@ -41,23 +41,24 @@ function Editor() {
         .then(data => {
             document.getElementById("Template").innerHTML = data.elements;
             var elems = document.getElementsByClassName("element");
+            const template = document.getElementById("Template");
             console.log(elems);
             setKey(elems.length);
             for (const elem of elems) 
             {
                 console.log(elem);
                 elem.addEventListener("mousedown", () => {
-                    document.addEventListener("mousemove", onMouseDrag);
+                    template.addEventListener("mousemove", onMouseDrag);
                 });
-                document.addEventListener("mouseup", () => {
-                    document.removeEventListener("mousemove", onMouseDrag);
+                template.addEventListener("mouseup", () => {
+                    template.removeEventListener("mousemove", onMouseDrag);
                 });  
 
                 function onMouseDrag(event) {
                     let leftValue = event.clientX;
                     let topValue = event.clientY;
-                    elem.style.left = `${leftValue}px`;
-                    elem.style.top = `${topValue}px`;
+                    elem.style.left = `${leftValue  - 150}px`;
+                    elem.style.top = `${topValue - 50}px`;
                 }
             }
         }); 
@@ -65,14 +66,28 @@ function Editor() {
 
     return (
         <div id="Editor">
-            <h1>Editor</h1>
-            <button onClick={() => addElement(1)}>Add Element</button>
-            <button onClick={() => addElement(2)}>Add Element</button>
-            <button onClick={() => addElement(3)}>Add Element</button>
-            <button onClick={() => save()}>Save</button>
-            <button onClick={() => load(3)}>Load</button>
-            <div id="Template">{elements}</div>
-            
+            <ul id = "Editor-nav" class="nav nav-pills flex-column navbar-dark bg-primary">
+                <li class="nav-item">
+                    <button class="nav-link" onClick={() => save()}>Save</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onClick={() => load(3)}>Load</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onClick={() => addElement(1)}>Navbar</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link " onClick={() => addElement(2)}>Section</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onClick={() => addElement(3)}>Image</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onClick={() => addElement(4)}>Button</button>
+                </li>
+            </ul>
+
+            <div id="Template">{elements}</div>    
         </div>
     )
 }

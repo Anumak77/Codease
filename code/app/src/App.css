@@ -2,29 +2,54 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-color: azure;
+  padding: 0;
+  background-color: #2B3035;
 }
 
 .element {
   position: absolute;
   left: 50%;
   top: 50%;
-  min-height: 2rem;
-  width: 15rem;
-  padding: 10px;
-  background-color: rgb(218, 255, 194);
-  border-radius: 5px;
   transform: translate(-50%, -50%);
   cursor: move;
   user-select: none;
+  border: 1px solid black;
+  display: inline-block;
+  overflow: visible;
+  white-space: nowrap;
 }
 
-.element header {
-  font-weight: 600;
-  text-transform: uppercase;
-  border-bottom: 1px solid black;
+#Top-nav {
+  height: 50px;
+}
+
+#Editor {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#Editor-nav {
+  width: 150px;
+  height: 100%;
+  padding: 10px;
+  left: 0;
+  position: absolute;
+  color: white;
+}
+
+#Editor-nav button {
+  color: white;
+}
+
+#Template {
+  width: 100%;
+  height: 100%;
+  left: 150px;
+  position: absolute;
+  background-color: white;
 }
