@@ -16,14 +16,15 @@ body {
   transform: translate(-50%, -50%);
   cursor: move;
   user-select: none;
-  border: 1px solid black;
   display: inline-block;
   overflow: visible;
   white-space: nowrap;
+  z-index: 1;
 }
 
 #Top-nav {
   height: 50px;
+  z-index: 3;
 }
 
 #Editor {
@@ -40,6 +41,7 @@ body {
   left: 0;
   position: absolute;
   color: white;
+  z-index: 2;
 }
 
 #Editor-nav button {
@@ -52,4 +54,5 @@ body {
   left: 150px;
   position: absolute;
   background-color: white;
+  z-index: 0;
 }
