@@ -1,7 +1,10 @@
-import'../scripts/coloris.js';
-import '../scripts/coloris.css';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import { useState, useEffect } from 'react';
-import Element from './element';
+import Element from './element.jsx';
+import Toolbar from './toolbar.jsx';
+import Image from './image.jsx';
 import { clickEvents, unselect } from "../scripts/clickEvents";
 import { changeColor } from "../scripts/changeStyles.js";
 
@@ -16,93 +19,63 @@ function Editor() {
         console.log(elements);
     }
 
-    function deleteElement() {
-        const id = template.getAttribute("data-selected");
-        if (id == null) {
-            return;
-        }
-
-        if (window.confirm("Are you sure?")) {
-            const elem = document.getElementById(id);
-            unselect(elem);
-            elem.remove();
-        }
+    function addImage() {
+        setElements(elements.concat(<Image id={key}/>));
+        setKey(key + 1);
+        console.log(elements);
     }
-
-    function save() {
-        console.log(document.getElementById("Template").innerHTML);
-        let template = {
-            "name": "template",
-            "elements": document.getElementById("Template").innerHTML
-        }
-
-        fetch("http://127.0.0.1:8000/api/templates/", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json",
-            },
-            body: JSON.stringify(template),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Success:", data);
-            setElements([]);
-        })
-        .catch(err=>console.log(err))
-    }
-
-    function load(temp) {
-        setElements([]);
-
-        fetch("http://127.0.0.1:8000/api/templates/" + temp + "/") 
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("Template").innerHTML = data.elements;
-            var elems = document.getElementsByClassName("element");
-            const template = document.getElementById("Template");
-            console.log(elems);
-            setKey(elems.length);
-            for (const elem of elems) 
-            {
-                clickEvents(elem);
-            }
-        }); 
-    }
-
-    useEffect (() => {
-        changeColor();
-    }, []);
 
     return (
         <div id="Editor">
-            <ul id = "Editor-nav" class="nav nav-pills flex-column navbar-dark bg-primary">
-                <li class="nav-item">
-                    <button class="nav-link" onClick={() => save()}>Save</button>
+            <Toolbar setKey={setKey} setElements={setElements}/>
+            <ul id = "Editor-nav"  expand="lg" className="p-3 mb-2 nav flex-column navbar-dark" data-bs-theme="dark">
+                <li className="nav-item">
+                    <button className="nav-link" onClick={() => addElement(3)}>Text Area</button>
+                    {/* <DropdownButton
+                        as={ButtonGroup}
+                        key={'TextArea'}
+                        id={`dropdown-button-drop-${'TextArea'}`}
+                        drop={"end"}
+                        title={`${'TextArea'}`}
+                    >
+                        <Dropdown.Item eventKey="1"><button className="nav-link" onClick={() => addElement(3)}><img src="Nav1.png"/></button></Dropdown.Item>
+                        <Dropdown.Divider />
+                        <Dropdown.Item eventKey="2"><button className="nav-link" onClick={() => addElement(2)}><img src="Nav2.png"/></button></Dropdown.Item>
+                    </DropdownButton> */}
                 </li>
-                <li class="nav-item">
-                    <button class="nav-link" onClick={() => load(1)}>Load</button>
+                <li className="nav-item">
+                    <DropdownButton
+                        as={ButtonGroup}
+                        key={'Navbar'}
+                        id={`dropdown-button-drop-${'Navbar'}`}
+                        drop={"end"}
+                        variant={"secondary"}
+                        title={`${'Navbar'}`}
+                    >
+                        <Dropdown.Item eventKey="1"><button className="nav-link" onClick={() => addElement(1)}><img src="Nav1.png"/></button></Dropdown.Item>
+                        <Dropdown.Divider />
+                        <Dropdown.Item eventKey="2"><button className="nav-link" onClick={() => addElement(2)}><img src="Nav2.png"/></button></Dropdown.Item>
+                    </DropdownButton>
                 </li>
-                <li class="nav-item">
-                    <button class="nav-link" onClick={() => addElement(1)}>Navbar</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link " onClick={() => addElement(2)}>Section</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" onClick={() => addElement(3)}>Image</button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" onClick={() => addElement(4)}>Button</button>
-                </li>
-                <li class="nav-item">
-                    <input id="color-picker" type="text" data-coloris/>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" onClick={() => deleteElement()}>Delete</button>
+                <li className="nav-item">
+                    <DropdownButton
+                        as={ButtonGroup}
+                        key={'Image'}
+                        id={`dropdown-button-drop-${'Image'}`}
+                        drop={"end"}
+                        variant={"secondary"}
+                        title={`${'Image'}`}
+                        autoClose="outside"
+                    >
+                        <Dropdown.Item eventKey="1">
+                            <input id="imagelink" type='text' placeholder="Input Image Address"/>
+                            <button className="nav-link" onClick={() => addImage()}>Add Image</button>
+                        </Dropdown.Item>
+                    </DropdownButton>
                 </li>
             </ul>
 
-            <div id="Template">{elements}</div>    
+            <div id="Template" style={{background: "white"}}>{elements}</div>    
         </div>
     )
 }

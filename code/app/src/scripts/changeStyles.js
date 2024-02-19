@@ -30,9 +30,9 @@ function changeText(container) {
 }
 
 function changeColor() {
-    console.log("Changing");
     const template = document.getElementById("Template");
     const colorPicker = document.getElementById("clr-picker");
+    const colorInput = document.getElementById("color-picker");
 
     colorPicker.addEventListener("mousedown", () => {
         document.addEventListener("mouseup", pickColor);
@@ -40,20 +40,51 @@ function changeColor() {
 
     function pickColor() {
         setTimeout(function(){
-            console.log("Picking");
             const id = template.getAttribute("data-selected");
+
             if (id == null || id == "null") {
-                const color = document.getElementById("color-picker").value;
-                template.style.backgroundColor = color;
+                const color = colorInput.value;
+                colorInput.style.color = color;
+                template.style.color = color;
             }
             else {
                 const elem = document.getElementById(id);
-                const color = document.getElementById("color-picker").value;
-                elem.style.backgroundColor = color;
+                const color = colorInput.value;
+                colorInput.style.color = color;
+                elem.style.color = color;
             }
             document.removeEventListener("mouseup", pickColor);
         }, 10);
     }
 }
 
-export { changeText, changeColor };
+function changeBgColor() {
+    const template = document.getElementById("Template");
+    const colorPicker = document.getElementById("clr-picker");
+    const colorInput = document.getElementById("bgcolor-picker");
+
+    colorPicker.addEventListener("mousedown", () => {
+        document.addEventListener("mouseup", pickBgColor);
+    });
+
+    function pickBgColor() {
+        setTimeout(function(){
+            const id = template.getAttribute("data-selected");
+
+            if (id == null || id == "null") {
+                const color = colorInput.value;
+                colorInput.style.color = color;
+                template.style.backgroundColor = color;
+            }
+            else {
+                const elem = document.getElementById(id);
+                const color = colorInput.value;
+                colorInput.style.color = color;
+                elem.style.backgroundColor = color;
+            }
+            document.removeEventListener("mouseup", pickBgColor);
+        }, 10);
+    }
+}
+
+export { changeText, changeColor, changeBgColor };

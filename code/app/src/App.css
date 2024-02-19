@@ -1,12 +1,71 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   padding: 0;
-  background-color: #2B3035;
+}
+
+#Top-nav {
+  height: 50px;
+  z-index: 4;
+  background-color: #F95738;
+}
+
+#Editor {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#Editor-nav {
+  width: 150px;
+  height: calc(100% - 50px);
+  padding: 10px;
+  left: 0;
+  position: absolute;
+  color: white;
+  background-color: #0D3B66;
+  border-right: 10px solid #CED4DA;
+  z-index: 3;
+}
+
+#Editor-nav button {
+  width: 100%;
+  left: 10px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+}
+
+#Toolbar {
+  width: calc(100% - 150px);
+  height: 50px;
+  left: 150px;
+  padding-left: 15px;
+  position: absolute;
+  background-color: #CED4DA;
+  z-index: 2;
+  align-items: center;
+  overflow: auto;
+}
+
+#Toolbar button {
+  all: unset;
+  margin-left: 10px;
+  margin-right: 20px;
+  color: #0D3B66;
+  font-size: 20px;
+}
+
+#Template {
+  width: calc(100% - 150px);
+  height: calc(100% - 50px);
+  left: 150px;
+  position: absolute;
+  background-color: white;
+  z-index: 0;
+  border: 10px solid #CED4DA;
+  border-top: none;
+  border-left: none;
 }
 
 .element {
@@ -22,37 +81,7 @@ body {
   z-index: 1;
 }
 
-#Top-nav {
-  height: 50px;
-  z-index: 3;
-}
-
-#Editor {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#Editor-nav {
-  width: 150px;
-  height: 100%;
-  padding: 10px;
-  left: 0;
-  position: absolute;
-  color: white;
-  z-index: 2;
-}
-
-#Editor-nav button {
-  color: white;
-}
-
-#Template {
-  width: 100%;
-  height: 100%;
-  left: 150px;
-  position: absolute;
-  background-color: white;
-  z-index: 0;
+#color-picker, #bgcolor-picker {
+  margin: 0px;
+  padding: 0px;
 }

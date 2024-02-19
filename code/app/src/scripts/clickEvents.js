@@ -53,7 +53,6 @@ function clickEvents(container) {
         if (mouseX - left < 5 || right - mouseX < 5)
         {   
             side = right - mouseX < 5 ? "r" : "l";
-            console.log(side);
             template.addEventListener("mousemove", onMouseHorizontalDrag);
             template.addEventListener("mouseup", function resizeEnd() {
                 template.style.cursor = "move";
@@ -71,10 +70,11 @@ function clickEvents(container) {
         if (mouseY - top < 5 || bottom - mouseY < 5) {
             side = bottom - mouseY < 5 ? "b" : "t";
             template.addEventListener("mousemove", onMouseVerticalDrag);
-            template.addEventListener("mouseup", () => {
+            template.addEventListener("mouseup", function resizeEnd() {
                 template.style.cursor = "move";
                 container.style.borderColor = "#1871FF";
                 template.removeEventListener("mousemove", onMouseVerticalDrag);
+                template.removeEventListener("mouseup", resizeEnd);
             });
             template.style.cursor = "ns-resize";
             container.style.borderColor = "red";
@@ -87,11 +87,10 @@ function clickEvents(container) {
         function onMouseHorizontalDrag(event) {
             event.preventDefault();
             var mouseX = event.clientX - template.offsetLeft;
-            console.log(side);
             
             var difference = side === "r" ? mouseX - (container.offsetLeft + container.clientWidth / 2) : container.offsetLeft - container.clientWidth / 2 - mouseX;
 
-            if (container.style.width > template.offsetWidth) { return; }
+            if (container.clientWidth > template.clientWidth) { return; }
             container.style.width = difference + container.clientWidth + "px";
         }
 
@@ -100,12 +99,14 @@ function clickEvents(container) {
             var mouseY = event.clientY - template.offsetTop;
             var difference = side === "b" ? mouseY - (container.offsetTop + container.clientHeight / 2) : container.offsetTop - container.clientHeight / 2 - mouseY;
 
+            if (container.clientHeight > template.clientHeight) { return; }
             container.style.height = difference + container.clientHeight + "px";
         }
     }
 }
 
 function unselect(container) {
+    console.log(container == null);
     const template = document.getElementById("Template");
 
     if (template.getAttribute("data-selected") === container.id) {
@@ -115,6 +116,10 @@ function unselect(container) {
     if (container != null) {
         container.style.borderColor = "transparent";
     }
+
+    const colorPicker = document.getElementById("color-picker");
+    colorPicker.style.color = template.style.backgroundColor;
+    colorPicker.value = template.style.backgroundColor;
 }
 
 export { clickEvents, unselect };
