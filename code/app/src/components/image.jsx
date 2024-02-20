@@ -11,12 +11,12 @@ function Image({id}) {
 
     const container = document.getElementById("elem" + id);   
     if (container != null) {
-        container.innerHTML = `<img src="${link}" style="width: 300px">`;
+        container.innerHTML = `<img src="${link}" style="width: 100%;">`;
         clickEvents(container);
     }
 
     return (
-        <div id={"elem" + id} key={id} className="element"></div>
+        <div id={"elem" + id} key={id} className="element image" style={{width: "300px", height: "auto"}}></div>
     )
 }
 export default Image;
