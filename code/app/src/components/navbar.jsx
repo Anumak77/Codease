@@ -1,16 +1,24 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Editor from './editor';
+import HomePage from './homepage';
+import { newPage } from '../scripts/saveLoad';
 
-function TopNavbar() {
+function TopNavbar({setComponent}) {
     return (
         <Navbar id="Top-nav" expand="lg" className="p-3" data-bs-theme="dark">
             <Navbar.Brand href="#home">CWPG</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
+                <Button onClick={() => setComponent(<HomePage setComponent={setComponent}/>)}>Home</Button>
+                <Button onClick={() => {
+                    newPage();
+                    setComponent(<Editor setComponent={setComponent}/>);
+                }}>Editor</Button>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

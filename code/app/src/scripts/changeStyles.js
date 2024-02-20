@@ -7,7 +7,7 @@ function changeText(container) {
             if (elem.getAttribute("data-inputMode") == null) {
                 elem.setAttribute("data-inputMode", "");
                 var val = this.innerText;
-                var input = document.createElement("input");
+                var input = document.createElement("textarea");
                 input.value = val;
                 template.addEventListener("click", textOutFocus);
                 this.innerText="";
@@ -20,9 +20,6 @@ function changeText(container) {
                     var val = input.value;
                     elem.innerText = val;
                     elem.removeAttribute("data-inputMode");
-                }
-                else {
-
                 }
             }
         }
@@ -42,12 +39,7 @@ function changeColor() {
         setTimeout(function(){
             const id = template.getAttribute("data-selected");
 
-            if (id == null || id == "null") {
-                const color = colorInput.value;
-                colorInput.style.color = color;
-                template.style.color = color;
-            }
-            else {
+            if (!(id == null || id == "null")) {
                 const elem = document.getElementById(id);
                 const color = colorInput.value;
                 colorInput.style.color = color;
@@ -69,12 +61,13 @@ function changeBgColor() {
 
     function pickBgColor() {
         setTimeout(function(){
+            const background = document.getElementById("Background");
             const id = template.getAttribute("data-selected");
 
             if (id == null || id == "null") {
                 const color = colorInput.value;
                 colorInput.style.color = color;
-                template.style.backgroundColor = color;
+                background.style.backgroundColor = color;
             }
             else {
                 const elem = document.getElementById(id);

@@ -11,7 +11,7 @@ function Image({id}) {
 
     const container = document.getElementById("elem" + id);   
     if (container != null) {
-        container.innerHTML = `<img src="${link}" style="width: 100%;">`;
+        container.innerHTML = `<img src="${link}" style="width: 100%; height: auto">`;
         clickEvents(container);
     }
 

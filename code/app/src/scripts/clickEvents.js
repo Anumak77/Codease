@@ -1,6 +1,7 @@
 function clickEvents(container) {
     const template = document.getElementById("Template");
-
+    const colorPicker = document.getElementById("color-picker");
+    const bgColorPicker = document.getElementById("bgcolor-picker");
     // container.addEventListener("mouseover", (event) => {
 
     // });
@@ -14,6 +15,11 @@ function clickEvents(container) {
         container.setAttribute("data-offsetX", `${event.clientX - container.offsetLeft}`);
         container.setAttribute("data-offsetY", `${event.clientY - container.offsetTop}`);
         template.setAttribute("data-selected", container.id);
+
+        colorPicker.style.color = container.style.color;
+        colorPicker.value = container.style.color;
+        bgColorPicker.style.color = container.style.backgroundColor;
+        bgColorPicker.value = container.style.backgroundColor;
 
         if (!resize(event)) {
             dragAndDrop();
@@ -69,13 +75,26 @@ function clickEvents(container) {
         // Vertical
         if (mouseY - top < 5 || bottom - mouseY < 5) {
             side = bottom - mouseY < 5 ? "b" : "t";
-            template.addEventListener("mousemove", onMouseVerticalDrag);
-            template.addEventListener("mouseup", function resizeEnd() {
-                template.style.cursor = "move";
-                container.style.borderColor = "#1871FF";
-                template.removeEventListener("mousemove", onMouseVerticalDrag);
-                template.removeEventListener("mouseup", resizeEnd);
-            });
+
+            if (container.classList.contains("image")) {
+                template.addEventListener("mousemove", onMouseVerticalDragWidth);
+                template.addEventListener("mouseup", function resizeEnd() {
+                    template.style.cursor = "move";
+                    container.style.borderColor = "#1871FF";
+                    template.removeEventListener("mousemove", onMouseVerticalDragWidth);
+                    template.removeEventListener("mouseup", resizeEnd);
+                });
+            }
+            else {
+                template.addEventListener("mousemove", onMouseVerticalDrag);
+                template.addEventListener("mouseup", function resizeEnd() {
+                    template.style.cursor = "move";
+                    container.style.borderColor = "#1871FF";
+                    template.removeEventListener("mousemove", onMouseVerticalDrag);
+                    template.removeEventListener("mouseup", resizeEnd);
+                });
+            }
+            
             template.style.cursor = "ns-resize";
             container.style.borderColor = "red";
 
@@ -90,7 +109,7 @@ function clickEvents(container) {
             
             var difference = side === "r" ? mouseX - (container.offsetLeft + container.clientWidth / 2) : container.offsetLeft - container.clientWidth / 2 - mouseX;
 
-            if (container.clientWidth > template.clientWidth) { return; }
+            if (difference + container.clientWidth > template.clientWidth) { return; }
             container.style.width = difference + container.clientWidth + "px";
         }
 
@@ -99,27 +118,36 @@ function clickEvents(container) {
             var mouseY = event.clientY - template.offsetTop;
             var difference = side === "b" ? mouseY - (container.offsetTop + container.clientHeight / 2) : container.offsetTop - container.clientHeight / 2 - mouseY;
 
-            if (container.clientHeight > template.clientHeight) { return; }
+            if (difference + container.clientHeight > template.clientHeight) { return; }
             container.style.height = difference + container.clientHeight + "px";
+        }
+
+        function onMouseVerticalDragWidth(event) {
+            event.preventDefault();
+            var mouseY = event.clientY - template.offsetTop;
+            var difference = side === "b" ? mouseY - (container.offsetTop + container.clientHeight / 2) : container.offsetTop - container.clientHeight / 2 - mouseY;
+
+            if (difference + container.clientHeight > template.clientHeight) { return; }
+            container.style.width = difference + container.clientWidth + "px";
         }
     }
 }
 
 function unselect(container) {
-    console.log(container == null);
     const template = document.getElementById("Template");
+    const background = document.getElementById("Background");
+    const bgColorPicker = document.getElementById("bgcolor-picker");
 
     if (template.getAttribute("data-selected") === container.id) {
         template.setAttribute("data-selected", null);
+        
+        bgColorPicker.style.color = background.style.backgroundColor;
+        bgColorPicker.value = background.style.backgroundColor;
     }   
 
     if (container != null) {
         container.style.borderColor = "transparent";
     }
-
-    const colorPicker = document.getElementById("color-picker");
-    colorPicker.style.color = template.style.backgroundColor;
-    colorPicker.value = template.style.backgroundColor;
 }
 
 export { clickEvents, unselect };

@@ -8,7 +8,7 @@ import Image from './image.jsx';
 import { clickEvents, unselect } from "../scripts/clickEvents";
 import { changeColor } from "../scripts/changeStyles.js";
 
-function Editor() {
+function Editor({setComponent}) {
     const [key, setKey] = useState(0);
     const [elements, setElements] = useState([]);
     const template = document.getElementById("Template");
@@ -24,6 +24,8 @@ function Editor() {
         setKey(key + 1);
         console.log(elements);
     }
+
+    console.log(elements);
 
     return (
         <div id="Editor">
@@ -75,7 +77,9 @@ function Editor() {
                 </li>
             </ul>
 
-            <div id="Template" style={{background: "white"}}>{elements}</div>    
+            <div id="Template" style={{background: "white"}}>
+                {elements}
+            </div>    
         </div>
     )
 }

@@ -4,11 +4,12 @@ import { useState } from 'react';
 import TopNavbar from './components/navbar';
 import Editor from './components/editor';
 import Element from './components/element';
+import HomePage from './components/homepage';
 
 function App() {
     const [component, setComponent] = useState(null);
     if (component == null) {
-        setComponent(<Editor/>)
+        setComponent(<HomePage setComponent={setComponent}/>)
     }
 
     const handleClick = (event, component) => {
@@ -26,7 +27,7 @@ function App() {
         <div className="App">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
             
-            {<TopNavbar/>}
+            {<TopNavbar setComponent={setComponent}/>}
             {component}
         </div>
     );
