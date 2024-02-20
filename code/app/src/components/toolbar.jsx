@@ -47,7 +47,7 @@ function Toolbar({ setKey, setElements }) {
                 <button className="" onClick={() => save(setKey, setElements)}><span className="material-symbols-outlined">save</span></button>
             </li>
             <li className="nav-item">
-                <button className="" onClick={() => load(8, setKey, setElements)}><span className="material-symbols-outlined">folder_open</span></button>
+                <button className="" onClick={() => load(11, setKey, setElements)}><span className="material-symbols-outlined">folder_open</span></button>
             </li>
         </ul>  
     )
