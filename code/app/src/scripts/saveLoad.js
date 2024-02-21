@@ -91,6 +91,10 @@ function download() {
     if (container) { unselect(container); }
 
     const template = document.getElementById("Template");
+    for (const elem of [...template.getElementsByClassName("element")]) {
+        elem.style.cursor = "auto";
+    }
+
     const link = document.createElement("a");
     var content = template.innerHTML;
     content = content.concat(
@@ -134,6 +138,10 @@ function download() {
     link.target = "_blank";
     link.click();
     URL.revokeObjectURL(link.href);
+
+    for (const elem of [...template.getElementsByClassName("element")]) {
+        elem.style.cursor = "move";
+    }
 }
 
 export { save, load, newPage, download };

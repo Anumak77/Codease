@@ -3,13 +3,6 @@ function clickEvents(container) {
     const colorPicker = document.getElementById("color-picker");
     const bgColorPicker = document.getElementById("bgcolor-picker");
     const linkInput = document.getElementById("link-input");
-    // container.addEventListener("mouseover", (event) => {
-
-    // });
-
-    // container.addEventListener("mouseup", () => {
-    //     container.style.cursor = "move";
-    // });
 
     container.addEventListener("mousedown", (event) => {
         container.style.border = "3px solid #1871FF";
@@ -42,7 +35,7 @@ function clickEvents(container) {
         });
     
         template.addEventListener("mouseup", () => {
-            container.style.cursor = "inherit";
+            container.style.cursor = "move";
             template.removeEventListener("mousemove", onMouseDrag);
 
         });
@@ -73,7 +66,7 @@ function clickEvents(container) {
             side = right - mouseX < 5 ? "r" : "l";
             template.addEventListener("mousemove", onMouseHorizontalDrag);
             template.addEventListener("mouseup", function resizeEnd() {
-                template.style.cursor = "inherit";
+                template.style.cursor = "default";
                 container.style.borderColor = "#1871FF";
                 template.removeEventListener("mousemove", onMouseHorizontalDrag);
                 template.removeEventListener("mouseup", resizeEnd);
@@ -91,7 +84,7 @@ function clickEvents(container) {
             if (container.classList.contains("image")) {
                 template.addEventListener("mousemove", onMouseVerticalDragWidth);
                 template.addEventListener("mouseup", function resizeEnd() {
-                    template.style.cursor = "inherit";
+                    template.style.cursor = "default";
                     container.style.borderColor = "#1871FF";
                     template.removeEventListener("mousemove", onMouseVerticalDragWidth);
                     template.removeEventListener("mouseup", resizeEnd);
@@ -100,7 +93,7 @@ function clickEvents(container) {
             else {
                 template.addEventListener("mousemove", onMouseVerticalDrag);
                 template.addEventListener("mouseup", function resizeEnd() {
-                    template.style.cursor = "inherit";
+                    template.style.cursor = "default";
                     container.style.borderColor = "#1871FF";
                     template.removeEventListener("mousemove", onMouseVerticalDrag);
                     template.removeEventListener("mouseup", resizeEnd);
