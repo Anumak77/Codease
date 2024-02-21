@@ -48,7 +48,7 @@ def verify_otp(request):
                 user.otp = ''
                 user.save()
                 login(request, user)
-                return redirect('success_page') 
+                return redirect('http://localhost:3000/') 
             else:
                 return render(request, 'verify_otp.html', {'error': 'Invalid OTP'})
     else:
@@ -65,7 +65,7 @@ def custom_login(request):
 
         if user is not None:
             login(request, user)
-            return redirect('success_page') 
+            return redirect('http://localhost:3000/') 
         else:
             return render(request, 'login.html', {'error': 'Invalid login credentials'})
 

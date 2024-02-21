@@ -1,16 +1,78 @@
-<!-- register.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User Registration</title>
+    <title>Register Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f95838; /* Updated background color */
+            font-family: Arial, sans-serif;
+        }
+        .center-container {
+            background-color: #ffffff; /* White background for the form container */
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 600px; /* Adjust the width as necessary */
+            max-width: 90%; /* Ensure it doesn't exceed the viewport width */
+        }
+        h2 {
+            color: #ffffff; /* Dark color for the title for contrast against white background */
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        form {
+            margin: 0 auto;
+            text-align: left;
+        }
+        .form-group p {
+            margin-bottom: 20px; /* Increase space between form fields */
+        }
+        .form-group label {
+            display: block; /* Make labels block elements for better spacing */
+            margin-bottom: 5px; /* Space above each input */
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; /* Full width inputs */
+            padding: 8px; /* Padding for inputs */
+            margin-bottom: 10px; /* Space below each input */
+            border: 1px solid #ccc; /* Border for inputs */
+            border-radius: 4px; /* Slightly rounded corners for inputs */
+            box-sizing: border-box; /* Include padding and border in the input width */
+        }
+        button {
+            background-color: #f95838; /* Button color */
+            color: white; /* Button text color */
+            padding: 10px 15px; /* Button padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            width: 100%; /* Make the button expand to the full width of the form */
+            margin-top: 20px; /* Space above the button */
+        }
+        button:hover {
+            background-color: #c74630; /* Darker shade for hover effect */
+        }
+    </style>
 </head>
 <body>
     <h2>Register</h2>
+<div class="center-container">
+    
     <form method="post" action="{% url 'register' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
         <button type="submit">Register</button>
     </form>
+</div>
 </body>
 </html>

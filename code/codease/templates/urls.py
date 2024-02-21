@@ -22,6 +22,6 @@ urlpatterns = [
     path('login/', custom_login, name='custom_login'),
     path('register/', register, name='register'),
     path('verify-otp/', verify_otp, name='verify_otp'), 
-    path('success/', success_page_view, name='success_page'),
+    path('account/', success_page_view, name='success_page'),
     path('api/', include(router.urls)),
 ]
