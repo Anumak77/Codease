@@ -6,7 +6,6 @@ function save(setkey, setElements) {
     const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
     if (container) { unselect(container); }
     
-    console.log(document.getElementById("Template").innerHTML);
     let template = {
         "name": document.getElementById("template-name").innerText,
         "elements": document.getElementById("Template").innerHTML,
@@ -88,6 +87,9 @@ function newPage(setKey, setElements) {
 }
 
 function download() {
+    const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
+    if (container) { unselect(container); }
+
     const template = document.getElementById("Template");
     const link = document.createElement("a");
     var content = template.innerHTML;
@@ -104,12 +106,18 @@ function download() {
                 position: absolute;
                 display: inline-block;
                 overflow: visible;
-                white-space: nowrap;
+                white-space: normal;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 1;
                 margin-top: -${template.offsetTop}px;
+                font-family: Arial;
+                cursor: auto;
+            }
+            .element .writable {
+                margin-top: 0;
+                margin-bottom: auto;
             }
             #Background {
                 width: 100%;
@@ -123,6 +131,7 @@ function download() {
     const file = new Blob([content], { type: 'application/html' });
     link.href = URL.createObjectURL(file);
     link.download = template.name + ".html";
+    link.target = "_blank";
     link.click();
     URL.revokeObjectURL(link.href);
 }

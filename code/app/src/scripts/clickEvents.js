@@ -12,12 +12,10 @@ function clickEvents(container) {
     // });
 
     container.addEventListener("mousedown", (event) => {
-        event.preventDefault();
         container.style.border = "3px solid #1871FF";
         container.setAttribute("data-offsetX", `${event.clientX - container.offsetLeft}`);
         container.setAttribute("data-offsetY", `${event.clientY - container.offsetTop}`);
         template.setAttribute("data-selected", container.id);
-        console.log(template.getAttribute("data-selected"));
 
         colorPicker.style.color = container.style.color;
         colorPicker.value = container.style.color;
@@ -44,12 +42,16 @@ function clickEvents(container) {
         });
     
         template.addEventListener("mouseup", () => {
-            container.style.cursor = "move";
+            container.style.cursor = "inherit";
             template.removeEventListener("mousemove", onMouseDrag);
 
         });
     
         function onMouseDrag(event) {
+            if (container.getAttribute("data-inputMode") != null) { 
+                console.log("Writing")
+                return; 
+            }
             event.preventDefault();
             container.style.left = `${event.clientX - container.getAttribute('data-offsetX')}px`;
             container.style.top = `${event.clientY - container.getAttribute('data-offsetY')}px`;
@@ -98,7 +100,7 @@ function clickEvents(container) {
             else {
                 template.addEventListener("mousemove", onMouseVerticalDrag);
                 template.addEventListener("mouseup", function resizeEnd() {
-                    template.style.cursor = "move";
+                    template.style.cursor = "inherit";
                     container.style.borderColor = "#1871FF";
                     template.removeEventListener("mousemove", onMouseVerticalDrag);
                     template.removeEventListener("mouseup", resizeEnd);
@@ -164,7 +166,6 @@ function unselect(container) {
 
 function disableLink(container) {
     const links = [...container.getElementsByTagName("a")];
-    console.log(links);
     for (const link of links) {
         link.addEventListener('click', function (event) {event.preventDefault()});
     }

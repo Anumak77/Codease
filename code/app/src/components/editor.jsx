@@ -13,13 +13,11 @@ function Editor() {
     function addElement(elem) {
         setElements(elements.concat(<Element id={key} elem={elem}/>));
         setKey(key + 1);
-        console.log(elements);
     }
 
     function addImage() {
         setElements(elements.concat(<Image id={key}/>));
         setKey(key + 1);
-        console.log(elements);
     }
 
     return (
@@ -27,7 +25,7 @@ function Editor() {
             <Toolbar setKey={setKey} setElements={setElements}/>
             <ul id = "Editor-nav"  expand="lg" className="p-3 mb-2 nav flex-column navbar-dark" data-bs-theme="dark">
                 <li className="nav-item">
-                    <button className="nav-link" onClick={() => addElement(3)}>Text Area</button>
+                    <button className="nav-link" onClick={() => addElement(3)}>Text Box</button>
                     {/* <DropdownButton
                         as={ButtonGroup}
                         key={'TextArea'}

@@ -109,7 +109,7 @@ body {
   user-select: none;
   display: inline-block;
   overflow: visible;
-  white-space: nowrap;
+  white-space: normal;
   z-index: 1;
 }
 
