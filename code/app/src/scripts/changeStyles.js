@@ -39,7 +39,7 @@ function changeColor() {
         setTimeout(function(){
             const id = template.getAttribute("data-selected");
 
-            if (!(id == null || id == "null")) {
+            if (!(id == null || id === "null")) {
                 const elem = document.getElementById(id);
                 const color = colorInput.value;
                 colorInput.style.color = color;
@@ -64,7 +64,7 @@ function changeBgColor() {
             const background = document.getElementById("Background");
             const id = template.getAttribute("data-selected");
 
-            if (id == null || id == "null") {
+            if (id == null || id === "null") {
                 const color = colorInput.value;
                 colorInput.style.color = color;
                 background.style.backgroundColor = color;
