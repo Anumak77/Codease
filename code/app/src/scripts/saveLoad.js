@@ -1,4 +1,5 @@
-import { clickEvents, unselect } from "../scripts/clickEvents";
+import { clickEvents, unselect, disableLink } from "../scripts/clickEvents";
+import { changeText } from "./changeStyles";
 
 var id = 0; 
 
@@ -47,6 +48,8 @@ function load(loadId, setElements) {
         for (const elem of elems) 
         {
             clickEvents(elem);
+            changeText(elem);
+            disableLink(elem);
         }
 
         document.getElementById("link-input").disabled = true;
@@ -105,6 +108,7 @@ function download() {
                 zoom: ${1920/(1920 - 150)};
                 -moz-transform: scale${1920/(1920 - 150)};
                 -moz-transform-origin: 0 0;
+                font-family: Arial;
             }
             .element {
                 position: absolute;
@@ -116,12 +120,10 @@ function download() {
                 transform: translate(-50%, -50%);
                 z-index: 1;
                 margin-top: -${template.offsetTop}px;
-                font-family: Arial;
                 cursor: auto;
             }
-            .element .writable {
-                margin-top: 0;
-                margin-bottom: auto;
+            .element p {
+                margin: 10px 10px;
             }
             #Background {
                 width: 100%;

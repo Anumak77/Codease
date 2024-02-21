@@ -1,5 +1,6 @@
 body {
   padding: 0;
+  font-family: Arial;
 }
 
 #Top-nav {
@@ -111,6 +112,10 @@ body {
   overflow: visible;
   white-space: normal;
   z-index: 1;
+}
+
+.element p {
+  margin: 10px 10px;
 }
 
 #color-picker, #bgcolor-picker {
