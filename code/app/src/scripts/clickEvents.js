@@ -2,6 +2,7 @@ function clickEvents(container) {
     const template = document.getElementById("Template");
     const colorPicker = document.getElementById("color-picker");
     const bgColorPicker = document.getElementById("bgcolor-picker");
+    const linkInput = document.getElementById("link-input");
     // container.addEventListener("mouseover", (event) => {
 
     // });
@@ -11,6 +12,7 @@ function clickEvents(container) {
     // });
 
     container.addEventListener("mousedown", (event) => {
+        event.preventDefault();
         container.style.border = "3px solid #1871FF";
         container.setAttribute("data-offsetX", `${event.clientX - container.offsetLeft}`);
         container.setAttribute("data-offsetY", `${event.clientY - container.offsetTop}`);
@@ -25,6 +27,11 @@ function clickEvents(container) {
         if (!resize(event)) {
             dragAndDrop();
         }
+
+        if (container.getElementsByTagName("a").length > 0) {
+            linkInput.disabled = false;
+        }
+        else { linkInput.disabled = true; }
     });
 
     function dragAndDrop () {
@@ -64,7 +71,7 @@ function clickEvents(container) {
             side = right - mouseX < 5 ? "r" : "l";
             template.addEventListener("mousemove", onMouseHorizontalDrag);
             template.addEventListener("mouseup", function resizeEnd() {
-                template.style.cursor = "move";
+                template.style.cursor = "inherit";
                 container.style.borderColor = "#1871FF";
                 template.removeEventListener("mousemove", onMouseHorizontalDrag);
                 template.removeEventListener("mouseup", resizeEnd);
@@ -82,7 +89,7 @@ function clickEvents(container) {
             if (container.classList.contains("image")) {
                 template.addEventListener("mousemove", onMouseVerticalDragWidth);
                 template.addEventListener("mouseup", function resizeEnd() {
-                    template.style.cursor = "move";
+                    template.style.cursor = "inherit";
                     container.style.borderColor = "#1871FF";
                     template.removeEventListener("mousemove", onMouseVerticalDragWidth);
                     template.removeEventListener("mouseup", resizeEnd);
@@ -140,17 +147,27 @@ function unselect(container) {
     const template = document.getElementById("Template");
     const background = document.getElementById("Background");
     const bgColorPicker = document.getElementById("bgcolor-picker");
-
-    if (template.getAttribute("data-selected") === container.id) {
-        template.setAttribute("data-selected", null);
-        
-        bgColorPicker.style.color = background.style.backgroundColor;
-        bgColorPicker.value = background.style.backgroundColor;
-    }   
+    const linkInput = document.getElementById("link-input");
 
     if (container != null) {
         container.style.borderColor = "transparent";
     }
+
+    if (template.getAttribute("data-selected") === container.id) {
+        template.setAttribute("data-selected", null);
+        linkInput.disabled = true;
+        
+        bgColorPicker.style.color = background.style.backgroundColor;
+        bgColorPicker.value = background.style.backgroundColor;
+    }   
 }
 
-export { clickEvents, unselect };
+function disableLink(container) {
+    const links = [...container.getElementsByTagName("a")];
+    console.log(links);
+    for (const link of links) {
+        link.addEventListener('click', function (event) {event.preventDefault()});
+    }
+}
+
+export { clickEvents, unselect, disableLink };

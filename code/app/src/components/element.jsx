@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { clickEvents } from "../scripts/clickEvents";
+import { clickEvents, disableLink } from "../scripts/clickEvents";
 import { changeText } from "../scripts/changeStyles";
 
 function Element({id, elem}) {
@@ -11,13 +11,14 @@ function Element({id, elem}) {
         .then(data => {
             setElement(data);
         });    
-    }, []);
+    }, [elem]);
 
     const container = document.getElementById("elem" + id);   
     if (container != null) {
         container.innerHTML = element.html;
         clickEvents(container);
         changeText(container);
+        disableLink(container);
     }
 
     return (

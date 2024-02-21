@@ -80,4 +80,29 @@ function changeBgColor() {
     }
 }
 
-export { changeText, changeColor, changeBgColor };
+function changeLink(elem) {
+    const template = document.getElementById("Template");
+    const links = [...elem.getElementsByTagName("a")];
+
+    template.addEventListener("mousedown", function setLink() {
+        for (const [i, link] of links.entries()) {
+            console.log(`Set ${link.href} to ${document.getElementById("link-input" + i)}`);
+            link.href = document.getElementById("link-input" + i).value;
+            console.log(link.href);
+        }
+        template.removeEventListener("mousedown", setLink);
+    })
+}
+
+function changeFontSize() {
+    const template = document.getElementById("Template");
+    const size = document.getElementById("font-size").value;
+
+    const id = template.getAttribute("data-selected");
+    if (!(id == null || id === "null")) {
+        const elem = document.getElementById(id);
+        elem.style.fontSize = size;
+    }
+}
+
+export { changeText, changeColor, changeBgColor, changeLink, changeFontSize };

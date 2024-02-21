@@ -1,8 +1,11 @@
-import { clickEvents } from "../scripts/clickEvents";
+import { clickEvents, unselect } from "../scripts/clickEvents";
 
 var id = 0; 
 
 function save(setkey, setElements) {
+    const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
+    if (container) { unselect(container); }
+    
     console.log(document.getElementById("Template").innerHTML);
     let template = {
         "name": document.getElementById("Template").name,
@@ -45,6 +48,8 @@ function load(loadId, setElements) {
         {
             clickEvents(elem);
         }
+
+        document.getElementById("link-input").disabled = true;
     }); 
 }
 
@@ -75,6 +80,7 @@ function newPage(setKey, setElements) {
         template.innerHTML = newTemplate.elements;
         template.style = null;
         template.setAttribute("data-selected", null);
+        document.getElementById("link-input").disabled = true;
     })
     .catch(err=>console.log(err))
 }
@@ -82,7 +88,36 @@ function newPage(setKey, setElements) {
 function download() {
     const template = document.getElementById("Template");
     const link = document.createElement("a");
-    const content = template.outerHTML;
+    var content = template.innerHTML;
+    content = content.concat(
+        `<style>
+            body {
+                margin: 0;
+                padding: 0;
+                zoom: ${1920/(1920 - 150)};
+                -moz-transform: scale${1920/(1920 - 150)};
+                -moz-transform-origin: 0 0;
+            }
+            .element {
+                position: absolute;
+                display: inline-block;
+                overflow: visible;
+                white-space: nowrap;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                margin-top: -${template.offsetTop}px;
+            }
+            #Background {
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                margin: 0;
+                position: absolute;
+            }
+        </style>`
+    )
     const file = new Blob([content], { type: 'application/html' });
     link.href = URL.createObjectURL(file);
     link.download = template.name + ".html";
