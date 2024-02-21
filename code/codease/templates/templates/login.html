@@ -1,25 +1,89 @@
-<!-- login.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f95838; /* Background color */
+            font-family: Arial, sans-serif;
+        }
+        .center-container {
+            background-color: #ffffff; /* White background for the form container */
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Adjust the width as necessary */
+            max-width: 90%; /* Ensure it doesn't exceed the viewport width */
+        }
+        h1 {
+            color: #ffffff; /* Dark color for the title for contrast */
+
+            text-align: left;
+        }
+        form {
+            margin: 0 auto;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 20px; /* Space between form fields */
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #f95838; /* Button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #c74630; /* Darker shade for hover effect */
+        }
+        p {
+            color: red; /* Error message color */
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <h1>Login</h1>
-    
-    {% if error %}
-        <p style="color: red;">{{ error }}</p>
-    {% endif %}
-
-    <form method="post" action="{% url 'custom_login' %}">
-        {% csrf_token %}
-        <label for="email">Email:</label>
-        <input type="email" name="email" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
-        <br>
-        <button type="submit">Login</button>
-    </form>
+    <div class="center-container">
+       
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        <form method="post" action="{% url 'custom_login' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>
+

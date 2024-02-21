@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Success Page</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Account Information{% endblock %}
+
+{% block content %}
     {% if user.is_authenticated %}
-    <h1>Welcome, {{ user.name }}! You have successfully logged in.</h1>
+    <h1>Welcome, {{ user.name }}! </h1>
     <p>Name: {{ user.name }}</p>
     <p>Email: {{ user.email }}</p>
     <!-- Displaying password for testing purposes (remove in production!) -->
     <!-- <p>Password: {{ user.password }}</p> -->
 
+    <!-- <a href="http://localhost:3000/">Editor</a> -->
     <a href="http://localhost:3000/">Homepage</a>
 
     <!-- Add content specific to the authenticated user -->
@@ -18,6 +18,8 @@
         {% csrf_token %}
         <button type="submit">Logout</button>
     </form>
+    {% else %}
+    <p>You are not logged in. <a href="{% url 'login' %}">Login here</a></p>
     {% endif %}
-</body>
-</html>
+{% endblock %}
+

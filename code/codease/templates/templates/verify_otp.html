@@ -3,17 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>OTP Verification</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f95838; /* Updated background color */
+            color: #fff; /* Ensure text is readable against the dark background */
+        }
+        form {
+            border: 1px solid #fff; /* Updated border color for visibility */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Enhance shadow for depth */
+            border-radius: 5px;
+            background: #ffffff; /* Light background for the form for contrast */
+            color: #000; /* Text color for readability */
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #000; /* Text color for visibility */
+        }
+        button {
+            background-color: #f95838; /* Button matches background */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #c74630; /* Darker shade for hover effect */
+        }
+        p {
+            color: #fff; /* Error message color for visibility */
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
-    <h2>OTP Verification</h2>
-    {% if error %}
-        <p>{{ error }}</p>
-    {% endif %}
-    <form method="post">
-        {% csrf_token %}
-        <label for="otp">Enter OTP:</label>
-        <input type="text" id="otp" name="otp">
-        <button type="submit">Verify OTP</button>
-    </form>
+    <div class="container">
+        <h2>OTP Verification</h2>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" name="otp">
+            <button type="submit">Verify OTP</button>
+        </form>
+    </div>
 </body>
 </html>
