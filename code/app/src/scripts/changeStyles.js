@@ -94,14 +94,15 @@ function changeLink(elem) {
     })
 }
 
-function changeFontSize() {
+function changeFontSize(size) {
     const template = document.getElementById("Template");
-    const size = document.getElementById("font-size").value;
 
     const id = template.getAttribute("data-selected");
     if (!(id == null || id === "null")) {
         const elem = document.getElementById(id);
-        elem.style.fontSize = size;
+        elem.style.fontSize = size + "px";
+        console.log(size);
+        console.log(elem.style.fontSize);
     }
 }
 

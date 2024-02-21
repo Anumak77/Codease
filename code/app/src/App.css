@@ -61,6 +61,25 @@ body {
 
 #Toolbar .divider {
   color: #ADB5BD;
+  margin: 0 10px;
+}
+
+#Toolbar #template-name {
+  max-width: 150px;
+  margin-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+
+#Toolbar textarea {
+  max-width: 150px;
+  height: 30px;
+}
+
+#Toolbar .load-dropdown {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden; 
 }
 
 #Template {

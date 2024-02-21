@@ -8,7 +8,7 @@ function save(setkey, setElements) {
     
     console.log(document.getElementById("Template").innerHTML);
     let template = {
-        "name": document.getElementById("Template").name,
+        "name": document.getElementById("template-name").innerText,
         "elements": document.getElementById("Template").innerHTML,
     }
 
@@ -38,7 +38,8 @@ function load(loadId, setElements) {
         console.log("Success:", data);
         const template = document.getElementById("Template");
         id = data.id;
-        template.name = "New template";
+        template.name = data.name;
+        document.getElementById("template-name").innerText = template.name;
         template.innerHTML = data.elements;
         template.style.zIndex = -1;
         template.setAttribute("data-selected", null);
@@ -77,6 +78,7 @@ function newPage(setKey, setElements) {
         id = data.id;
         const template = document.getElementById("Template");
         template.name = "New template";
+        document.getElementById("template-name").innerText = "New Template";
         template.innerHTML = newTemplate.elements;
         template.style = null;
         template.setAttribute("data-selected", null);

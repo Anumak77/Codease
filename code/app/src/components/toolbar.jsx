@@ -8,7 +8,7 @@ import'../scripts/coloris.js';
 import '../scripts/coloris.css';
 import { useState, useEffect } from 'react';
 import { unselect } from "../scripts/clickEvents";
-import { changeColor, changeBgColor, changeLink } from "../scripts/changeStyles.js";
+import { changeColor, changeBgColor, changeLink, changeText, changeFontSize } from "../scripts/changeStyles.js";
 import { save, load, newPage, download } from "../scripts/saveLoad.js";
 
 function Toolbar({ setKey, setElements }) {
@@ -30,8 +30,10 @@ function Toolbar({ setKey, setElements }) {
     }
 
     useEffect (() => {
+        changeText(document.getElementById("Toolbar"));
         changeColor();
         changeBgColor();
+        changeFontSize();
         fetch("http://127.0.0.1:8000/api/templates/") 
         .then(response => response.json())
         .then(data => {
@@ -64,13 +66,14 @@ function Toolbar({ setKey, setElements }) {
                             as={ButtonGroup}
                             title={<span className="material-symbols-outlined">format_size</span>}
                             size="sm"
+                            id="font-size"
                         >
-                            {[8, 12, 16, 20, 24].map(
+                            {[8, 12, 16, 20, 24, 28, 32, 36, 40, 48, 64, 72, 84, 90, 108].map(
                                 (size) => (
                                     <Dropdown.Item 
                                         eventKey={size}
-                                        style={{width: "10px"}}
                                         className="w-50"
+                                        onClick={() => {changeFontSize(size)}}
                                     >
                                         {size}
                                     </Dropdown.Item>
@@ -121,6 +124,11 @@ function Toolbar({ setKey, setElements }) {
                 <span className="material-symbols-outlined divider">more_vert</span>
             </li>
             <li className="nav-item">
+                <OverlayTrigger overlay={<Tooltip>Double click to change Template Name</Tooltip>}>
+                    <h5 id="template-name" className="writable"></h5>
+                </OverlayTrigger>
+            </li>
+            <li className="nav-item">
                 <OverlayTrigger overlay={<Tooltip>New Template</Tooltip>}>
                     <button className="" onClick={() => {
                         if (window.confirm("Do you want to save the current template?")) {
@@ -154,6 +162,7 @@ function Toolbar({ setKey, setElements }) {
                             (temp) => (
                                 <Dropdown.Item 
                                     eventKey={load.id} 
+                                    className="load-dropdown"
                                     onClick={() => {
                                         if (window.confirm("Do you want to save any changes to the current template?")) {
                                             save(setKey, setElements);
