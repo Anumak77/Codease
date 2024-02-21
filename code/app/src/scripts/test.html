@@ -1,31 +1,3616 @@
+
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false},ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"8010de0d16",applicationID:"983950717"};;/*! For license information please see nr-loader-rum-1.252.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,DL:()=>w,OP:()=>S,lF:()=>T,Yu:()=>x,Dg:()=>m,CX:()=>c,GE:()=>_,sU:()=>R});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!A[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return A[e]}function _(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const x=(0,n.mF)().o;var E=r(385),D=r(6818);const k={buildEnv:D.Re,customTransaction:void 0,disabled:!1,distMethod:D.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(E._A?.performance?.timeOrigin||E._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof E._A.XMLHttpRequest?.prototype?.addEventListener,version:D.q4,denyList:void 0},j={};function S(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!j[e])throw new Error("Runtime for ".concat(e," was never set"));return j[e]}function R(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");j[e]=(0,i.D)(t,k);const r=(0,n.ek)(e);r&&(r.runtime=j[e])}function T(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.252.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>n,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{L:()=>d,R:()=>c});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,r)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(u(e),!e||!s[e].get(t)||r)return c(t);s[e].get(t).staged=!0;const a=[...s[e]];function c(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}a.every((e=>{let[t,r]=e;return r.staged}))&&(a.sort(((e,t)=>e[1].priority-t[1].priority)),a.forEach((t=>{let[r]=t;s[e].delete(r),c(r)})))}function l(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},f=!1;try{f=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=p(n),c=v(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var f=b()[s[e]];f&&f.push([g,e,r,a]);return a},get:m,listeners:v,context:p,buffer:function(e,t){const r=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:r,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return g;function p(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function h(e,t){n[e]=v(e).concat(t)}function v(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(g,t)}function b(){return g.backlog}}(void 0,"globalEE"),d=(0,n.fP)();function l(){u.aborted=!0,Object.keys(u.backlog).forEach((e=>{delete u.backlog[e]}))}d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>o,IK:()=>c,oD:()=>i,uT:()=>s,wO:()=>a});const n="NRBA",i=144e5,o=18e5,a={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},s={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},c={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.round(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>d,T:()=>l});var n=r(8325),i=r(5546),o=r(3325),a=r(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa],sr:[o.D.sessionReplay,o.D.sessionTrace]},u=new Set;function d(e,t){const r=n.ee.get(t);e&&"object"==typeof e&&(u.has(t)||(Object.entries(e).forEach((e=>{let[t,n]=e;c[t]?c[t].forEach((e=>{n?(0,i.p)("feat-"+t,[],void 0,e,r):(0,i.p)("block-"+t,[],void 0,e,r),(0,i.p)("rumresp-"+t,[Boolean(n)],void 0,e,r)})):n&&(0,i.p)("feat-"+t,[],void 0,void 0,r),l[t]=Boolean(n)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,r))),l[e]=!1)})),u.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(7894),i=r(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,n.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7530:(e,t,r)=>{"use strict";r.d(t,{j:()=>b});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(7894),c=r(8e3),u=r(3960),d=r(385),l=r(50),f=r(3081),g=r(8632);function p(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}var h=r(2825);const v=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let m=!1;function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,y=arguments.length>3?arguments[3]:void 0,{init:A,info:w,loader_config:_,runtime:x={loaderType:b},exposed:E=!0}=t;const D=(0,g.gG)();w||(A=D.init,w=D.info,_=D.loader_config),(0,i.Dg)(e.agentIdentifier,A||{}),(0,i.GE)(e.agentIdentifier,_||{}),w.jsAttributes??={},d.v6&&(w.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,w);const k=(0,i.P_)(e.agentIdentifier),j=[w.beacon,w.errorBeacon];m||(k.proxy.assets&&(v(k.proxy.assets),j.push(k.proxy.assets)),k.proxy.beacon&&j.push(k.proxy.beacon),p(),(0,g.EZ)("activatedFeatures",h.T)),x.denyList=[...k.ajax.deny_list||[],...k.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,x),void 0===e.api&&(e.api=function(e,t){t||(0,c.R)(e,"api");const g={};var p=a.ee.get(e),h=p.get("tracer"),v="api-",m=v+"ixn-";function b(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),w(v,n,!0,o||null===r?"session":void 0)(t,r)}function y(){}["setErrorHandler","finished","addToTrace","addRelease"].forEach((e=>{g[e]=w(v,e,!0,"api")})),g.addPageAction=w(v,"addPageAction",!0,n.D.pageAction),g.setCurrentRouteName=w(v,"routeName",!0,n.D.spa),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,w(v,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",r);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},g.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,p);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{p.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},g.recordReplay=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,n.D.metrics,p),(0,o.p)("recordReplay",[],void 0,n.D.sessionReplay,p)},g.pauseReplay=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,n.D.metrics,p),(0,o.p)("pauseReplay",[],void 0,n.D.sessionReplay,p)},g.interaction=function(){return(new y).get()};var A=y.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,n.D.metrics,p),(0,o.p)(m+"tracer",[(0,s.z)(),e,r],i,n.D.spa,p),function(){if(h.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw h.emit("fn-err",[arguments,this,e],r),e}finally{h.emit("fn-end",[(0,s.z)()],r)}}}};function w(e,t,r,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,n.D.metrics,p),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],r?null:this,i,p),r?void 0:this}}function _(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,c.L)(e,"api")})).catch((()=>{(0,l.Z)("Downloading runtime APIs failed..."),(0,c.L)(e,"api",!0)}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{A[e]=w(m,e,void 0,n.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,n.D.metrics,p),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,n.D.jserrors,p)},d.il?(0,u.b2)((()=>_()),!0):_(),g}(e.agentIdentifier,y)),void 0===e.exposed&&(e.exposed=E),m=!0}},1926:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.sessionReplay]:9}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.252.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.252.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-85KXSsv643MTRPulZfmcwj8IKIbJeT9JfNpsSBckCZNUr+o/ILbmpOISx04Ol69WzHRZplUy/y2FaJ3KUChaTw=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.252.0.PROD"]=self["webpackChunk:NRBA-1.252.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(1926);var e=i(50);class t{#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e("recordReplay")}pauseReplay(){return this.#e("pauseReplay")}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var r=i(3325),n=i(234);const o=Object.values(r.D);function a(e){const t={};return o.forEach((r=>{t[r]=function(e,t){return!1!==(0,n.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var s=i(7530);var c=i(8e3),u=i(5938),d=i(3960),l=i(385);class f extends u.W{constructor(e,t,r){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,n.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,c.R)(e,r)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,c.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const r=l.il&&!0===(0,n.Mt)(this.agentIdentifier,"privacy.cookies_enabled");let o;this.onAggregateImported=new Promise((e=>{o=e}));const a=async()=>{let n;try{if(r){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,957));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t)}try{if(!this.shouldImportAgg(this.featureName,n))return(0,c.L)(this.agentIdentifier,this.featureName),void o(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:r}=await e(this.featureName,"aggregate");this.featAggregate=new r(this.agentIdentifier,this.aggregator,t),o(!0)}catch(t){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),t),this.abortHandler?.(),(0,c.L)(this.agentIdentifier,this.featureName,!0),o(!1)}};l.il?(0,d.b2)((()=>a()),!0):a()}shouldImportAgg(e,t){return e!==r.D.sessionReplay||!!n.Yu.MO&&(!1!==(0,n.Mt)(this.agentIdentifier,"session_trace.enabled")&&(!!t?.isNew||!!t?.state.sessionReplayMode))}}var g=i(7633);class p extends f{static featureName=g.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,g.t,r),this.importAggregator()}}var h=i(1117),v=i(1284);class m extends h.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,v.D)(e,(function(e,r){t[e]=b(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,v.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=b(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=y(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=b(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=A(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function b(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=y(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function y(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function A(e){return"object"!=typeof e?[]:(0,v.D)(e,w)}function w(e,t){return t}var _=i(8632),x=i(4402),E=i(4351);var D=i(5546),k=i(7956),j=i(3239),S=i(7894),R=i(9251);class T extends f{static featureName=R.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,R.t,r),l.il&&((0,k.N)((()=>(0,D.p)("docHidden",[(0,S.z)()],void 0,R.t,this.ee)),!0),(0,j.bP)("pagehide",(()=>(0,D.p)("winPagehide",[(0,S.z)()],void 0,R.t,this.ee))),this.importAggregator())}}var I=i(3081);class P extends f{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends t{constructor(t){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,x.ky)(16);super(),l._A?(this.agentIdentifier=r,this.sharedAggregator=new m({agentIdentifier:this.agentIdentifier}),this.features={},(0,_.h5)(r,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(p),(0,s.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:(0,n.C5)(this.agentIdentifier),init:(0,n.P_)(this.agentIdentifier),loader_config:(0,n.DL)(this.agentIdentifier),runtime:(0,n.OP)(this.agentIdentifier)}}run(){try{const t=a(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>r.p[e.featureName]-r.p[t.featureName])),n.forEach((n=>{if(t[n.featureName]||n.featureName===r.D.pageViewEvent){const i=function(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.sessionReplay:return[r.D.sessionTrace];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}(n.featureName);i.every((e=>t[e]))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has been disabled (").concat((0,E.P)(i),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,_.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}}({features:[p,T,P],loaderType:"lite"})})()})();</script>
+<script type="text/javascript" id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0288c3e7-1050-491d-a0cc-a253e9161ebe" async="async"></script>
+<meta name="description" content="Study at Dublin City University - DCU, based on the Northside of Dublin, Ireland is where undergraduate education, masters and PhD training, research, innovation and community engagement transform lives and societies." />
+<link rel="shortlink" href="https://www.dcu.ie/" />
+<link rel="canonical" href="https://www.dcu.ie/" />
+<meta property="og:site_name" content="Dublin City University" />
+<meta property="og:url" content="https://www.dcu.ie/" />
+<meta property="og:title" content="Dublin City University | DCU" />
+<meta property="og:description" content="Study at Dublin City University - DCU, based on the Northside of Dublin, Ireland is where undergraduate education, masters and PhD training, research, innovation and community engagement transform lives and societies." />
+<meta property="og:updated_time" content="Mon, 12/02/2024 - 12:11" />
+<meta property="article:author" content="https://www.facebook.com/DCU/" />
+<meta property="article:publisher" content="https://www.facebook.com/DCU/" />
+<meta property="article:published_time" content="Thu, 01/09/2022 - 20:20" />
+<meta property="article:modified_time" content="Mon, 12/02/2024 - 12:11" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Dublin City University | DCU" />
+<meta name="twitter:site" content="@DCU" />
+<meta name="twitter:description" content="Study at Dublin City University - DCU, based on the Northside of Dublin, Ireland is where undergraduate education, masters and PhD training, research, innovation and community engagement transform lives and societies." />
+<meta name="twitter:site:id" content="70713759" />
+<meta name="twitter:creator" content="@DCU" />
+<meta name="twitter:creator:id" content="70713759" />
+<meta name="twitter:url" content="https://www.dcu.ie/" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/sites/default/files/favicon_3.ico" type="image/vnd.microsoft.icon" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <title>Dublin City University | DCU</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_WqzrGs6kmeD8ZrHc9Zi3ZtNu96iKvp_OBcHK5_mT0t0.css?delta=0&amp;language=en&amp;theme=dcuorange&amp;include=eJylUkFywyAM_BAxT_IIIyc0gDSSSJu-vsR1nGTinnoRq90VSADEaAT16mEFwyxUzelVDYsPoOg-McwkZQxEpibA_o1xE9E5YSDzG3IPPxPTBeWJMaJsiR2DwLETJ_VRGkMeHszQKreQk54wukvCT_VLHArFlrFTEawVv64uZPi--iWuOBPEFTLl65xyXtMpg2rf2u6yUEl91t9MYF5Rn5RdN05nv8RhUn3J7YQFX5gCqQ5HSbeeI9KIJWAc54Q5ekFlqpoueFjE90LlnO5NhUQDfMDXy_APYoRmNFHhjIb9gGwo2zUujsOz47A6_lV8iMhYI_YvMpHgveDZ6rQxytyfzW9oPN3eP1W7Fe7pWiBnnQSx7uuNmTRZoj_13l0Luqc6qGLjMbL4De1x4_Z3fwCRjzkx" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/7.x-3.x/drupal-bootstrap.min.css" integrity="sha512-nrwoY8z0/iCnnY9J1g189dfuRMCdI5JBwgvzKvwXC4dZ+145UNBUs+VdeG/TUuYRqlQbMlL4l8U3yT7pVss9Rg==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-jM5OBHt8tKkl65deNLp2dhFMAwoqHBIbzSW0WiRRwJfHzGoxAFuCowGd9hYi1vU8ce5xpa5IGmZBJujm/7rVtw==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.2.0/7.x-3.x/drupal-bootstrap.min.css" integrity="sha512-U2uRfTiJxR2skZ8hIFUv5y6dOBd9s8xW+YtYScDkVzHEen0kU0G9mH8F2W27r6kWdHc0EKYGY3JTT3C4pEN+/g==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.2.0/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-JXQ3Lp7Oc2/VyHbK4DKvRSwk2MVBTb6tV5Zv/3d7UIJKlNEGT1yws9vwOVUkpsTY0o8zcbCLPpCBG2NrZMBJyQ==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.min.css" integrity="sha512-ZbcpXUXjMO/AFuX8V7yWatyCWP4A4HMfXirwInFWwcxibyAu7jHhwgEA1jO4Xt/UACKU29cG5MxhF/i8SpfiWA==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-kTMXGtKrWAdF2+qSCfCTa16wLEVDAAopNlklx4qPXPMamBQOFGHXz0HDwz1bGhstsi17f2SYVNaYVRHWYeg3RQ==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-tGFFYdzcicBwsd5EPO92iUIytu9UkQR3tLMbORL9sfi/WswiHkA1O3ri9yHW+5dXk18Rd+pluMeDBrPKSwNCvw==" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_K8yZeNQ_iDbpsrzscVQvGVZ0gtiQvSH-K81u0nHxEQI.css?delta=9&amp;language=en&amp;theme=dcuorange&amp;include=eJylUkFywyAM_BAxT_IIIyc0gDSSSJu-vsR1nGTinnoRq90VSADEaAT16mEFwyxUzelVDYsPoOg-McwkZQxEpibA_o1xE9E5YSDzG3IPPxPTBeWJMaJsiR2DwLETJ_VRGkMeHszQKreQk54wukvCT_VLHArFlrFTEawVv64uZPi--iWuOBPEFTLl65xyXtMpg2rf2u6yUEl91t9MYF5Rn5RdN05nv8RhUn3J7YQFX5gCqQ5HSbeeI9KIJWAc54Q5ekFlqpoueFjE90LlnO5NhUQDfMDXy_APYoRmNFHhjIb9gGwo2zUujsOz47A6_lV8iMhYI_YvMpHgveDZ6rQxytyfzW9oPN3eP1W7Fe7pWiBnnQSx7uuNmTRZoj_13l0Luqc6qGLjMbL4De1x4_Z3fwCRjzkx" />
+
+    
+
+     
+  <!-- Main DCU Analytics Code 29/06/2023 -->
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6DDW1E8264"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6DDW1E8264');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PZQS4F5');</script>
+
+
+ <!-- Facebook Pixel code added at request of Deirdre Wynter maketing cleared by Noel Prior DPO -->
+<meta name="facebook-domain-verification" content="w0wj39e5q0ulx5w3mh8oj729qrisub" />
+<!-- Facebook Pixel Code -->
+<script>
+
+!function(f,b,e,v,n,t,s)
+
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+
+n.queue=[];t=b.createElement(e);t.async=!0;
+
+t.src=v;s=b.getElementsByTagName(e)[0];
+
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '262293472041067');
+
+fbq('track', 'PageView');
+
+</script>
+
+<!-- Start 2 Facebook Pixel Code -->
+<meta name="facebook-domain-verification"
+  content="4s9lnssi8brojsfsxubq5gpxeryank" />
+
+<noscript><img height="1" width="1" style="display:none"
+
+src=https://www.facebook.com/tr?id=262293472041067&ev=PageView&noscript=1
+
+/></noscript>
+
+<!-- End Facebook Pixel Code -->
+
+  </head>
+  <body class="node-171851 path-frontpage page-node-type-landing-page has-glyphicons">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZQS4F5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+          <div class="region region-navigation">
+    <section id="block-utilitybar" class="utilitybar block block-block-content block-block-content27f5e1b6-6321-410f-9cf7-dce46fef2b57 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="utility main-utility navbar-static-top" id="background">
+<div class="utilityLeft utilitySection">
+
+
+<form class="mainSearch utilityform" action="/search-results" accept-charset="UTF-8">
+<fieldset>
+         <input value="017566043542663844620:g9uk5n1hgmy" name="cx" type="hidden">
+         <input value="FORID:11" name="cof" type="hidden">
+      <span id="searchbar"><input type="text" aria-label="Site Search" class="input-text1" size="20" maxlength="255"  name="keywords" value="Search..." onfocus="if(this.value=='Search...')this.value='';" onblur="if(this.value=='')this.value='Search...';"></span>
+      <span>
+<input type="image" src="/themes/custom/dcuorange/images/search-icon-white.png" height="21" width="21" alt="Search Now" id="searchicon">
+</span>   
+</fieldset>
+</form>
+
+<nav role="navigation" class="utilitynav utilityform"><span class="utility inner1 accessibility">&nbsp;&nbsp;&nbsp; <a class="reciteme" id="recitemeText" href="#reciteme-launch">Accessibility &amp; Language </a> <span class="strut">| </span> <span id="menu2"><a href="https://loop.dcu.ie/" target="_blank" link="" mydcu="" >Loop </a></span> <span class="strut">| </span> <span id="menu5"><a href="/iss/staff-my-page" link="" mydcu="" >Staff </a></span><span class="strut">| </span> <span id="menu3"><a href="/library" library="" link="" utility="">Library</a> </span> <span class="strut">| </span> <span id="menu4"><a href="/hr/vacancies-employment-opportunities-human-resources"  >Vacancies</a></span> <span class="strut"> </span> <span id="menu1"> </span> </span>
+</nav>
+
+
+<!--</div>
+
+<div class="utilityCentre utilitySection">-->
+
+<span class="utilityPhone">
+  <form class="phoneSearchform utilityform" action="/phonebook" accept-charset="UTF-8" method="GET">
+<input type="search" aria-label="Search Phonebook" class="input-text2"  maxlength="255"  name="keywords" value="People..." onfocus="if(this.value=='People...')this.value='';" onblur="if(this.value=='')this.value='People...';">
+
+                   
+<!--<input type="image" src="https://www.dcu.ie/sites/default/files/iss/images/PhoneNavy.png" height="21" width="21" alt="Search Phonebook now" id="searchicon" style="padding-right:3px;">-->
+<input type="submit" value="&#9742;" aria-label="Search Phonebook" class="phoneSubmit">
+                                        </form>
+</span>
+
+<!--</div>-->
+
+
+</div>
+</div>
+<script>
+    addStrategyClass();
+    addLLSClass();
+    addCACClass();
+    addICElass();
+
+window.addEventListener("load", function(event) {
+    updatePublicationBranding();
+    fixSocialImages();
+    addAriaAttributes();
+    hideEmptyDCUCommunity();
+    openChatWithStudents();
+    setupStickyMenus();
+    overrideUnibuddyStyles();
+    openProspectusFirstItems();
+    setupModal();
+    moveBlogIcon();
+
+    setTimeout(function() { 
+        resetChatWithStudents(); 
+    }, 6000);
+    
+});
+
+
+
+function setupStickyMenus() {
+    var prospectus_menu = document.getElementById("prospectus-page-menu");
+    var prospectus_menu_sticky = null;
+    if(prospectus_menu != null) {
+        var prospectus_menu_sticky = prospectus_menu.offsetTop;
+    }
+
+    var menu = null;
+    var menu_sticky = null;
+
+    var menus = document.getElementsByClassName('strategy-sub-menu');
+    if(menus.length > 0) {
+        menu = menus[0];
+        var menu_container = document.getElementById("strategy-sub-menu-container"); 
+        if(menu_container != null) {
+            menu_container.append(menu);  
+        }
+        menu_sticky = menu.offsetTop;
+        
+    }
+
+
+     window.onscroll = function() {
+        //console.log("1");
+        stickyStrategyPillarMenu(menu, menu_sticky);
+        stickyProspectusMenu(prospectus_menu, prospectus_menu_sticky)
+
+    }
+}
+
+function stickyProspectusMenu(prospectus_menu, prospectus_menu_sticky) {
+    if(prospectus_menu != null && prospectus_menu_sticky != null) {
+        if(window.innerWidth > 767) {       
+          if (window.pageYOffset >= prospectus_menu_sticky) {
+            prospectus_menu.classList.add("prospectus-page-menu-sticky")
+          } else {
+            prospectus_menu.classList.remove("prospectus-page-menu-sticky");
+          }
+        } else {
+          if (window.pageYOffset >= prospectus_menu_sticky) {
+            prospectus_menu.classList.add("prospectus-page-menu-sticky-mobile")
+          } else {
+            prospectus_menu.classList.remove("prospectus-page-menu-sticky-mobile");
+          }            
+        }
+    }
+} 
+
+function stickyStrategyPillarMenu(menu, menu_sticky) {
+    if(menu != null && menu_sticky != null) {
+        if(window.innerWidth > 767) {       
+          if (window.pageYOffset >= menu_sticky) {
+            menu.classList.add("strategy-sub-menu-sticky")
+          } else {
+            menu.classList.remove("strategy-sub-menu-sticky");
+          }
+        } else {
+          // if (window.pageYOffset >= menu_sticky) {
+          //   menu.classList.add("strategy-sub-menu-sticky-mobile")
+          // } else {
+          //   menu.classList.remove("strategy-sub-menu-sticky-mobile");
+          // }            
+        }
+    }
+} 
+//(function() {
+    
+//})();
+
+function fixSocialImages() {
+    const collection = document.getElementsByClassName("social-icons-large");
+    for (let i = 0; i < collection.length; i++) {
+
+        var parent = collection[i].parentNode;
+        var counter = 0;
+        while( (!parent.classList.contains('building-block')) && counter<50)  {
+            parent = parent.parentNode;
+            counter++;
+        }
+        if(parent.classList.contains('building-block')) {
+            parent.previousElementSibling.classList.add('social-images');
+        }
+    }
+}
+function addAriaAttributes() {
+    
+    const collection = document.querySelectorAll(".field--name-field-background-iconography img");
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].setAttribute('aria-hidden', 'true');
+    }
+
+    const collection2 = document.querySelectorAll(".feature__iconography img");
+    for (let i = 0; i < collection2.length; i++) {
+        collection2[i].setAttribute('aria-hidden', 'true');
+    }
+
+    const collection3 = document.querySelectorAll(".slide__title");
+    for (let i = 0; i < collection3.length; i++) {
+        collection3[i].setAttribute('aria-label', collection3[i].innerText);
+    }
+
+    const collection4 = document.querySelectorAll(".video-embed-field-responsive-video iframe");
+    for (let i = 0; i < collection4.length; i++) {
+        collection4[i].setAttribute('aria-label', 'Embedded video');
+    }
+
+    const collection5 = document.querySelectorAll(".slideshow .slick__slide");
+    for (let i = 0; i < collection5.length; i++) {
+
+
+        var slide_title = collection5[i].querySelector(".slide__title");
+        var slide_title_text = "Slide link";
+        if(slide_title != null) {
+            if(slide_title.innerText != "") {
+                slide_title_text = slide_title.innerText;
+            }            
+        }
+
+        const collection6 = collection5[i].querySelectorAll("a");
+        for (let i = 0; i < collection6.length; i++) {
+            collection6[i].setAttribute('aria-label', slide_title_text);
+        }
+    }
+
+    const collection7 = document.querySelectorAll(".slideshow");
+    for (let i = 0; i < collection7.length; i++) {
+        var carousel_text = "Carousel "+(i+1);
+        collection7[i].setAttribute('aria-label', carousel_text);
+        collection7[i].setAttribute('role', 'marquee');
+    }
+
+    const collection8 = document.querySelectorAll(".slick__slider");
+    for (let i = 0; i < collection8.length; i++) {
+        var carousel_text = "Carousel Slider "+(i+1);
+        collection8[i].setAttribute('aria-label', carousel_text);
+        collection8[i].setAttribute('role', 'marquee');
+    }
+
+    const collection9 = document.querySelectorAll('[role="heading"]');
+    for (let i = 0; i < collection9.length; i++) {
+        var heading_text = "Heading Section "+(i+1);
+        collection9[i].setAttribute('aria-label', heading_text);
+    }    
+
+    const collection10 = document.querySelectorAll('.html5-video-player');
+    for (let i = 0; i < collection10.length; i++) {
+        collection10[i].setAttribute('role', 'widget');
+    }   
+
+    const collection11 = document.querySelectorAll('[aria-label="YouTube Video Player"]');
+    for (let i = 0; i < collection11.length; i++) {
+        collection11[i].setAttribute('role', 'widget');
+    }   
+
+    const collection12 = document.querySelectorAll('.social-images .tile a');
+    for (let i = 0; i < collection12.length; i++) {
+        var insta_text = "Instagram Image "+(i+1);
+        collection12[i].setAttribute('aria-label', insta_text);
+        collection12[i].setAttribute('role', 'link');
+
+    }  
+    const collection13 = document.querySelectorAll('.utilitynav');
+    for (let i = 0; i < collection13.length; i++) {
+        var heading_text = "Heading Nav "+(i+1);
+        collection13[i].setAttribute('aria-label', heading_text);
+
+    }  
+}
+
+function hideEmptyDCUCommunity() {
+    const collection14 = document.querySelectorAll('.page-node-type-prospectus .view-dcu-community-profiles');
+    for (let i = 0; i < collection14.length; i++) {
+        if(collection14[i].childNodes.length <= 1) {
+            var section = document.getElementsByClassName('dcu-community-full-section');
+            if(section.length > 0) {
+                section[0].style.display = "none";
+            }
+        }
+    }       
+}
+
+function openChatWithStudents() {
+    if(document.getElementById('unibuddy-buddyframe-0') != null) {
+        var offsetHeight = document.getElementById('unibuddy-buddyframe-0').offsetHeight;
+        jQuery('#collapse-prospectus-chat-1').height(offsetHeight);       
+    }
+
+    if(window.innerWidth > 580) {
+        var chat = document.getElementById('collapse-prospectus-chat-1');
+        if(chat != null) {
+            //chat.collapse('show');
+//chat.style.display = 'block';
+//chat.classList.add('in');
+        }
+        
+        // const collection15 = document.querySelectorAll('.page-node-type-prospectus #prospectus-accordion-unibuddy');
+        // for (let i = 0; i < collection15.length; i++) {
+        //     jQuery(collection15[i]).show();
+        // }
+    }
+}
+function resetChatWithStudents() {
+    if(document.getElementById('unibuddy-iframe-wrapper') != null) {
+        var offsetHeight = document.getElementById('unibuddy-iframe-wrapper').offsetHeight;
+        jQuery('#collapse-prospectus-chat-1').height(offsetHeight);       
+    }
+}
+
+function overrideUnibuddyStyles() {
+    let iframe = document.getElementById("unibuddy-buddyframe-0");
+    if(iframe != null) {
+        let doc = iframe.contentDocument;
+        if(doc != null) {
+            doc.body.innerHTML = doc.body.innerHTML + '<style>#mentors-container > div { width: 25%; margin: 0.5em; float: left;}</style>';
+        }
+    }
+}
+function openProspectusFirstItems() {
+
+    var req = document.getElementById('collapse-prospectus-req-1');
+    var overview = document.getElementById('collapse-prospectus-course-structure-overview');
+    var apply = document.getElementById('collapse-prospectus-apply-1');
+    var life_on_campus = document.getElementsByClassName('life-on-campus-accordion-container');
+
+    if(req != null) {
+       // req.collapse('show');
+req.classList.add('in');
+    }
+    if(overview != null) {
+        //overview.collapse('show');
+overview.classList.add('in');
+    }
+    if(apply != null) {
+        //apply.collapse('show');
+apply.classList.add('in');
+    }
+    for (let i = 0; i < life_on_campus.length; i++) {
+        if(life_on_campus[i] != null) {
+           // life_on_campus[i].find('.card-block').first().collapse('show');
+//life_on_campus[i].find('.card-block').first().classList.add('in');
+        }
+    }
+
+}
+
+function addStrategyClass() {
+    var url = window.location.href;
+    if(url.includes("/strategy")) {
+        document.body.classList.add("strategy-site");
+    }
+}
+
+function addLLSClass() {
+    var url = window.location.href;
+    if(url.includes("/leadership-lifeskills") || url.includes("/skills-development-centre")) {
+        document.body.classList.add("leadership-lifeskills");
+    }
+}
+function addCACClass() {
+    var url = window.location.href;
+     if(url.includes("/care&connect") || url.includes("/care%26connect")) {
+        document.body.classList.add("care-and-connect");
+    }
+}
+function addICElass() {
+    var url = window.location.href;
+     if(url.includes("/ice") || url.includes("/ice")) {
+        document.body.classList.add("ice");
+    }
+}
+
+ function setupModal() {
+
+    const modals = document.querySelectorAll('.modal');
+    for (let i = 0; i < modals.length; i++) {
+
+        var modal = modals[i];
+        var closeButton = modal.querySelector(".close-button");
+
+        closeButton.addEventListener("click", function() {
+            modal.classList.toggle("show");
+        });
+
+         window.addEventListener("click", function(event) {
+           if (event.target == modal) {
+             modal.classList.toggle("show");
+           }
+         });
+    }
+}
+
+function openModal(id) {
+    var modal = document.getElementById(id);
+    if(modal != null) {
+        modal.classList.toggle("show");
+    }
+}
+
+function moveBlogIcon() {
+    const blogs = document.getElementsByClassName("page-node-type-blog-post");
+    if(blogs.length > 0) {
+        const icon = document.querySelectorAll('.field--name-field-branding-icon');
+        if(icon.length > 0) {
+            const img = document.querySelectorAll('.hero-image .field--name-field-m-image-image');
+            if(icon.length > 0) {
+                for (let i = 0; i < icon.length; i++) {
+                    img[0].after(icon[i]);
+                }
+            }
+        }
+    }
+
+}
+
+
+function updatePublicationBranding() {
+    const schools = document.querySelectorAll('.page-node-type-research-publication .field--name-field-school .field--item');
+    var fac = "";
+    var fac_class = "";
+    if(schools.length > 0) {
+        var school = schools[0].innerText.toLowerCase();
+        if(school.indexOf('business') != -1) {
+            fac = "dcubs";
+            fac_class = "fac_dcubs";
+        } else if(school.indexOf('education studies') != -1) {
+            fac = "ioe";
+            fac_class = "fac_ioe";
+        }  else if(school.indexOf('fiontar') != -1) {
+            fac = "hss";
+            fac_class = "fac_hss";
+        }  else if(school.indexOf('institute of education') != -1) {
+            fac = "ioe";
+            fac_class = "fac_ioe";
+        }  else if(school.indexOf('law') != -1) {
+            fac = "hss";
+            fac_class = "fac_hss";
+        }  else if(school.indexOf('open education') != -1) {
+            fac = "ioe";
+            fac_class = "fac_ioe";
+        }  else if(school.indexOf('salis') != -1) {
+            fac = "hss";
+            fac_class = "fac_hss";
+        }  else if(school.indexOf('biotechnology') != -1) {
+            fac = "sh";
+            fac_class = "fac_fsh";
+        }  else if(school.indexOf('chemical') != -1) {
+            fac = "sh";
+            fac_class = "fac_fsh";
+        }  else if(school.indexOf('communications') != -1) {
+            fac = "hss";
+            fac_class = "fac_hss";
+        }  else if(school.indexOf('computing') != -1) {
+            fac = "ec";
+            fac_class = "fac_eng";
+        }  else if(school.indexOf('of electronic') != -1) {
+            fac = "ec";
+            fac_class = "fac_eng";
+        }  else if(school.indexOf('english') != -1) {
+            fac = "hss";
+            fac_class = "fac_hss";
+        }  else if(school.indexOf('health') != -1) {
+            fac = "sh";
+            fac_class = "fac_fsh";
+        }  else if(school.indexOf('history') != -1) {
+            fac = "hss";
+            fac_class = "fac_hss";
+        }  else if(school.indexOf('human') != -1) {
+            fac = "ioe";
+            fac_class = "fac_ioe";
+        }  else if(school.indexOf('language') != -1) {
+            fac = "ioe";
+            fac_class = "fac_ioe";
+        }  else if(school.indexOf('mathematical') != -1) {
+            fac = "sh";
+            fac_class = "fac_fsh";
+        }  else if(school.indexOf('mechanical') != -1) {
+            fac = "ec";
+            fac_class = "fac_eng";
+        }  else if(school.indexOf('nursing') != -1) {
+            fac = "sh";
+            fac_class = "fac_fsh";
+        }  else if(school.indexOf('physical') != -1) {
+            fac = "sh";
+            fac_class = "fac_fsh";
+        }  else if(school.indexOf('psychology') != -1) {
+            fac = "sh";
+            fac_class = "fac_fsh";
+        }  else if(school.indexOf('theology') != -1) {
+            fac = "hss";
+            fac_class = "fac_hss";
+        } 
+
+        schools[0].parentNode.parentNode.classList.add(fac);
+        if(fac_class != "") {
+            schools[0].parentNode.classList.add(fac_class);
+        }  
+    }
+
+}
+</script>
 <style>
-    .Nav2 {
-      width: 100%;
-      height: 100%;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      align-content: center;
-      font-family: arial;
+
+.strategy-site,
+.strategy-site .navbar,
+.strategy-site .main-container,
+.strategy-site .footer {
+  max-width: 1920px;
+  width: 100%;
+  margin: auto;
+}
+
+.strategy-site.page-node-type-landing-page .custom-container {
+  max-width: 1920px !important;
+  width: 100% !important;
+  margin: auto !important;
+}
+
+
+.feature-two-image-no-icon {
+    background: #ffc900;
+    min-height: 600px;
+}
+.feature-two-image-no-icon .feature__photo {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.feature-two-image-no-icon .feature__photo .contextual-region,
+.feature-two-image-no-icon .feature__photo .contextual-region .field--name-field-m-image-image {
+    height: 100%;
+}
+.feature-two-image-no-icon .feature__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.feature-two-image-no-icon .feature-text-area {
+    width: 30%;
+    padding: 2em 2em 1em 2em;
+    max-width: 100%;
+    bottom: 0;
+    background: #ffc900;
+}
+.feature-two-image-no-icon .feature--left,
+.feature-two-image-no-icon .feature--right {
+    width: 70%;
+    position: relative;
+}
+.feature-two-image-no-icon .feature__text p {
+    color: #00334f;
+    margin: 2em 0;
+}
+
+.feature-two-image-no-icon .feature-header.h2 p {
+    color: #00334f;  
+    font-size: 1.2em;
+}
+
+.feature-two-image-no-icon .feature__text {
+    padding-left: 2px;
+}
+
+@media (max-width: 1445px) {
+    .feature-two-image-no-icon {
+        max-height: 500px;
+        min-height: 400px;
     }
+    .feature-two-image-no-icon .feature-header.h2 p {
+        font-size: 0.8em;
+    }
+    .feature-two-image-no-icon .feature__text p {
+        font-size: 1em;
+    }
+}
+@media (max-width: 900px) {
+    .feature-two-image-no-icon {
+        max-height: 400px;
+        min-height: 300px;
+    }
+    .feature-two-image-no-icon .feature-header.h2 p {
+        font-size: 0.8em;
+    }
+    .feature-two-image-no-icon .feature-text-area {
+        width: 40%;
+    }
+    .feature-two-image-no-icon .feature--left,
+    .feature-two-image-no-icon .feature--right {
+        width: 60%;
+    }
+    .feature-two-image-no-icon .feature__text p {
+        color: #00334f;
+        margin: 1em 0;
+        font-size: 0.9em;
+    }
+
+}
+@media (max-width: 700px) {
+
+    .feature-two-image-no-icon {
+        max-height: unset;
+        min-height: unset;
+        flex-direction: column;
+    }
+
+    .feature-two-image-no-icon .feature-text-area {
+        width: 100%;
+    }
+    .feature-two-image-no-icon .feature--left,
+    .feature-two-image-no-icon .feature--right {
+        width: 100%;
+    }
+    .feature-two-image-no-icon .feature__photo {
+       position: relative;
+    }
+}
+@media (max-width: 600px) {
+    .feature-two-image-no-icon {
+        max-height: 600px;
+    }
+}
+.strategy-site li.sf-clone-parent {
+    display: none;
+}
+@media only screen and (max-width: 991px) and (min-width: 768px)  {
+.profiles-container .email p {
+   max-width:156px!important;
+}
+}
+</style>
+</div>
+      
+  </section>
+
+      <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+      <img src="/sites/default/files/dcu_logo_web_0.png" alt="Home" />
+    </a>
+        <a class="name navbar-brand" href="/" title="Home" rel="home">Dublin City University</a>
+    <section id="block-mainmenu21" class="sf-main-menu-21 block block-superfish block-superfishmain-menu-21 clearfix">
+  
     
-    .Nav2 li {
-      float: left;
-    }
+
+      
+<ul id="superfish-main-menu-21" class="menu sf-menu sf-main-menu-21 sf-horizontal sf-style-none">
+  
+<li id="main-menu-21-menu-link-contentbf2ef455-bbe1-4cff-88f8-1926b541b81e" class="sf-depth-1 menuparent"><span class="sf-depth-1 menuparent nolink">Courses</span><ul><li id="main-menu-21-menu-link-content79117dbc-ff66-422b-842b-fb68936039be" class="sf-depth-2 sf-no-children"><a href="/courses#tab-99371-1" class="sf-depth-2">Undergraduate</a></li><li id="main-menu-21-menu-link-content5e6f911a-9a95-4192-932b-23d0ff45e3d0" class="sf-depth-2 sf-no-children"><a href="/cao" class="sf-depth-2">CAO Hub</a></li><li id="main-menu-21-menu-link-content350aeca8-6d62-4e76-8f5f-f15aacf90006" class="sf-depth-2 sf-no-children"><a href="/postgraduate" class="sf-depth-2">Postgraduate Hub</a></li><li id="main-menu-21-menu-link-content3e1f9953-d02b-4e60-9314-0f095063929f" class="sf-depth-2 sf-no-children"><a href="/micro-credentials" class="sf-depth-2">DCU Micro-Credentials</a></li><li id="main-menu-21-menu-link-content3d9e2928-5ecb-49a9-b419-75eee47a3236" class="sf-depth-2 sf-no-children"><a href="/connected" class="sf-depth-2">DCU Connected</a></li><li id="main-menu-21-menu-link-contente5ab75d8-b170-43fd-b18d-e6e78ea9fa67" class="sf-depth-2 sf-no-children"><a href="/scholarships" class="sf-depth-2">Scholarships</a></li><li id="main-menu-21-menu-link-content5c8e98a7-dcb9-44a0-975d-363030f320ab" class="sf-depth-2 sf-no-children"><a href="https://www.dcu.ie/registry/registry-admissions" class="sf-depth-2 sf-external">Admissions Information</a></li><li id="main-menu-21-menu-link-content23d881d9-3744-4a8d-952b-1c2c66982371" class="sf-depth-2 sf-no-children"><a href="https://www.dcuaccommodation.ie" class="sf-depth-2 sf-external">Accommodation</a></li><li id="main-menu-21-menu-link-content62c5c584-32dc-48a8-9d96-12110424a57b" class="sf-depth-2 sf-no-children"><a href="https://www.dcu.ie/graduatestudies" class="sf-depth-2 sf-external">Graduate Studies Office</a></li><li id="main-menu-21-menu-link-content56ac1457-74bd-41c5-8821-0e15cdfff368" class="sf-depth-2 sf-no-children"><a href="/studentrecruitment" class="sf-depth-2">Student Recruitment</a></li></ul></li><li id="main-menu-21-menu-link-content1e0270fa-313d-4070-857f-e5353bda5610" class="sf-depth-1 menuparent"><span class="sf-depth-1 menuparent nolink">Research</span><ul><li id="main-menu-21-menu-link-contentf84232c6-5cba-4d35-b075-fdfabe2d2fcd" class="sf-depth-2 sf-no-children"><a href="/research" class="sf-depth-2">Research at DCU</a></li><li id="main-menu-21-menu-link-content35a8aee3-003a-49cb-beb3-4e150f09baa8" class="sf-depth-2 sf-no-children"><a href="/research-impact" class="sf-depth-2">Research Impact</a></li><li id="main-menu-21-menu-link-contentf2e21fa5-fb25-4b13-9d88-ed80f7d1a106" class="sf-depth-2 sf-no-children"><a href="/dcu-covid-19-research" class="sf-depth-2">DCU COVID 19 Research &amp; Innovation Hub</a></li><li id="main-menu-21-menu-link-contentd25d8fe0-0de5-4a12-b713-99595051b7d5" class="sf-depth-2 sf-no-children"><a href="https://www.dcu.ie/graduatestudies" class="sf-depth-2 sf-external">Graduate Studies Office</a></li><li id="main-menu-21-menu-link-content7afe68bc-27d1-4c37-b6a4-d2560c463650" class="sf-depth-2 sf-no-children"><a href="https://www.dcualpha.ie" class="sf-depth-2 sf-external">DCU Alpha</a></li><li id="main-menu-21-menu-link-content2a7e35ec-efa8-4092-aeca-1290eca38cdf" class="sf-depth-2 sf-no-children"><a href="/dcu-invent-technology-transfer" class="sf-depth-2">DCU Invent - Technology Transfer</a></li></ul></li><li id="main-menu-21-menu-link-contentacbc0efe-54a8-4624-93ef-c7f9689f5e89" class="sf-depth-1 sf-no-children"><a href="/global" class="sf-depth-1">DCU Global</a></li><li id="main-menu-21-menu-link-content5f1e62cd-94a3-4ab1-9b95-a0ee71e990ca" class="sf-depth-1 menuparent"><span class="sf-depth-1 menuparent nolink">Engagement</span><ul><li id="main-menu-21-menu-link-contenta289d991-2b6d-4ebb-bbfb-69fae9a76e75" class="sf-depth-2 sf-no-children"><a href="https://www.dcu.ie/intra" class="sf-depth-2 sf-external">INTRA Internships</a></li><li id="main-menu-21-menu-link-content6ee017a9-7de0-405f-9ada-1081e66274f8" class="sf-depth-2 sf-no-children"><a href="/intra/courses-intra" class="sf-depth-2">Courses with INTRA</a></li><li id="main-menu-21-menu-link-content9f191482-db51-409c-95a7-ad311701aac0" class="sf-depth-2 sf-no-children"><a href="/engage-with-dcu" class="sf-depth-2">Engage with DCU</a></li><li id="main-menu-21-menu-link-content0f29eb37-3f76-48c4-86b0-a91e560569ef" class="sf-depth-2 menuparent"><span class="sf-depth-2 menuparent nolink">Engagement</span><ul><li id="main-menu-21-menu-link-content010c9724-a95d-4962-bf41-20b118f969c2" class="sf-depth-3 sf-no-children"><a href="/directorofengagement" class="sf-depth-3">Office of the Executive Director of Engagement</a></li><li id="main-menu-21-menu-link-content9eca31c8-b6bd-4904-8ece-8a5e5ea842bc" class="sf-depth-3 sf-no-children"><a href="/alumni" class="sf-depth-3">DCU Alumni</a></li><li id="main-menu-21-menu-link-content36eda5e8-77f6-4120-98b2-8250ba457627" class="sf-depth-3 sf-no-children"><a href="/dcuartsandculture" class="sf-depth-3">Arts and Culture</a></li><li id="main-menu-21-menu-link-content9af06d23-ff1b-473c-8883-9b76cfd342af" class="sf-depth-3 sf-no-children"><a href="/directorofengagement/dcu-engagement-governance" class="sf-depth-3">Engagement Governance</a></li><li id="main-menu-21-menu-link-content3f79a92f-f946-45cb-9562-85d3a3193a47" class="sf-depth-3 sf-no-children"><a href="/agefriendly" class="sf-depth-3">Age Friendly University</a></li></ul></li><li id="main-menu-21-menu-link-content38241c39-98b0-46bc-8f59-0989f7ee44e0" class="sf-depth-2 sf-no-children"><a href="https://www.dcu.ie/placement" class="sf-depth-2 sf-external">DCU Placement</a></li><li id="main-menu-21-menu-link-content235249ab-e340-4cd8-88ee-57e90b7a8ffa" class="sf-depth-2 sf-no-children"><a href="https://dcuedtrust.ie/" class="sf-depth-2 sf-external">DCU Educational Trust</a></li><li id="main-menu-21-menu-link-content1236723c-b2f2-4493-9f05-bfb9b4f1310f" class="sf-depth-2 sf-no-children"><a href="/dcu-international-academy" class="sf-depth-2">DCU International Academy</a></li><li id="main-menu-21-menu-link-content32d892da-c557-4332-8d9d-558e0ac8084c" class="sf-depth-2 sf-no-children"><a href="/ctyi" class="sf-depth-2">Centre for Talented Youth, Ireland</a></li><li id="main-menu-21-menu-link-content486f4ade-d53b-4ca1-badc-79a299ea3189" class="sf-depth-2 sf-no-children"><a href="/nidl" class="sf-depth-2">National Institute for Digital Learning</a></li><li id="main-menu-21-menu-link-content84a574ea-997c-40a9-b941-33a64aea00bb" class="sf-depth-2 sf-no-children"><a href="/campusstore" class="sf-depth-2">DCU Campus Store</a></li><li id="main-menu-21-menu-link-content863e30a1-7462-4e99-bd67-ee18c9fe018c" class="sf-depth-2 sf-no-children"><a href="/dcusport" class="sf-depth-2">DCU Sport</a></li><li id="main-menu-21-menu-link-contentaea11573-4690-45bf-8136-221951d12abf" class="sf-depth-2 sf-no-children"><a href="https://thehelix.ie" class="sf-depth-2 sf-external">The Helix</a></li><li id="main-menu-21-menu-link-content92dd310b-01f2-4612-93b7-bc8f3631d9e4" class="sf-depth-2 sf-no-children"><a href="/dcu-changemaker-schools-network" class="sf-depth-2">Changemaker Schools Network</a></li></ul></li><li id="main-menu-21-menu-link-contentef1ec9a2-5fb0-45b9-9975-e6ae6a9394e4" class="sf-depth-1 menuparent"><span class="sf-depth-1 menuparent nolink">Support</span><ul><li id="main-menu-21-menu-link-contenta3c02a7d-c60b-4055-8575-0e824ee522d9" class="sf-depth-2 menuparent"><a href="/students" class="sf-depth-2 menuparent">Student Support &amp; Development</a><ul><li id="main-menu-21-menu-link-contentab707a41-e59f-49c2-8ce9-338899158a16" class="sf-depth-3 sf-no-children"><a href="/counselling" class="sf-depth-3">Counselling &amp; Personal Development </a></li><li id="main-menu-21-menu-link-contentf9a6f4a7-5bc9-4f21-ad94-83a47867f738" class="sf-depth-3 sf-no-children"><a href="/health" class="sf-depth-3">Student Health Service</a></li><li id="main-menu-21-menu-link-content230cfef3-4b65-4b6a-917e-f89e7589a29d" class="sf-depth-3 sf-no-children"><a href="/student-policies" class="sf-depth-3">Student Policies</a></li><li id="main-menu-21-menu-link-content5e1216a7-4054-4b65-b0ec-79c0f3602456" class="sf-depth-3 sf-no-children"><a href="/students/student-financial-assistance-service" class="sf-depth-3">Financial Assistance Service </a></li><li id="main-menu-21-menu-link-content84fd7b46-7b2b-421b-be66-f45e2b191e5b" class="sf-depth-3 sf-no-children"><a href="/chaplaincy" class="sf-depth-3">Chaplaincy</a></li></ul></li><li id="main-menu-21-menu-link-content6dde5caf-1eea-4247-9e86-70f00aa7eff7" class="sf-depth-2 sf-no-children"><a href="/sal" class="sf-depth-2">Student Advice and Learning Skills Centre</a></li><li id="main-menu-21-menu-link-content2e27b218-91b3-4190-82da-29e93473d57c" class="sf-depth-2 sf-no-children"><a href="https://www.accessable.co.uk/organisations/dublin-city-university" class="sf-depth-2 sf-external">Accessible Campus</a></li><li id="main-menu-21-menu-link-content760e8a49-4250-4a9f-91db-057ec94fd7cc" class="sf-depth-2 sf-no-children"><a href="/registry" class="sf-depth-2">Registry</a></li><li id="main-menu-21-menu-link-content0a356d0a-a756-4715-b150-535d1af6b0f9" class="sf-depth-2 sf-no-children"><a href="/registry/registry-transcripts-results" class="sf-depth-2">Transcripts</a></li><li id="main-menu-21-menu-link-contentadfb9cfe-971b-4d5b-9f80-4bfa6038ad5a" class="sf-depth-2 menuparent"><span class="sf-depth-2 menuparent nolink">Current Students</span><ul><li id="main-menu-21-menu-link-content18dac7ff-4b74-4a30-ae56-a5d552471bd6" class="sf-depth-3 sf-no-children"><a href="/offers" class="sf-depth-3">Orientation</a></li><li id="main-menu-21-menu-link-contentd2496662-3921-444b-8694-144765fc9049" class="sf-depth-3 sf-no-children"><a href="/registry/examinations-office-registry-0" class="sf-depth-3">Examinations</a></li><li id="main-menu-21-menu-link-content420567b9-cdb3-47f3-80fc-ec5784db4c3d" class="sf-depth-3 sf-no-children"><a href="/registry/examination-results-registry" class="sf-depth-3">Examination Results</a></li><li id="main-menu-21-menu-link-contentf7c3e56d-8592-44d7-9f42-4a84991abefe" class="sf-depth-3 sf-no-children"><a href="/fees/noticeboard-fees" class="sf-depth-3">Fees Information</a></li><li id="main-menu-21-menu-link-contentbab1a8f8-ce11-4b1f-8684-a5306e1871b4" class="sf-depth-3 sf-no-children"><a href="/registry/academic-calendars" class="sf-depth-3">Academic Calendars</a></li><li id="main-menu-21-menu-link-content22aec2f1-1964-46db-b689-2ee38be4bd1e" class="sf-depth-3 sf-no-children"><a href="/iss/eduroam-wireless-wifi-network" class="sf-depth-3">WiFi</a></li><li id="main-menu-21-menu-link-content71acb1d2-bb23-4f1b-88cf-539b16e20be8" class="sf-depth-3 sf-no-children"><a href="/iss" class="sf-depth-3">Information Systems Services</a></li></ul></li><li id="main-menu-21-menu-link-contenta087fb5c-2a93-44cc-930a-2fb45a826ff8" class="sf-depth-2 menuparent"><span class="sf-depth-2 menuparent nolink">Student Life</span><ul><li id="main-menu-21-menu-link-content0df8cf0b-3df1-4fb6-ade3-3cdf76e2c7ef" class="sf-depth-3 sf-no-children"><a href="https://www.dcusu.ie/" class="sf-depth-3 sf-external">DCU Students Union</a></li><li id="main-menu-21-menu-link-content2c3ab8f9-11e0-40c4-ac0e-43b24fc840e1" class="sf-depth-3 sf-no-children"><a href="https://www.dcusu.ie/about-us-1" class="sf-depth-3 sf-external">Clubs &amp; Societies</a></li><li id="main-menu-21-menu-link-content148ce7f9-b387-468a-aa2f-8440513c35a2" class="sf-depth-3 sf-no-children"><a href="http://www.dcufm.net/" class="sf-depth-3 sf-external">DCUFM</a></li></ul></li><li id="main-menu-21-menu-link-contentdf7561f8-c6cf-42e6-901a-bffa1c77651a" class="sf-depth-2 sf-no-children"><a href="/autism-friendly" class="sf-depth-2">DCU Autism Friendly</a></li><li id="main-menu-21-menu-link-content7f645ba6-a440-4227-86cb-2635d23e7baa" class="sf-depth-2 sf-no-children"><a href="/disability" class="sf-depth-2">Disability &amp; Learning Support Service</a></li><li id="main-menu-21-menu-link-content470cdc2b-2431-41d2-a639-d5e182a0e881" class="sf-depth-2 sf-no-children"><a href="/access" class="sf-depth-2">DCU Access</a></li><li id="main-menu-21-menu-link-content1c08461b-3455-4f41-816c-9f6d69d3afc3" class="sf-depth-2 sf-no-children"><a href="/mature-students" class="sf-depth-2">Mature Students</a></li><li id="main-menu-21-menu-link-content1c092058-6697-4965-a292-ea5fb4b57c27" class="sf-depth-2 sf-no-children"><a href="/careers" class="sf-depth-2">Careers Service</a></li></ul></li><li id="main-menu-21-menu-link-content1a0c16b7-1362-410e-9f76-318cc251a9dd" class="sf-depth-1 menuparent"><span class="sf-depth-1 menuparent nolink">Faculties</span><ul><li id="main-menu-21-menu-link-contentc2415803-3c72-48ed-8116-b1b4da19d513" class="sf-depth-2 sf-no-children"><a href="https://business.dcu.ie" class="sf-depth-2 sf-external">DCU Business School</a></li><li id="main-menu-21-menu-link-content51e6ebc3-bd24-4647-b0d3-88cbb4a09459" class="sf-depth-2 sf-no-children"><a href="/instituteofeducation" class="sf-depth-2">DCU Institute of Education</a></li><li id="main-menu-21-menu-link-contentf921d215-3c46-437f-80f6-0ac5a00a96d2" class="sf-depth-2 sf-no-children"><a href="/engineeringandcomputing" class="sf-depth-2">Faculty of Engineering &amp; Computing</a></li><li id="main-menu-21-menu-link-contentfd6741b1-7098-4600-8a84-0fc13cf51844" class="sf-depth-2 sf-no-children"><a href="/humanities-and-social-sciences" class="sf-depth-2">Faculty of Humanities &amp; Social Sciences </a></li><li id="main-menu-21-menu-link-content495c7b14-d7a3-4a45-b305-f9add9231835" class="sf-depth-2 sf-no-children"><a href="/science-and-health" class="sf-depth-2">Faculty of Science &amp; Health</a></li><li id="main-menu-21-menu-link-content743810dd-c09c-43ad-aa9e-3a3af5b81018" class="sf-depth-2 sf-no-children"><a href="/connected" class="sf-depth-2">DCU Connected</a></li></ul></li><li id="main-menu-21-menu-link-contente2dd4bec-c1ba-47ef-bcd4-87d332e229f2" class="sf-depth-1 menuparent"><span class="sf-depth-1 menuparent nolink">More</span><ul><li id="main-menu-21-menu-link-contentdd09e286-3fa4-4873-8cad-e33697786ca5" class="sf-depth-2 sf-no-children"><a href="/president" class="sf-depth-2">Office of the President</a></li><li id="main-menu-21-menu-link-contentea89acba-bb9d-4840-9060-e32869a78fe4" class="sf-depth-2 menuparent"><a href="/ocoo" class="sf-depth-2 menuparent">Office of the COO</a><ul><li id="main-menu-21-menu-link-contentfbd2ba87-6513-4cb8-9e91-99f857f581b1" class="sf-depth-3 sf-no-children"><a href="https://www.dcu.ie/sustainability" class="sf-depth-3 sf-external">Sustainability at DCU </a></li><li id="main-menu-21-menu-link-contentdd14e684-8ece-4a7d-9c71-1d2f05347b28" class="sf-depth-3 sf-no-children"><a href="/governance" class="sf-depth-3">DCU Governing Authority</a></li><li id="main-menu-21-menu-link-contentfed51800-8389-4bd0-9ad0-531f9c749f71" class="sf-depth-3 sf-no-children"><a href="/estates" class="sf-depth-3">Estates</a></li><li id="main-menu-21-menu-link-content11ad7f83-1286-4447-bd1e-fbc16756c8db" class="sf-depth-3 sf-no-children"><a href="/foi" class="sf-depth-3">Freedom of Information</a></li><li id="main-menu-21-menu-link-content035ec725-cb8d-4798-9715-69a1561e1c98" class="sf-depth-3 sf-no-children"><a href="/safety" class="sf-depth-3">Health &amp; Safety</a></li><li id="main-menu-21-menu-link-contentfc63c5b2-ee28-4744-9b07-76ce0cb1cde9" class="sf-depth-3 sf-no-children"><a href="https://www.dcu.ie/oifignagaeilge" class="sf-depth-3 sf-external">Oifig Na Gaeilge</a></li><li id="main-menu-21-menu-link-content3bf9c84a-e762-452e-ad5b-77897e759af3" class="sf-depth-3 sf-no-children"><a href="/policies" class="sf-depth-3">University Policies</a></li></ul></li><li id="main-menu-21-menu-link-content1e1c1cba-7b10-402d-977d-f5bb42a8b237" class="sf-depth-2 menuparent"><a href="/ovpaa" class="sf-depth-2 menuparent">Office of the Vice President of Academic Affairs</a><ul><li id="main-menu-21-menu-link-content0fca3df0-258d-4ab8-b5d8-1393eb830cbe" class="sf-depth-3 sf-no-children"><a href="/graduatestudies" class="sf-depth-3">Graduate Studies</a></li></ul></li><li id="main-menu-21-menu-link-content2cf33065-8a62-48e5-8382-ff0aacd18057" class="sf-depth-2 sf-no-children"><a href="/directorofengagement" class="sf-depth-2">Office of the Executive Director of Engagement</a></li><li id="main-menu-21-menu-link-content3b1f1a25-c154-4f6e-bf32-4bd8b4159f2e" class="sf-depth-2 sf-no-children"><a href="/research" class="sf-depth-2">Office of the Vice President for Research</a></li><li id="main-menu-21-menu-link-content0f0a3bfc-55bf-4bc6-b15e-02f7cecc6524" class="sf-depth-2 menuparent"><span class="sf-depth-2 menuparent nolink">Offices &amp; Departments</span><ul><li id="main-menu-21-menu-link-contenta35f4f02-6af0-4f41-9c94-d44d5994e20e" class="sf-depth-3 sf-no-children"><a href="/cme" class="sf-depth-3">Communications, Marketing &amp; Events</a></li><li id="main-menu-21-menu-link-content43f15ea4-ea4c-43a6-b1f3-a4afbf29cee3" class="sf-depth-3 sf-no-children"><a href="/estates" class="sf-depth-3">Estates</a></li><li id="main-menu-21-menu-link-content14c246ae-d2da-4c5f-a232-ef6570787b12" class="sf-depth-3 sf-no-children"><a href="/finance" class="sf-depth-3">Finance</a></li><li id="main-menu-21-menu-link-contentdaecdad5-133c-42ad-a2bf-e890497ab62f" class="sf-depth-3 sf-no-children"><a href="/hr" class="sf-depth-3">Human Resources</a></li><li id="main-menu-21-menu-link-content3cb5a279-df5a-4059-a040-b68ea555b707" class="sf-depth-3 sf-no-children"><a href="/iss" class="sf-depth-3">Information Systems Services (ISS)</a></li><li id="main-menu-21-menu-link-content609751e6-d34a-4464-ae0e-81014880604e" class="sf-depth-3 sf-no-children"><a href="https://dculs.dcu.ie/" class="sf-depth-3 sf-external">Language Translation Services</a></li><li id="main-menu-21-menu-link-contentcc04394b-9071-4e93-aeaa-714cd06504e6" class="sf-depth-3 sf-no-children"><a href="/registry" class="sf-depth-3">Registry</a></li><li id="main-menu-21-menu-link-content85a4eed0-e8e6-4d25-8ae8-ef9c72a55adb" class="sf-depth-3 sf-no-children"><a href="/qpo" class="sf-depth-3">Quality and Institutional Insights Office</a></li><li id="main-menu-21-menu-link-contentb540270b-571f-4b5e-9c78-232e6cd4ab5a" class="sf-depth-3 sf-no-children"><a href="/teu" class="sf-depth-3">Teaching Enhancement Unit (TEU)</a></li></ul></li><li id="main-menu-21-menu-link-content881a64c5-04f5-4ad4-a417-db61a2081e8d" class="sf-depth-2 menuparent"><span class="sf-depth-2 menuparent nolink">Campus</span><ul><li id="main-menu-21-menu-link-content20ceef18-5f4d-446e-b53e-37a993e6f0b4" class="sf-depth-3 sf-no-children"><a href="/chaplaincy" class="sf-depth-3">Inter-Faith Centre</a></li><li id="main-menu-21-menu-link-content49c8030c-2b19-42e7-aac9-2ef8bd890d17" class="sf-depth-3 sf-no-children"><a href="/estates/car-parking-dcu" class="sf-depth-3">Parking</a></li><li id="main-menu-21-menu-link-contentd1faf7a3-8f65-472f-ab8a-c62f3be7d5a6" class="sf-depth-3 sf-no-children"><a href="https://www.pharmhealth.com/" class="sf-depth-3 sf-external">Pharmacy</a></li></ul></li></ul></li>
+</ul>
+
+  </section>
+
+
+  </div>
+
+                      </div>
+
+                      </header>
+  
+
+  <!--<div role="main" class="main-container container js-quickedit-main-content">-->
+	  <div role="main" class="main-container container-fluid  js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading" aria-level="1">
+              <div class="region region-header">
     
-    .Nav2 li a {
-      display: block;
-      text-align: center;
-      font-weight: 900;
-      padding: 14px 16px;
-      text-decoration: none;
-      color: inherit;
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-12">
+
+                                      <div class="highlighted"></div>
+                  
+                
+                          <a id="main-content"></a>
+            <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>  <article class="landing-page is-promoted full clearfix">
+
+  
+    
+
+  
+  <div class="content">
+    
+      <div class="building-blocks custom-container field__items">
+              <div class="building-block">  
+
+
+
+<div class="media-slideshow blockbg-">
+  <div class="slick blazy slick--field slick--field-bb-item slick--field-bb-item--default slick--skin--grid slick--optionset--x-grid" data-blazy=""><div id="slick-073614dfcbe" data-slick="{&quot;count&quot;:4,&quot;total&quot;:4,&quot;autoplay&quot;:true,&quot;dots&quot;:true,&quot;lazyLoad&quot;:&quot;blazy&quot;}" class="slick__slider">  <div class="slick__slide slide slide--0">  
+
+
+    
+
+
+
+
+        
+    	
+
+    
+
+
+ <a  class="two-image-feature feature--navy feature--right"  href="/spring-open-day" >
+
+<div class="feature-imagery-area">
+
+        <div class="feature__photo">
+        <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/traditional_television/public/student_policies_editor/2024-02/open-day-glasnevin-18th-nov-2023_23.png?h=e8ed248f&amp;itok=M_qZtMel" width="960" height="720" alt="DCU Open Day - Student Ambassadors" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+      </div>
+      <div class="feature__iconography">
+      <div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/styles/traditional_television/public/2022-09/large-icon.png?h=01429348&amp;itok=JAbYwSzU" width="960" height="720" alt="DCU Welcome Background" class="img-responsive" />
+
+
+</div>
+          </div>
+
+</div>
+
+      </div>
+    
+</div>
+
+<div class="feature-text-area">
+
+          <div class="feature-header h2">
+      
+            <div class="field field--name-field-feature-header field--type-text field--label-hidden field--item"><p>Spring Open Day</p>
+</div>
+      
+
+      </div>
+    
+          <div class="feature__text">
+        
+            <div class="field field--name-field-feature-text field--type-text-long field--label-hidden field--item"><p>Join us from 10am Saturday 13th April for Taster Lectures, Graduate Panels, Support Talks &amp; Campus Tours</p>
+</div>
+      
+      </div>
+    
+</div>
+
+
+</a>
+
+    </div>
+  <div class="slick__slide slide slide--1">  
+
+
+    
+
+
+
+
+        
+    	
+
+    
+
+
+ <a  class="two-image-feature feature--navy feature--left"  href="/cao" >
+
+<div class="feature-imagery-area">
+
+     <div class="feature__iconography">
+      <div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/styles/traditional_television/public/2022-09/large-icon.png?h=01429348&amp;itok=JAbYwSzU" width="960" height="720" alt="DCU Welcome Background" class="img-responsive" />
+
+
+</div>
+          </div>
+
+</div>
+
+      </div>
+      <div class="feature__photo">
+        <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/traditional_television/public/student_policies_editor/2023-12/cao-image.jpg?h=ed376f01&amp;itok=Hyr8wHM_" width="960" height="721" alt="DCU CAO Hub 2023" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+      </div>
+    
+</div>
+
+<div class="feature-text-area">
+
+          <div class="feature-header h2">
+      
+            <div class="field field--name-field-feature-header field--type-text field--label-hidden field--item"><p>DCU CAO Hub</p>
+</div>
+      
+
+      </div>
+    
+          <div class="feature__text">
+        
+            <div class="field field--name-field-feature-text field--type-text-long field--label-hidden field--item"><p>Guiding you to greatness - visit our CAO Hub</p>
+</div>
+      
+      </div>
+    
+</div>
+
+
+</a>
+
+    </div>
+  <div class="slick__slide slide slide--2">  
+
+
+    
+
+
+
+
+        
+    	
+
+    
+
+
+ <a  class="two-image-feature feature--navy feature--right"  href="/postgraduate" >
+
+<div class="feature-imagery-area">
+
+        <div class="feature__photo">
+        <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/traditional_television/public/phone_buyers_editor/2023-07/GLA%20Campus.jpg?h=1ed1e818&amp;itok=WF5DUg-U" width="960" height="720" alt="Postgraduate Students in DCU" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+      </div>
+      <div class="feature__iconography">
+      <div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/styles/traditional_television/public/2022-09/large-icon.png?h=01429348&amp;itok=JAbYwSzU" width="960" height="720" alt="DCU Welcome Background" class="img-responsive" />
+
+
+</div>
+          </div>
+
+</div>
+
+      </div>
+    
+</div>
+
+<div class="feature-text-area">
+
+          <div class="feature-header h2">
+      
+            <div class="field field--name-field-feature-header field--type-text field--label-hidden field--item"><p>Postgraduate at DCU</p>
+</div>
+      
+
+      </div>
+    
+          <div class="feature__text">
+        
+            <div class="field field--name-field-feature-text field--type-text-long field--label-hidden field--item"><p>Discover your passions and follow your greatness at DCU</p>
+</div>
+      
+      </div>
+    
+</div>
+
+
+</a>
+
+    </div>
+  <div class="slick__slide slide slide--3">  
+
+
+    
+
+
+
+
+        
+    	
+
+    
+
+
+ <a  class="two-image-feature feature--navy feature--left"  href="https://www.dcu.ie/commsteam/news/2023/oct/dcu-launches-new-strategy-transformation-unscripted-future" >
+
+<div class="feature-imagery-area">
+
+     <div class="feature__iconography">
+      <div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/styles/traditional_television/public/2022-09/large-icon.png?h=01429348&amp;itok=JAbYwSzU" width="960" height="720" alt="DCU Welcome Background" class="img-responsive" />
+
+
+</div>
+          </div>
+
+</div>
+
+      </div>
+      <div class="feature__photo">
+        <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/traditional_television/public/sal_editor/2023-10/Return%2019th%20Sept%20%202023_59%20%282%29.jpg?h=25c60405&amp;itok=xDE2NPda" width="960" height="720" alt="Shows group of female studnets collaborating on projec t in DCU" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+      </div>
+    
+</div>
+
+<div class="feature-text-area">
+
+          <div class="feature-header h2">
+      
+            <div class="field field--name-field-feature-header field--type-text field--label-hidden field--item"><p>Strategy 2023-2028</p>
+</div>
+      
+
+      </div>
+    
+          <div class="feature__text">
+        
+            <div class="field field--name-field-feature-text field--type-text-long field--label-hidden field--item"><p>DCU launches ambitious new strategy entitled 'Transformation for an Unscripted Future'</p>
+</div>
+      
+      </div>
+    
+</div>
+
+
+</a>
+
+    </div>
+</div>
+          <nav role="navigation" class="slick__arrow">
+        <button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0">Previous</button>
+                <button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0">Next</button>
+      </nav>
+    </div>
+
+</div>
+
+    </div>
+              <div class="building-block">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- v -->
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--297746 blockbg-">
+  <div class="paragraph__column">
+    
+      <div class="field field--name-bp-view field--type-viewsreference field--label-hidden field--items">
+              <div class="field--item"><div class="views-element-container form-group"><div class="custom-container front-finder view view-prospectus view-id-prospectus view-display-id-block_20 js-view-dom-id-b149cb2cf397cf0df2a41a19a7d76f3f8c498ef5bdb50984a81ff82c8c278a31">
+  
+    
+        <div class="view-filters form-group">
+      <form class="views-exposed-form" novalidate="novalidate" data-drupal-selector="views-exposed-form-prospectus-block-20" action="/courses/admin" method="get" id="views-exposed-form-prospectus-block-20" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-select js-form-type-select form-item-field-undergraduate-postgraduate-value js-form-item-field-undergraduate-postgraduate-value form-group">
+      <label for="edit-field-undergraduate-postgraduate-value" class="control-label">Undergraduate or Postgraduate </label>
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-field-undergraduate-postgraduate-value" class="form-select form-control" id="edit-field-undergraduate-postgraduate-value" name="field_undergraduate_postgraduate_value"><option
+            value="All" selected="selected">- Any -</option><option
+            value="undergraduate">Undergraduate</option><option
+            value="postgraduate">Postgraduate</option></select></div>
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-key-words-value js-form-item-field-key-words-value form-group form-autocomplete">
+      <label for="edit-field-key-words-value" class="control-label">Course</label>
+  
+  
+  <div class="input-group"><input class="views-ac-dependent-filter form-autocomplete form-text form-control" data-drupal-selector="edit-field-key-words-value" data-autocomplete-path="/views-autocomplete-filters/prospectus/block_20/field_key_words_value/0" type="text" id="edit-field-key-words-value" name="field_key_words_value" value="" size="30" maxlength="128" /><span class="input-group-addon"><span class="icon glyphicon glyphicon-refresh ajax-progress ajax-progress-throbber" aria-hidden="true"></span></span></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-prospectus" class="button js-form-submit form-submit btn-default btn" type="submit" id="edit-submit-prospectus" value="Find my course &gt;">Find my course &gt;</button></div>
+
+</div>
+
+</form>
+
+    </div>
+    
+      <div class="view-empty">
+      
+    </div>
+  
+      
+            <div class="view-footer">
+      <div class="atoz"> Search our A-Z of <a href="/courses/undergraduate/a-z-undergraduate-courses">Undergraduate Courses</a> and <a href="/courses/postgraduate/a-z-postgraduate-courses">Postgraduate Courses</a></div>
+<div class="course-finder-hb">Undergraduate courses at DCU<br>Click here for our <a href="/cao">CAO Hub</a></div>
+
+
+    </div>
+    </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+</div>
+</div>
+              <div class="building-block">  
+
+<div class="section-break primary blockbg-">
+  <hr>
+</div>
+
+    </div>
+              <div class="building-block">  
+  
+
+    
+  
+
+
+
+  
+
+
+  
+    
+
+
+<div class="iwt layout-contained table-responsive custom-container padding-horizontal blockbg- feature small">
+
+  <div class="iwt__inner">
+    <div class="iwt__image">
+
+   <a  href="/president" >
+
+<div>
+            <div class="field field--name-field-image-caption-formatted field--type-text-long field--label-hidden field--item"><p>Welcome</p>
+</div>
+      </div>
+ <div><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/square/public/2021-02/prof-daire-keogh-headshot_0.jpg?h=184eb9e8&amp;itok=1nobkMWF" width="600" height="600" alt="Prof Daire Keogh" class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+  <div class="secondcaption">Dáire Keogh</div>
+   <div class="thirdcaption">President</div>
+
+
+   </a>
+
+    </div>
+
+    <div class="iwt__content">
+                    <div class="iwt__text be-text--large">
+          
+            <div class="field field--name-field-p-it-text field--type-text-long field--label-hidden field--item"><p>DCU is proud to be one of the world’s leading Young Universities, with a mission to transform lives and societies. Through education, research and innovation, we are focused on delivering real impact, and addressing global challenges in collaboration with our partners and stakeholders.</p>
+<p> </p>
+</div>
+      
+        </div>
+                </div>
+
+
+  </div>
+</div>
+
+    </div>
+              <div class="building-block">  
+
+<div class="section-break primary blockbg-">
+  <hr>
+</div>
+
+    </div>
+              <div class="building-block">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="paragraph paragraph--type--bp-blank paragraph--view-mode--default paragraph--id--297771 blockbg-">
+  <div class="paragraph__column">
+    
+            <div class="field field--name-bp-unrestricted field--type-text-long field--label-hidden field--item"><h2 class="great-heading">Why DCU?</h2></div>
+      
+  </div>
+</div>
+</div>
+              <div class="building-block">
+    <div aria-label="carousel"  class="paragraph slideshow split-screen custom-container paragraph--type--split-screen-slideshow paragraph--view-mode--default">
+          <div class="slick blazy slick--field slick--view slick--field-split-slideshow-item slick--field-split-slideshow-item--default slick--view--prospectus-block-block-20 slick--view--prospectus slick--view--prospectus--block-20 is-b-captioned slick--skin--split slick--optionset--x-split" data-blazy=""><div id="slick-aba7b2c0706" data-slick="{&quot;count&quot;:5,&quot;total&quot;:5,&quot;autoplay&quot;:true,&quot;dots&quot;:true,&quot;lazyLoad&quot;:&quot;blazy&quot;,&quot;responsive&quot;:[{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;autoplay&quot;:true,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;touchMove&quot;:false,&quot;waitForAnimate&quot;:false}}]}" class="slick__slider">
+  <div class="slick__slide slide slide--0 slide--caption--split-zebra">
+  <a href="/commsteam/news/2021/sep/dcu-ranks-1-ireland-its-graduate-employment-rate"><div class="slide__content" >
+                  <div class="slide__media">    <div data-b-token="b-28152c11db5" class="media media--blazy media--slick media--bundle--image media--image is-b-loading"><img alt="Homepage Statistics" title="Homepage Statistics - number 1" decoding="async" class="media__element b-lazy img-responsive" loading="lazy" data-src="/sites/default/files/styles/split_slide_850x566/public/placement_editor/2022-09/Homepage%20Statistic%20Assets_1%20in%20Ireland.png?itok=p9D2l70O" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="835" height="555" />
+        </div>
+  </div>
+      
+  
+            
+        <div class="slide__caption">
+          
+                      <h2 class="slide__title">We're #1 in Ireland</h2>
+          
+          
+                      <div class="slide__description data"><p>DCU is ranked No 1 in Ireland for Graduate Employment Rate</p>
+</div>
+          
+                      <div class="slide__link"><a href="/commsteam/news/2021/sep/dcu-ranks-1-ireland-its-graduate-employment-rate">QS Graduate Employability Rankings 2022</a></div>
+          
+                  </div>
+
+            
+  </div></a> </div> 
+
+  <div class="slick__slide slide slide--1 slide--caption--split-zebra">
+  <a href="/commsteam/news/2021/sep/dcu-ranks-1-ireland-its-graduate-employment-rate"><div class="slide__content" >
+                  <div class="slide__media">    <div data-b-token="b-42c62dece2b" class="media media--blazy media--slick media--bundle--image media--image is-b-loading"><img alt="Homepage Statistics" title="Homepage Statistics - scroll" decoding="async" class="media__element b-lazy img-responsive" loading="lazy" data-src="/sites/default/files/styles/split_slide_850x566/public/placement_editor/2022-09/Homepage%20Statistic%20Assets_23%20Globally.png?itok=JTUAhk_Q" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="835" height="555" />
+        </div>
+  </div>
+      
+  
+            
+        <div class="slide__caption">
+          
+                      <h2 class="slide__title"><span><span><span><span><span><span>We're #23 in the world</span></span></span></span></span></span></h2>
+          
+          
+                      <div class="slide__description data"><p>DCU is ranked 23rd globally for Graduate Employment Rate</p>
+</div>
+          
+                      <div class="slide__link"><a href="/commsteam/news/2021/sep/dcu-ranks-1-ireland-its-graduate-employment-rate">QS Graduate Employability Rankings 2022</a></div>
+          
+                  </div>
+
+            
+  </div></a> </div> 
+
+  <div class="slick__slide slide slide--2 slide--caption--split-zebra">
+  <a href="https://hea.ie/higher-education-institutions/dublin-city-university/statistics/"><div class="slide__content" >
+                  <div class="slide__media">    <div data-b-token="b-3ee2ab58137" class="media media--blazy media--slick media--bundle--image media--image is-b-loading"><img alt="Homepage Statistics" title="Homepage Statistics - work" decoding="async" class="media__element b-lazy img-responsive" loading="lazy" data-src="/sites/default/files/styles/split_slide_850x566/public/placement_editor/2022-09/Homepage%20Statistic%20Assets_96.png?itok=2MHukReV" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="835" height="555" />
+        </div>
+  </div>
+      
+  
+            
+        <div class="slide__caption">
+          
+                      <h2 class="slide__title"><span><span><span><span><span><span>96% in employment</span></span></span></span></span></span></h2>
+          
+          
+                      <div class="slide__description data"><p>96% of our recent graduates are in employment or further education six months after graduation</p>
+</div>
+          
+                      <div class="slide__link"><a href="https://hea.ie/higher-education-institutions/dublin-city-university/statistics/">Graduate Outcomes Survey</a></div>
+          
+                  </div>
+
+            
+  </div></a> </div> 
+
+  <div class="slick__slide slide slide--3 slide--caption--split-zebra">
+  <a href=""><div class="slide__content" >
+                  <div class="slide__media">    <div data-b-token="b-aacbfc99757" class="media media--blazy media--slick media--bundle--image media--image is-b-loading"><img alt="Homepage Statistics" title="Homepage Statistics - people" decoding="async" class="media__element b-lazy img-responsive" loading="lazy" data-src="/sites/default/files/styles/split_slide_850x566/public/placement_editor/2022-09/Homepage%20Statistic%20Assets_80%25.png?itok=bA-ZZqBD" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="835" height="555" />
+        </div>
+  </div>
+      
+  
+            
+        <div class="slide__caption">
+          
+                      <h2 class="slide__title">Work Placement</h2>
+          
+          
+                      <div class="slide__description data"><p>80% of our courses have INTRA - paid, relevant work experience or work placement </p>
+</div>
+          
+          
+                  </div>
+
+            
+  </div></a> </div> 
+
+  <div class="slick__slide slide slide--4 slide--caption--split-zebra">
+  <a href=""><div class="slide__content" >
+                  <div class="slide__media">    <div data-b-token="b-21b72668889" class="media media--blazy media--slick media--bundle--image media--image is-b-loading"><img alt="Homepage Statistics" title="Homepage Statistics - globe" decoding="async" class="media__element b-lazy img-responsive" loading="lazy" data-src="/sites/default/files/styles/split_slide_850x566/public/placement_editor/2022-09/Homepage%20Statistic%20Assets_124.png?itok=fgu7s5wT" src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%201%201&#039;%2F%3E" width="835" height="555" />
+        </div>
+  </div>
+      
+  
+            
+        <div class="slide__caption">
+          
+                      <h2 class="slide__title"><span><span><span><span><span><span>128 different nationalities</span></span></span></span></span></span></h2>
+          
+          
+                      <div class="slide__description data"><p>We attract students from around the world thanks to our world-class research, cutting-edge learning which positively transform lives and societies</p>
+</div>
+          
+          
+                  </div>
+
+            
+  </div></a> </div> 
+</div>
+          <nav role="navigation" class="slick__arrow">
+        <button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0">Previous</button>
+                <button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0">Next</button>
+      </nav>
+    </div>
+
+      </div>
+</div>
+              <div class="building-block">  
+
+<div class="section-break primary blockbg-">
+  <hr>
+</div>
+
+    </div>
+              <div class="building-block">  	
+  
+
+<div class="header-with-icon blockbg-lightblue">
+  
+            <div class="field field--name-field-header field--type-text field--label-hidden field--item"><h3>DCU People</h3>
+</div>
+      
+  
+            <div class="field field--name-field-icon-with-header field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/dcu-community-icon.png" width="90" height="90" alt="People Icon" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+</div>
+
+    </div>
+              <div class="building-block">
+
+
+
+
+
+
+  
+
+  
+
+
+
+<!-- v -->
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--298126 blockbg-lightblue">
+  <div class="paragraph__column">
+    
+      <div class="field field--name-bp-view field--type-viewsreference field--label-hidden field--items">
+              <div class="field--item"><div class="views-element-container form-group"><div class="view-news-views view view-dcu-community-profiles view-id-dcu_community_profiles view-display-id-block_1 js-view-dom-id-f5ae8ef24b4dbbe3235d05788c4b44008227484881852c78213767fdc45054ca">
+  
+    
+      
+      <div class="view-content">
+          <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/community-profiles/caithlin-stamp" aria-label="Caithlin Stamp">
+<div class="profile-image"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/square/public/student_policies_editor/2023-11/Caithlin%20Stamp.jpg?itok=HH8_RYxl" width="600" height="600" alt="Profile picture of Caithlin Stamp" class="img-responsive" />
+
+
+</div>
+      
+</div>
+ </div>
+</a>
+<div class="profile-title">Caithlin Stamp</div>
+<div class="profile-group">Alumni </div>
+<div class="profile-body"><p>Caithlin brought her skills and experience as a hip-hop dancer to her Bachelor of Education course, and says the degree “really is setting you up for the rest of your career.”</p></div><br>
+<a href="/community-profiles/caithlin-stamp" aria-label="Caithlin Stamp">Read more about Caithlin Stamp</a></span></div></div>
+    <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/community-profiles/tomas-broe-brady" aria-label="Tomás Broe-Brady">
+<div class="profile-image"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/square/public/student_policies_editor/2023-11/Tom%C3%A1s-Broe-Brady_0.jpg?itok=uIhqOsgK" width="600" height="600" alt="Profile picture of Tomás-Broe-Brady" class="img-responsive" />
+
+
+</div>
+      
+</div>
+ </div>
+</a>
+<div class="profile-title">Tomás Broe-Brady</div>
+<div class="profile-group">Alumni </div>
+<div class="profile-body"><p>During his time studying at DCU for the BSc Actuarial Mathematics Tomás combined his love of maths with an active social life through the DCU Weightlifting Club.</p></div><br>
+<a href="/community-profiles/tomas-broe-brady" aria-label="Tomás Broe-Brady">Read more about Tomás Broe-Brady</a></span></div></div>
+    <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/community-profiles/dr-hossein-javidnia" aria-label="Dr Hossein Javidnia">
+<div class="profile-image"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/square/public/comms_team_editor/2022-10/Hossein.png?h=d27db49b&amp;itok=tzqUNxJ5" width="600" height="600" alt="Profile picture of Dr Hossein Javidnia" class="img-responsive" />
+
+
+</div>
+      
+</div>
+ </div>
+</a>
+<div class="profile-title">Dr Hossein Javidnia</div>
+<div class="profile-group">Staff </div>
+<div class="profile-body"><p>What I enjoy the most about lecturing in this field is interacting with interested and intelligent students.</p></div><br>
+<a href="/community-profiles/dr-hossein-javidnia" aria-label="Dr Hossein Javidnia">Read more about Dr Hossein Javidnia</a></span></div></div>
+    <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/community-profiles/julie-duke" aria-label="Julie Duke">
+<div class="profile-image"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/square/public/student_policies_editor/2023-12/julie-dukes.jpg?h=35592687&amp;itok=gEcXDVN6" width="600" height="600" alt="Profile picture of Julie Dukes" class="img-responsive" />
+
+
+</div>
+      
+</div>
+ </div>
+</a>
+<div class="profile-title">Julie Duke</div>
+<div class="profile-group">Alumni </div>
+<div class="profile-body"><p>Julie Duke returned to education as a mature student, and says her DCU course 'was the making of me and helped me in more ways than one'.</p></div><br>
+<a href="/community-profiles/julie-duke" aria-label="Julie Duke">Read more about Julie Duke</a></span></div></div>
+
+    </div>
+  
+          </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+</div>
+</div>
+              <div class="building-block">    
+
+<div class="section-break quaternary blockbg-navy">
+  <hr>
+</div>
+
+    </div>
+              <div class="building-block">  	
+  
+
+<div class="header-with-icon blockbg-navy">
+  
+            <div class="field field--name-field-header field--type-text field--label-hidden field--item"><h2>Life On Campus</h2>
+</div>
+      
+  
+            <div class="field field--name-field-icon-with-header field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/life-on-campus-icon.png" width="87" height="87" alt="Life On Campus Icon" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+</div>
+
+    </div>
+              <div class="building-block">  
+
+
+  
+<div class="media-slideshow blockbg-navy">
+  <div class="slick blazy slick--field slick--view slick--field-bb-item slick--field-bb-item--default slick--view--dcu-community-profiles-block-block-1 slick--view--dcu-community-profiles slick--view--dcu-community-profiles--block-1 is-b-captioned slick--skin--grid slick--optionset--x-grid" data-blazy=""><div id="slick-5182d3629de" data-slick="{&quot;count&quot;:2,&quot;total&quot;:2,&quot;autoplay&quot;:true,&quot;dots&quot;:true,&quot;lazyLoad&quot;:&quot;blazy&quot;}" class="slick__slider">  <div class="slick__slide slide slide--0">
+
+
+
+
+
+
+
+
+
+<div class="hero-image custom-container above">
+
+  
+  
+  
+            <div class="field field--name-field-p-hm-hero-video field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-media-video-embed-field field--type-video-embed-field field--label-hidden field--item"><div class="video-embed-field-provider-youtube video-embed-field-responsive-video form-group">
+<div class="anrt-cookiebotconsent-optout cookieconsent-optout-marketing">
+  <a href="javascript:Cookiebot.renew()">The video provider requires that you accept marketing and statistics cookies in order to view this video.</a>
+</div>
+
+<iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" data-cookieconsent="marketing" data-src="https://www.youtube.com/embed/_pecC2yBJa8?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+</div>
+</div>
+      
+</div>
+</div>
+      
+
+  
+</div>
+
+    </div>
+  <div class="slick__slide slide slide--1">
+
+
+
+
+
+
+
+
+
+<div class="hero-image custom-container above">
+
+  
+  
+  
+            <div class="field field--name-field-p-hm-hero-video field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-media-video-embed-field field--type-video-embed-field field--label-hidden field--item"><div class="video-embed-field-provider-youtube video-embed-field-responsive-video form-group">
+<div class="anrt-cookiebotconsent-optout cookieconsent-optout-marketing">
+  <a href="javascript:Cookiebot.renew()">The video provider requires that you accept marketing and statistics cookies in order to view this video.</a>
+</div>
+
+<iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" data-cookieconsent="marketing" data-src="https://www.youtube.com/embed/U9u957E-PO8?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+</div>
+</div>
+      
+</div>
+</div>
+      
+
+  
+</div>
+
+    </div>
+</div>
+          <nav role="navigation" class="slick__arrow">
+        <button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0">Previous</button>
+                <button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0">Next</button>
+      </nav>
+    </div>
+
+</div>
+
+    </div>
+              <div class="building-block">            
+
+        
+
+
+<div class="feature-image-overlay layout-contained table-responsive custom-container padding-horizontal text-bottomright image-topleft blockbg-background-navy text-area-colours-yellowbg">
+
+  <div class="fio__inner">
+   <a  href="/commsteam/news/2023/dec/dcu-launches-new-quiet-space-informed-autism-friendly-university-design" >
+
+              <div class="background-icon">
+          
+            <div class="field field--name-field-background-iconography field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/homepage%20graphics_homepage%20story%20bg-18.jpg" width="2501" height="1455" alt="DCU Feature Background Image" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+        </div>
+      
+                    <div class="overlay-photo">
+          
+            <div class="field field--name-field-overlay-photo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/editor/2023-11/quiet-space-launch-28th-nov-2023_32.jpg?h=bc9ab464&amp;itok=C-yUTwFt" width="1920" height="1080" alt=" The design of the new Quiet Space in the Henry Grattan building was led by the Autism-Friendly University Design Guide. " class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+<div class="overlay-text-section">
+
+<div class="overlay-text-area">
+         <div class="overlay-text-area">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>The new space was informed by the Autism-Friendly University Design Guide - the DCU Autism Friendly Project aims to support and celebrate autistic students and staff </p>
+</div>
+      
+        </div>
+      
+</div>
+
+<div class="overlay-headers-section">
+              <div class="top-sub-header">
+          
+            <div class="field field--name-field-top-sub-header field--type-text field--label-hidden field--item"><p>#WeAreDCU</p>
+</div>
+      
+        </div>
+      
+              <h2 class="overlay-main-header h2">
+          
+            <div class="field field--name-field-main-header field--type-text field--label-hidden field--item"><p>DCU launches new 'Quiet Space' as part of University's Autism-Friendly Project</p>
+</div>
+      
+        </h2>
+      
+                  </div>
+
+</div>
+
+
+
+   </a>
+  </div>
+
+
+    </div>
+              <div class="building-block">
+
+<div class="layout-contained padding-horizontal">
+  <div class="tiled-layout custom-container tile--landingthree landingthree blockbg-navy">
+
+      
+  	  
+
+
+  
+    
+
+  
+
+
+  
+  
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-secondary tile--medium" >
+ <a  href="https://dcustudentlife.ie/about-us-1" >
+
+    
+      
+              <div class="tile__image">
+          <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/institute_education_access/2022-09/homepage%20graphics_homepage%20clubs%20and%20soc_0.jpg?itok=ppxpXh_J" width="1200" height="480" alt="Clubs &amp; Societies" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+        </div>
+      
+      <div class="tile-text-section">
+
+                  <div class="tile__text">
+            
+            <div class="field field--name-field-p-tile-text field--type-text-long field--label-hidden field--item"><p>Find out all you need to know about our clubs and societies</p>
+</div>
+      
+          </div>
+        
+                <div class="tile__title h1">
+        
+            <div class="field field--name-field-p-tile-title field--type-string field--label-hidden field--item">Clubs &amp; Socs</div>
+      
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+  	  
+
+
+  
+    
+
+  
+
+
+  
+  
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-tertiary tile--medium" >
+ <a  href="/advice" >
+
+    
+      
+              <div class="tile__image">
+          <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/institute_education_access/2022-09/homepage%20graphics_homepage%20student%20advice_0.jpg?itok=3t8OSF2q" width="1200" height="480" alt="Student Advice Centre" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+        </div>
+      
+      <div class="tile-text-section">
+
+                  <div class="tile__text">
+            
+            <div class="field field--name-field-p-tile-text field--type-text-long field--label-hidden field--item"><p>Student Advice and Learning Skills Centre (SAL)</p>
+</div>
+      
+          </div>
+        
+                <div class="tile__title h1">
+        
+            <div class="field field--name-field-p-tile-title field--type-string field--label-hidden field--item">Get in touch with SAL</div>
+      
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+  	  
+
+
+  
+    
+
+  
+
+
+  
+  
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-secondary tile--medium" >
+ <a  href="/travel-to-dcu" >
+
+    
+      
+              <div class="tile__image">
+          <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/institute_education_access/2022-09/homepage%20graphics_homepage%20-%20how%20to%20get_0.jpg?itok=l63DfYP5" width="1200" height="481" alt="How to get to DCU" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+        </div>
+      
+      <div class="tile-text-section">
+
+                  <div class="tile__text">
+            
+            <div class="field field--name-field-p-tile-text field--type-text-long field--label-hidden field--item"><p>Public transport options for DCU</p>
+</div>
+      
+          </div>
+        
+                <div class="tile__title h1">
+        
+            <div class="field field--name-field-p-tile-title field--type-string field--label-hidden field--item">How to get to DCU</div>
+      
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+
+
+  </div>
+</div>
+
+
+
+    </div>
+              <div class="building-block">
+
+<div class="layout-contained padding-horizontal">
+  <div class="tiled-layout custom-container tile--landingtwo landingtwo blockbg-navy">
+
+      
+  	  
+
+
+  
+    
+
+  
+
+  
+  
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-tertiary tile--full" >
+ <a  href="/commsteam/news/2023/dec/dcu-scholars-awards-recognise-high-achieving-students" >
+
+    
+      
+              <div class="tile__image">
+          
+            <div class="field field--name-field-p-tile-image field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/editor/2023-12/academic-scholarship-29th-nov-2023_73-1.jpg?h=df3c6bf4&amp;itok=t7k0E_wY" width="1200" height="675" alt="The students were recognised for achieving more than 600 points in the Leaving Certificate exams, or two A grades and one B in the A-levels. " class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+      <div class="tile-text-section">
+
+                  <div class="tile__text">
+            
+            <div class="field field--name-field-p-tile-text field--type-text-long field--label-hidden field--item"><p>Awards recognise high-achieving students for Leaving Cert and A Levels</p>
+</div>
+      
+          </div>
+        
+                <div class="tile__title h1">
+        
+            <div class="field field--name-field-p-tile-title field--type-string field--label-hidden field--item">DCU Scholars Awards</div>
+      
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+  	  
+
+
+  
+    
+
+  
+
+  
+  
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-secondary tile--full" >
+ <a  href="/sal/develop-your-learning-skills" >
+
+    
+      
+              <div class="tile__image">
+          
+            <div class="field field--name-field-p-tile-image field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/staff/2022-01/Dublin%20City%20University%20-%20brown%20sticks.jpg?itok=5ygrrRyu" width="1200" height="800" alt="DCU front entrance" class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+      <div class="tile-text-section">
+
+                  <div class="tile__text">
+            
+            <div class="field field--name-field-p-tile-text field--type-text-long field--label-hidden field--item"><p>Writing Centre is now open for Semester 1</p>
+</div>
+      
+          </div>
+        
+                <div class="tile__title h1">
+        
+            <div class="field field--name-field-p-tile-title field--type-string field--label-hidden field--item">Writing centre open for students</div>
+      
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+
+
+  </div>
+</div>
+
+
+
+    </div>
+              <div class="building-block">            
+
+        
+
+
+<div class="feature-image-overlay layout-contained table-responsive custom-container padding-horizontal text-bottomleft image-topright blockbg-background-navy text-area-colours-bluebg">
+
+  <div class="fio__inner">
+   <a  href="/commsteam/news/2024/jan/dcu-recognises-eight-former-students-alumni-awards" >
+
+              <div class="background-icon">
+          
+            <div class="field field--name-field-background-iconography field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/homepage%20graphics_homepage%20story%20bg-17.jpg" width="2501" height="1455" alt="DCU Feature Background Image" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+        </div>
+      
+                    <div class="overlay-photo">
+          
+            <div class="field field--name-field-overlay-photo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/marketing_editor/2024-01/group-shot.jpeg?itok=CT3VYJnO" width="1600" height="1066" alt="Seven Alumni Award winners with Prof Daire Keogh and Ross Munnelly" class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+<div class="overlay-text-section">
+
+<div class="overlay-text-area">
+         <div class="overlay-text-area">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>The DCU Alumni Awards honour alumni who, through their exceptional ability and leadership, have achieved excellence in their chosen fields of endeavour. Recipients come from all five faculties in DCU. </p>
+</div>
+      
+        </div>
+      
+</div>
+
+<div class="overlay-headers-section">
+              <div class="top-sub-header">
+          
+            <div class="field field--name-field-top-sub-header field--type-text field--label-hidden field--item"><p>#DCUAlumni</p>
+</div>
+      
+        </div>
+      
+              <h2 class="overlay-main-header h2">
+          
+            <div class="field field--name-field-main-header field--type-text field--label-hidden field--item"><p>DCU Alumni Awards: Exceptional alumni honoured at ceremony</p>
+</div>
+      
+        </h2>
+      
+                  </div>
+
+</div>
+
+
+
+   </a>
+  </div>
+
+
+    </div>
+              <div class="building-block">    
+
+<div class="section-break primary blockbg-lightyellow">
+  <hr>
+</div>
+
+    </div>
+              <div class="building-block">  	
+  
+
+<div class="header-with-icon blockbg-lightyellow">
+  
+            <div class="field field--name-field-header field--type-text field--label-hidden field--item"><h2>Highlights</h2>
+</div>
+      
+  
+            <div class="field field--name-field-icon-with-header field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/highlights-icon.png" width="87" height="87" alt="DCU Highlights Icon" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+</div>
+
+    </div>
+              <div class="building-block">            
+
+        
+
+
+<div class="feature-image-overlay layout-contained table-responsive custom-container padding-horizontal text-bottomright image-topleft blockbg-background-lightyellow text-area-colours-bluebg">
+
+  <div class="fio__inner">
+   <a  href="/blog/2056/returning-work" >
+
+              <div class="background-icon">
+          
+            <div class="field field--name-field-background-iconography field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/homepage%20graphics_homepage%20story%20bg-19.jpg" width="2501" height="1455" alt="DCU Feature Background Image" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+        </div>
+      
+                    <div class="overlay-photo">
+          
+            <div class="field field--name-field-overlay-photo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/dcu_changemaker_network_editor/2023-04/Maternity%20Leave.jpg?h=20c91b1e&amp;itok=NndJEJuy" width="1920" height="1080" alt="Research Blog: Examining the career impact of maternity leave: DCU research points to better employee experiences" class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+<div class="overlay-text-section">
+
+<div class="overlay-text-area">
+         <div class="overlay-text-area">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>This blog looks at how the return to work after maternity leave is a critical transition for many women. In this project, DCU researchers looked at how women's professional relationships with their line managers both develop, and influence experiences during this time</p>
+</div>
+      
+        </div>
+      
+</div>
+
+<div class="overlay-headers-section">
+              <div class="top-sub-header">
+          
+            <div class="field field--name-field-top-sub-header field--type-text field--label-hidden field--item"><p>#DCUResearch</p>
+</div>
+      
+        </div>
+      
+              <h2 class="overlay-main-header h2">
+          
+            <div class="field field--name-field-main-header field--type-text field--label-hidden field--item"><p>Examining the career impact of maternity leave: researching better employee experiences</p>
+</div>
+      
+        </h2>
+      
+                  </div>
+
+</div>
+
+
+
+   </a>
+  </div>
+
+
+    </div>
+              <div class="building-block">            
+
+        
+
+
+<div class="feature-image-overlay layout-contained table-responsive custom-container padding-horizontal text-bottomleft image-topright blockbg-background-lightyellow text-area-colours-bluebg">
+
+  <div class="fio__inner">
+   <a  href="/commsteam/news/2024/feb/dublin-city-university-and-accenture-sign-memorandum-understanding" >
+
+              <div class="background-icon">
+          
+            <div class="field field--name-field-background-iconography field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/bg-4.png" width="1200" height="698" alt="DCU Feature Background Image" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+        </div>
+      
+                    <div class="overlay-photo">
+          
+            <div class="field field--name-field-overlay-photo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/marketing_editor/2024-01/dcu-accneture-mou-dock-jan-2024-04767.jpg?itok=T_O3Fk5l" width="1920" height="1280" alt="Group shot of DCU and Accenture representatives." class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+<div class="overlay-text-section">
+
+<div class="overlay-text-area">
+         <div class="overlay-text-area">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>Agreement will leverage existing strengths through a range of initiatives in order to advance their long-standing collaboration, and recognises their shared commitement to strengthening university-industry partnership</p>
+</div>
+      
+        </div>
+      
+</div>
+
+<div class="overlay-headers-section">
+              <div class="top-sub-header">
+          
+            <div class="field field--name-field-top-sub-header field--type-text field--label-hidden field--item"><p>#DCUEngagement</p>
+</div>
+      
+        </div>
+      
+              <h2 class="overlay-main-header h2">
+          
+            <div class="field field--name-field-main-header field--type-text field--label-hidden field--item"><p>Dublin City University and Accenture sign MOU</p>
+</div>
+      
+        </h2>
+      
+                  </div>
+
+</div>
+
+
+
+   </a>
+  </div>
+
+
+    </div>
+              <div class="building-block">            
+
+        
+
+
+<div class="feature-image-overlay layout-contained table-responsive custom-container padding-horizontal text-bottomright image-topleft blockbg-background-lightyellow text-area-colours-bluebg">
+
+  <div class="fio__inner">
+   <a  href="/commsteam/news/2024/feb/brexit-institute-event-marks-approaching-two-year-anniversary-russias" >
+
+              <div class="background-icon">
+          
+            <div class="field field--name-field-background-iconography field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/homepage%20graphics_homepage%20story%20bg-20.jpg" width="2501" height="1455" alt="DCU Feature Background Image" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+        </div>
+      
+                    <div class="overlay-photo">
+          
+            <div class="field field--name-field-overlay-photo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/marketing_editor/2024-01/visit-of-federica-mogherini-to-the-brexit-institute-25th-jan-2024_23-1.jpg?itok=5-E6wSIS" width="1920" height="1280" alt="Federica Mogherini speaking at the DCU Brexit Institute Event." class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+<div class="overlay-text-section">
+
+<div class="overlay-text-area">
+         <div class="overlay-text-area">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>Federica Mogherini, former High Representative of the EU for Foreign Affairs and Security Policy, gave the keynote address at event. Now Rector of the College of Europe, Ms. Mogherini also held a meeting in Belvedere House with members of The Brexit Institute.</p>
+</div>
+      
+        </div>
+      
+</div>
+
+<div class="overlay-headers-section">
+              <div class="top-sub-header">
+          
+            <div class="field field--name-field-top-sub-header field--type-text field--label-hidden field--item"><p>#DCUBrexit</p>
+</div>
+      
+        </div>
+      
+              <h2 class="overlay-main-header h2">
+          
+            <div class="field field--name-field-main-header field--type-text field--label-hidden field--item"><p>Brexit Institute event marks two-year anniversary of Russia’s invasion of Ukraine</p>
+</div>
+      
+        </h2>
+      
+                  </div>
+
+</div>
+
+
+
+   </a>
+  </div>
+
+
+    </div>
+              <div class="building-block">            
+
+        
+
+
+<div class="feature-image-overlay layout-contained table-responsive custom-container padding-horizontal text-bottomleft image-topright blockbg-background-lightyellow text-area-colours-bluebg">
+
+  <div class="fio__inner">
+   <a  href="/science-and-health/news/2024/feb/drug-resistant-pancreatic-cancer-cells-successfully-treated-prof" >
+
+              <div class="background-icon">
+          
+            <div class="field field--name-field-background-iconography field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/homepage%20graphics_homepage%20story%20bg-17.jpg" width="2501" height="1455" alt="DCU Feature Background Image" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+        </div>
+      
+                    <div class="overlay-photo">
+          
+            <div class="field field--name-field-overlay-photo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/media/2020/06/04/silvia_giordani.jpg?itok=rF5dl97J" width="1500" height="1000" alt="Prof. Silvia Giordani wins High Level Scientific Mobility Grant" class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+<div class="overlay-text-section">
+
+<div class="overlay-text-area">
+         <div class="overlay-text-area">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>Researchers, led by Professor Silvia Giordani, School of Chemical Sciences, Dublin City University, have found a way to more precisely deliver medicines to pancreatic ductal adenocarcinoma (PDAC) cells, a cancer cell type known for its aggression and its resistance to treatments.</p>
+</div>
+      
+        </div>
+      
+</div>
+
+<div class="overlay-headers-section">
+              <div class="top-sub-header">
+          
+            <div class="field field--name-field-top-sub-header field--type-text field--label-hidden field--item"><p>#DCUResearch</p>
+</div>
+      
+        </div>
+      
+              <h2 class="overlay-main-header h2">
+          
+            <div class="field field--name-field-main-header field--type-text field--label-hidden field--item"><p>Drug-resistant pancreatic cancer cells successfully treated in DCU lab</p>
+</div>
+      
+        </h2>
+      
+                  </div>
+
+</div>
+
+
+
+   </a>
+  </div>
+
+
+    </div>
+              <div class="building-block">            
+
+        
+
+
+<div class="feature-image-overlay layout-contained table-responsive custom-container padding-horizontal text-bottomright image-topleft blockbg-background-lightyellow text-area-colours-bluebg">
+
+  <div class="fio__inner">
+   <a  href="/courses/undergraduate/school-chemical-sciences/environmental-science-and-technology" >
+
+              <div class="background-icon">
+          
+            <div class="field field--name-field-background-iconography field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/homepage%20graphics_homepage%20story%20bg-19.jpg" width="2501" height="1455" alt="DCU Feature Background Image" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+        </div>
+      
+                    <div class="overlay-photo">
+          
+            <div class="field field--name-field-overlay-photo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/2020-09/img_5772.jpg?h=b858edfc&amp;itok=x_CnqJeM" width="1920" height="1080" alt="Environmental Science and Technology" class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+        </div>
+      
+<div class="overlay-text-section">
+
+<div class="overlay-text-area">
+         <div class="overlay-text-area">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>Do you want to help solve society's greatest challenges such as climate change and environmental pollution? Get the relevant scientific skills you’ll need to tackle these complex issues on this diverse and stimulating course. </p>
+</div>
+      
+        </div>
+      
+</div>
+
+<div class="overlay-headers-section">
+              <div class="top-sub-header">
+          
+            <div class="field field--name-field-top-sub-header field--type-text field--label-hidden field--item"><p>Featured Course</p>
+</div>
+      
+        </div>
+      
+              <h2 class="overlay-main-header h2">
+          
+            <div class="field field--name-field-main-header field--type-text field--label-hidden field--item"><p>Environmental Science and Technology</p>
+</div>
+      
+        </h2>
+      
+                  </div>
+
+</div>
+
+
+
+   </a>
+  </div>
+
+
+    </div>
+              <div class="building-block">
+
+<div class="layout-contained padding-horizontal">
+  <div class="tiled-layout custom-container tile--landingtwo landingtwo blockbg-lightyellow">
+
+      
+  	  
+
+
+  
+    
+
+  
+
+
+  
+  
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-secondary tile--full" >
+ <a  href="/commsteam/news/2024/feb/dcu-press-celebrates-launches-its-first-publication-statecraft-and-foreign" >
+
+    
+      
+              <div class="tile__image">
+          <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/sal_editor/2024-02/dcu-press-launch-30th-jan-2024_4.jpg?h=efb31b2b&amp;itok=EUQcutCn" width="1920" height="1079" alt="Shows DCU Press launch" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+        </div>
+      
+      <div class="tile-text-section">
+
+                  <div class="tile__text">
+            
+            <div class="field field--name-field-p-tile-text field--type-text-long field--label-hidden field--item"><p>Launches 'Statecraft and Foreign Policy: India, 1947-2023'</p>
+</div>
+      
+          </div>
+        
+                <div class="tile__title h1">
+        
+            <div class="field field--name-field-p-tile-title field--type-string field--label-hidden field--item">DCU Press launches first publication</div>
+      
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+  	  
+
+
+  
+    
+
+  
+
+
+  
+  
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-quinary tile--full" >
+ <a  href="/commsteam/news/2024/feb/dcu-educational-trust-hold-annual-leadership-circle-dinner" >
+
+    
+      
+              <div class="tile__image">
+          <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/widescreen_television/public/sal_editor/2024-02/leadership-circle-dinner-1th-feb-2024_88.jpg?h=4e7599e3&amp;itok=7dTfrxhf" width="1920" height="1080" alt="Shows people in O&#039;Mahony Hall for Leadership Circle Awards" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+        </div>
+      
+      <div class="tile-text-section">
+
+                  <div class="tile__text">
+            
+            <div class="field field--name-field-p-tile-text field--type-text-long field--label-hidden field--item"><p>Community Foundation Ireland, KPMG and Prof Noel O'Connor honoured</p>
+</div>
+      
+          </div>
+        
+                <div class="tile__title h1">
+        
+            <div class="field field--name-field-p-tile-title field--type-string field--label-hidden field--item">DCU Leadership Circle Awards</div>
+      
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+
+
+  </div>
+</div>
+
+
+
+    </div>
+              <div class="building-block">  
+
+<div class="section-break primary blockbg-">
+  <hr>
+</div>
+
+    </div>
+              <div class="building-block">  
+  
+
+<div class="header-with-icon blockbg-white">
+  
+            <div class="field field--name-field-header field--type-text field--label-hidden field--item"><h3>Our Vibrant Campuses</h3>
+</div>
+      
+  
+</div>
+
+    </div>
+              <div class="building-block">
+
+
+
+
+
+
+
+<div class="paragraph paragraph--type--bp-image paragraph--view-mode--default paragraph--id--298051">
+  <div class="paragraph__column custom-container">
+        
+            <div class="field field--name-field-p-hm-hero-image field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/placement_editor/2022-09/homepage%20graphics.jpg?h=ed9d3bb6&amp;itok=87KoV1W9" width="1200" height="750" alt="A collage of images showing DCU&#039;s three academic campuses " class="img-responsive" />
+
+
+</div>
+      
+</div>
+</div>
+      
+          </a>
+      </div>
+</div>
+</div>
+              <div class="building-block">  
+
+<div class="section-break primary blockbg-">
+  <hr>
+</div>
+
+    </div>
+              <div class="building-block">  	
+  
+
+<div class="header-with-icon blockbg-lightblue">
+  
+            <div class="field field--name-field-header field--type-text field--label-hidden field--item"><h2>News</h2>
+</div>
+      
+  
+            <div class="field field--name-field-icon-with-header field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/news-icon.png" width="87" height="87" alt="News Icon" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+</div>
+
+    </div>
+              <div class="building-block">
+
+
+
+
+
+
+  
+
+  
+
+
+
+<!-- v -->
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--298131 blockbg-lightblue">
+  <div class="paragraph__column">
+    
+      <div class="field field--name-bp-view field--type-viewsreference field--label-hidden field--items">
+              <div class="field--item"><div class="views-element-container form-group"><div class="custom-container medium six-story view view-news-views view-id-news_views view-display-id-block_7 js-view-dom-id-cc2f0e08abd76f6ff57c4c18dd8e39123aee0a2bc18856b616cfdbc9e5ba6dd5">
+  
+    
+      
+      <div class="view-content">
+          <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/news/news/2024/feb/dcus-autism-friendly-university-and-isl-stem-glossary-and-gnomes-feature-new">  	
+
+
+
+  
+
+
+
+
+
+<div class="hero-image custom-container below">
+
+
+  <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/comms_team_editor/2024-02/my-uni-life_matthew-smith-and-fiona-early_autism-friendly-university_dcu_-img2.jpg?h=75ed424a&amp;itok=R84Zd0aa" width="1200" height="800" alt="Fiona Earley and Matthew Smith" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+
+    
+            <div class="field field--name-field-p-hm-image-caption field--type-string-long field--label-hidden field--item">Fiona Earley, Dublin City University&#039;s Autism Friendly University Coordinator and Matthew Smith, who studied Early Childhood Education in DCU</div>
+      
+  
+</div>
+
+     
+<div class="field--name-field-news-date field--type-datetime"><time datetime="2024-02-16T10:12:04+00:00">16/02/2024</time>
+ </div>
+<div class="news-card-title" aria-label="DCU’s Autism Friendly University and the ISL STEM glossary and The Gnomes feature in new series of My Uni Life" role="note"> <a href="/news/news/2024/feb/dcus-autism-friendly-university-and-isl-stem-glossary-and-gnomes-feature-new" hreflang="en">DCU’s Autism Friendly University and the ISL STEM glossary and The Gnomes feature in new series of My Uni Life</a> </div></a></span></div></div>
+    <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/commsteam/news/2024/feb/dcu-led-media-ownership-monitor-ireland-launched">  	
+
+
+
+  
+
+
+
+
+
+<div class="hero-image custom-container above">
+
+  
+  
+  <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/2021-03/dc631-ma-in-political-communications.jpg?itok=gqts7-Xw" width="1200" height="801" alt="MA in Political Communications" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+
+  
+</div>
+
+     
+<div class="field--name-field-news-date field--type-datetime"><time datetime="2024-02-16T09:06:04+00:00">16/02/2024</time>
+ </div>
+<div class="news-card-title" aria-label="DCU-led Media Ownership Monitor Ireland launched" role="note"> <a href="/commsteam/news/2024/feb/dcu-led-media-ownership-monitor-ireland-launched" hreflang="en">DCU-led Media Ownership Monitor Ireland launched</a> </div></a></span></div></div>
+    <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/instituteofeducation/news/2024/feb/dcu-researchers-launch-virtual-reality-classroom-communication">  	
+
+
+
+  
+
+
+
+
+
+<div class="hero-image custom-container below">
+
+
+  <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/engineering_and_computing_editor/2024-02/alan-gorman-and-peter-tiernan-virtual-classroom-8th-feb-2024_6.jpg?itok=FmAGevW_" width="1200" height="800" alt="Shows Dr Peter Tiernan and Dr Alan Gorman using VR equipment" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+
+    
+            <div class="field field--name-field-p-hm-image-caption field--type-string-long field--label-hidden field--item">Dr Peter Tiernan and Dr Alan Gorman have worked with the School of Computing on the project. Credit: Kyran O&#039;Brien</div>
+      
+  
+</div>
+
+     
+<div class="field--name-field-news-date field--type-datetime"><time datetime="2024-02-19T10:09:29+00:00">19/02/2024</time>
+ </div>
+<div class="news-card-title" aria-label="DCU researchers launch virtual reality classroom communication skills resource" role="note"> <a href="/instituteofeducation/news/2024/feb/dcu-researchers-launch-virtual-reality-classroom-communication" hreflang="en">DCU researchers launch virtual reality classroom communication skills resource</a> </div></a></span></div></div>
+    <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/commsteam/news/2024/feb/exam-results">  	
+
+
+
+  
+
+
+
+
+
+<div class="hero-image custom-container above">
+
+  
+  
+  <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/editor/2024-02/st-pats-campus-gv-77_0.jpg?h=6b55786a&amp;itok=kS86Pcow" width="999" height="666" alt="Exam results" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+
+  
+</div>
+
+     
+<div class="field--name-field-news-date field--type-datetime"><time datetime="2024-02-06T10:02:57+00:00">06/02/2024</time>
+ </div>
+<div class="news-card-title" aria-label="Exam results" role="note"> <a href="/commsteam/news/2024/feb/exam-results" hreflang="en">Exam results</a> </div></a></span></div></div>
+    <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/commsteam/news/2024/feb/dcu-press-celebrates-launches-its-first-publication-statecraft-and-foreign">  	
+
+
+
+  
+
+
+
+
+
+<div class="hero-image custom-container below">
+
+
+  <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/editor/2024-02/dcu-press-launch-30th-jan-2024_23.jpg?h=bdbe9ddb&amp;itok=szU7mzqf" width="1198" height="799" alt="DCU President Professor Daire Keogh with His Excellency Akhilesh Mishra, Indian Ambassador to Ireland" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+
+    
+            <div class="field field--name-field-p-hm-image-caption field--type-string-long field--label-hidden field--item">DCU President Professor Daire Keogh with His Excellency Akhilesh Mishra, Indian Ambassador to Ireland. </div>
+      
+  
+</div>
+
+     
+<div class="field--name-field-news-date field--type-datetime"><time datetime="2024-02-07T15:58:06+00:00">07/02/2024</time>
+ </div>
+<div class="news-card-title" aria-label=" India, 1947 – 2023" role="note"> <a href="/commsteam/news/2024/feb/dcu-press-celebrates-launches-its-first-publication-statecraft-and-foreign" hreflang="en">DCU Press celebrates the launches of its first publication, Statecraft and Foreign Policy: India, 1947 – 2023</a> </div></a></span></div></div>
+    <div class="card views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/commsteam/news/2024/feb/dcu-educational-trust-hold-annual-leadership-circle-dinner">  	
+
+
+
+  
+
+
+
+
+
+<div class="hero-image custom-container below">
+
+
+  <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/user_defined/public/marketing_editor/2024-02/exo-1-1.jpg?itok=SshRbe0_" width="1200" height="800" alt="Leadership Circle Dinner 2024" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+
+    
+            <div class="field field--name-field-p-hm-image-caption field--type-string-long field--label-hidden field--item">(L-R) Jack Kavanagh, Ronan Langan, Chloe Greene and Prof Blanaid White</div>
+      
+  
+</div>
+
+     
+<div class="field--name-field-news-date field--type-datetime"><time datetime="2024-02-07T16:13:41+00:00">07/02/2024</time>
+ </div>
+<div class="news-card-title" aria-label="DCU Educational Trust hold annual Leadership Circle Dinner" role="note"> <a href="/commsteam/news/2024/feb/dcu-educational-trust-hold-annual-leadership-circle-dinner" hreflang="en">DCU Educational Trust hold annual Leadership Circle Dinner</a> </div></a></span></div></div>
+
+    </div>
+  
+          <div class="more-link form-group"><a href="https://www.dcu.ie/news">More news &gt;</a></div>
+
+      </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+</div>
+</div>
+              <div class="building-block">  	
+  
+
+<div class="header-with-icon blockbg-lightgrey">
+  
+            <div class="field field--name-field-header field--type-text field--label-hidden field--item"><h2>Events</h2>
+</div>
+      
+  
+            <div class="field field--name-field-icon-with-header field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/events-icon.png" width="87" height="87" alt="Events Icon" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+</div>
+
+    </div>
+              <div class="building-block">
+
+
+
+
+
+
+  
+
+  
+
+
+
+<!-- v -->
+<div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--298136 blockbg-lightgrey">
+  <div class="paragraph__column">
+    
+      <div class="field field--name-bp-view field--type-viewsreference field--label-hidden field--items">
+              <div class="field--item"><div class="views-element-container form-group"><div class="custom-container medium view view-dcu-events-calendar view-id-dcu_events_calendar view-display-id-block_6 js-view-dom-id-eaab178fe68eab27050c2b0184b8483e4bf476d2da84578189404c613304d667">
+  
+    
+      
+  
+          </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+</div>
+</div>
+              <div class="building-block">    
+
+<div class="section-break quaternary blockbg-lightgrey">
+  <hr>
+</div>
+
+    </div>
+              <div class="building-block">  	
+  
+
+<div class="header-with-icon blockbg-yellow">
+  
+            <div class="field field--name-field-header field--type-text field--label-hidden field--item"><h2>Get Social</h2>
+</div>
+      
+  
+            <div class="field field--name-field-icon-with-header field--type-entity-reference field--label-hidden field--item"><div>
+  
+  
+  <div class="field field--name-field-m-image-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img loading="lazy" src="/sites/default/files/2022-09/social-icon.png" width="87" height="87" alt="Social Icon" class="img-responsive" />
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+</div>
+
+    </div>
+              <div class="building-block">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="paragraph paragraph--type--bp-blank paragraph--view-mode--default paragraph--id--298096 blockbg-">
+  <div class="paragraph__column">
+    
+            <div class="field field--name-bp-unrestricted field--type-text-long field--label-hidden field--item"><div class="get-social-heading"><p>Spotted on Instagram</p></div></div>
+      
+  </div>
+</div>
+</div>
+              <div class="building-block">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="paragraph paragraph--type--from-library paragraph--view-mode--default paragraph--id--368291 blockbg-">
+  <div class="paragraph__column">
+    
+      <div>
+
+<div class="layout-contained padding-horizontal">
+  <div class="tiled-layout custom-container tile--landingthree landingthree blockbg-yellow">
+
+      
+  	  
+
+
+  
+    
+
+  
+
+
+
+
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-primary tile--medium" >
+ <a  href="https://www.instagram.com/p/C2-XH20sTIr/" >
+
+    
+      
+              <div class="tile__image">
+          <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/square/public/sal_editor/2024-02/hp-instagram-3.png?h=fdb4ed80&amp;itok=r20JpaJJ" width="600" height="600" alt="Shows Alumni Award winner posing outside Albert College blue door " class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+        </div>
+      
+      <div class="tile-text-section">
+
+        
+                <div class="tile__title h1">
+        
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+  	  
+
+
+  
+    
+
+  
+
+
+
+
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-primary tile--medium" >
+ <a  href="https://www.instagram.com/p/C2kOhsDM27F/" >
+
+    
+      
+              <div class="tile__image">
+          <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/square/public/sal_editor/2024-02/hp-instagram-2.png?h=3cb5d27d&amp;itok=XUfYjXtb" width="600" height="600" alt="Shows DCU GAA player during a match" class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+        </div>
+      
+      <div class="tile-text-section">
+
+        
+                <div class="tile__title h1">
+        
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+  	  
+
+
+  
+    
+
+  
+
+
+
+
+
+    
+
+
+<div  class="tile tile-outline tile--has-image tile--colour-primary tile--medium" >
+ <a  href="https://www.instagram.com/p/C2Rs2ePsRFq/" >
+
+    
+      
+              <div class="tile__image">
+          <div>
+  
+  
+            <div class="field field--name-field-m-image-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/default/files/styles/square/public/sal_editor/2024-02/hp-instagram-1.png?h=0420777b&amp;itok=HtYkvTdF" width="600" height="600" alt="Shows international student at welcome event " class="img-responsive" />
+
+
+</div>
+      
+</div>
+
+        </div>
+      
+      <div class="tile-text-section">
+
+        
+                <div class="tile__title h1">
+        
+        </div>
+        
+                              </div>
+
+      
+    
+
+</a>
+</div>
+
+    
+
+
+  </div>
+</div>
+
+
+
+    </div>
+  
+  </div>
+</div>
+</div>
+              <div class="building-block">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="paragraph paragraph--type--bp-blank paragraph--view-mode--default paragraph--id--298121 blockbg-">
+  <div class="paragraph__column">
+    
+            <div class="field field--name-bp-unrestricted field--type-text-long field--label-hidden field--item"><div class="footer-container">
+<div class="social-icons-large">
+<a href="https://www.facebook.com/DCU" target="_blank"><img src="/sites/default/files/2024-01/fb-100.jpg" alt="DCU Facebook" /></a>
+
+<a href="https://twitter.com/DCU/" target="_blank"><img src="/sites/default/files/2024-01/x-100.jpg" alt="DCU Twitter" /></a>
+
+<a href="https://www.youtube.com/user/DublinCityUniversity" target="_blank"><img src="/sites/default/files/2024-01/yt-100.jpg" alt="DCU YouTube" /></a>
+
+<a href="https://www.instagram.com/dublincityuniversity/" target="_blank"><img src="/sites/default/files/2024-01/ig-100.jpg" alt="DCU Instagram" /></a>
+
+<a href="https://vm.tiktok.com/ZMekeLrLn/" target="_blank"><img src="/sites/default/files/2024-01/tiktok-100.jpg" alt="DCU Tiktok" /></a>
+</div>
+<div class="keep-in-touch-container">
+<a href="/contact-us" class="keep-in-touch">Interested in DCU?</a>
+</div>
+</div></div>
+      
+  </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+
+</article>
+
+
+  </div>
+
+              </section>
+
+                </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <section id="block-revisioncreatetime" class="last-updated block block-ctools-block block-entity-fieldnoderevision-timestamp clearfix">
+  
+    
+
+      
+  <div class="field field--name-revision-timestamp field--type-created field--label-above">
+    <div class="field--label">Revision create time</div>
+              <div class="field--item"><h6>Last updated:</h6><p>1 week 1 day ago</p></div>
+          </div>
+
+  </section>
+
+<section id="block-footercontent" class="footer-content-container block block-block-content block-block-content98aeef5b-8259-40fe-98a8-ed3d2c1981b6 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div id="content-holder">
+<div id="footer-left" class="footer-content">
+<ul class="footer-ul" id="ul-left"><li><a href="https://www.dcu.ie/studentapps" title="Student Apps &amp; Links">Student Apps</a></li>
+     <li><a href="https://www.dcu.ie/staff" title="Staff Apps ">Staff Apps</a></li>
+     <li><a href="https://loop.dcu.ie/" title="Loop Footer Link">Loop</a></li>
+     <li><a href="/disclaimer" title="Disclaimer">Disclaimer</a></li>
+</ul><ul class="footer-ul" id="ul-center"><li><a href="http://login.mail.dcu.ie/" title="Student Email">Student Email</a></li>
+     <li><a href="http://apps.dcu.ie/" title="Staff Email">Staff Email</a></li>
+    </ul><ul class="footer-ul" id="ul-right"><li><a href="/policies-privacy-and-cookies-statement-information-systems-services" title="Privacy">Privacy and Cookies</a></li>
+    <li><a href="/digitalcomms/accessibility-statement" title="Privacy">Accessibility Statement</a></li>
+     <li><a href="/contact-us" title="Contact">Contact Us</a></li>
+</ul></div>
+
+<div id="footer-center" class="footer-content">
+<div class="social-wrapper">
+
+<div class="social-icon"><a href="https://www.facebook.com/DCU" target="_blank"><img src="/themes/custom/dcuorange/images/facebook50.png" alt="Facebook Icon" width="32" height="32" loading="lazy" /></a></div>
+
+<div class="social-icon"><a href="https://twitter.com/DCU/" target="_blank"><img src="/themes/custom/dcuorange/images/twitter50.png" alt="Twitter Icon" height="32" width="32" loading="lazy" /></a></div>
+
+<div class="social-icon"><a href="https://www.youtube.com/user/DublinCityUniversity" target="_blank"><img src="/themes/custom/dcuorange/images/youtube-logo.png" alt="YouTube Icon" height="32" width="32" loading="lazy" /></a></div>
+
+<div class="social-icon"><a href="https://www.instagram.com/dublincityuniversity/" target="_blank"><img src="/themes/custom/dcuorange/images/instagram50.png" alt="Instagram Icon" width="32" height="32" loading="lazy" /></a></div>
+<div class="social-icon"><a href="https://vm.tiktok.com/ZMekeLrLn/" target="_blank"><img src="/themes/custom/dcuorange/images/tiktok50.png" alt="Tik Tok Icon" width="32" height="32" loading="lazy" /></a></div>
+
+
+
+
+
+</div>
+</div>
+
+<div id="footer-right" class="footer-content">
+
+<ul id="footer_logo"><li id="footer_logo_item1" class="even_footer_logo_item"><a href="https://www.thehelix.ie/" title=""><img src="/themes/custom/dcuorange/images/the-helix.png" alt="The Helix logo" width="92" height="18" loading="lazy" /></a></li>
+<li id="footer_logo_item2" class="even_footer_logo_item"><a href="https://eufunds.ie/" title=""><img src="/themes/custom/dcuorange/images/Irelands-EU-S-IFP-2014-2020.jpg" width="92" height="26" alt="ESF logo" loading="lazy" /></a></li>
+<li id="footer_logo_item3" class="odd_footer_logo_item"><a href="https://eufunds.ie/" title=""><img src="/themes/custom/dcuorange/images/eu_image.jpg" alt="EU Structural Funds logo" width="52" height="48" loading="lazy" /></a></li>
+</ul></div>
+</div></div>
+      
+  </section>
+
+<section id="block-phonebookscript" class="block block-block-content block-block-content63957091-7c22-4ed5-bfd9-36cb73b914f8 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><script>
+function getQueryVariable(keywords)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == "keywords"){return pair[1];}
+       }
+       return(false);
+}
+
+
+    var x = getQueryVariable();
+if (x) {
+    x = x.replace(/\+/g, '%20');
+    x = decodeURIComponent(x);
+  var individual = x;
+
+ window.onload = function enterName() {
+if(document.getElementById('edit-find-staff') != null) {
+    document.getElementById('edit-find-staff').value = individual;
+}
+if(document.getElementById('views-exposed-form-phonebook-search-block-1') != null) {
+document.getElementById("views-exposed-form-phonebook-search-block-1").submit();
+}
+};
+};
+</script> </div>
+      
+  </section>
+
+<section id="block-recitemeaccessibilitytool" class="block block-recite-me block-recite-me-block clearfix">
+  
+    
+
+          <script>
+    var serviceUrl = "//api.reciteme.com/asset/js?key=";
+    var serviceKey = "9e088e763ab0e699d675959fe85c7ebc754fcfa4";
+    var options = {
+
+    };
+    var autoLoad = false;
+    var enableFragment = "#reciteEnable";
+    var loaded = [], frag = !1;
+    window.location.hash === enableFragment && (frag = !0);
+
+    function loadScript(c, b) {
+        var a = document.createElement("script");
+        a.type = "text/javascript";
+        a.readyState ? a.onreadystatechange = function() {
+            if ("loaded" == a.readyState || "complete" == a.readyState) a.onreadystatechange = null, void 0 != b && b()
+        } : void 0 != b && (a.onload = function() {
+            b()
+        });
+        a.src = c;
+        document.getElementsByTagName("head")[0].appendChild(a)
     }
-    </style>
-    <ul class="Nav2">
-      <li><a class="writable" href="#home">Home</a></li>
-      <li><a class="writable" href="#news">News</a></li>
-      <li><a class="writable" href="#contact">Contact</a></li>
-      <li><a class="writable" href="#about">About</a></li>
-    </ul>
+
+    function _rc(c) {
+        c += "=";
+        for (var b = document.cookie.split(";"), a = 0; a < b.length; a++) {
+            for (var d = b[a];
+                " " == d.charAt(0);) d = d.substring(1, d.length);
+            if (0 == d.indexOf(c)) return d.substring(c.length, d.length)
+        }
+        return null
+    }
+
+    function loadService(c) {
+        for (var b = serviceUrl + serviceKey, a = 0; a < loaded.length; a++)
+            if (loaded[a] == b) return;
+        loaded.push(b);
+        loadScript(serviceUrl + serviceKey, function() {
+            "function" === typeof _reciteLoaded && _reciteLoaded();
+            "function" == typeof c && c();
+            Recite.load(options);
+            Recite.Event.subscribe("Recite:load", function() {
+                Recite.enable()
+            })
+        })
+    }
+
+    function loadReciteMe() {
+        "true" == _rc("Recite.Persist") && loadService();
+        (autoLoad && "false" != _rc("Recite.Persist") || frag) && loadService();
+
+        var reciteMeButtons = document.querySelectorAll('#reciteMe, #reciteme-launch, .reciteme-launch, [href *= "reciteme-launch"]');
+        for (var i = 0; i < reciteMeButtons.length; i++) {
+            var reciteMeButton = reciteMeButtons[i];
+            if (reciteMeButton) {
+                reciteMeButton.addEventListener("click", function () {
+                    loadService();
+                });
+            }
+        }
+    }
+
+    if(document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", function(event) {
+            loadReciteMe();
+        });
+    } else {
+        loadReciteMe();
+    }
+
+    function _reciteLoaded() {
+
+    }
+
+
+    </script>
+
+  </section>
+
+<section id="block-sitescripts" class="block block-block-content block-block-content9081b5f0-eb58-47ae-8236-2f7a784e8cc6 clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><!--
+ <script>
+    function webform() {
+    var x = document.getElementsByClassName("paragraph--type--bp-webform");
+        if (document.body.classList.contains('page-node-type-webform') || (x.length >= 1)){
+    document.getElementById("main-content").innerHTML = "<h2 class='alternative' style='text-align:center;'>Webforms on the DCU website are closed for a short time while we carry out essential upgrades.<br> Please check back again soon.</h2>"; 
+        }
+    }
+    window.onload = webform;
+        </script> -->
+
+
+
+<script>
+window.addEventListener('load', (event) => {
+
+	if(document.querySelector(".hero-slide .slide__description") != null) {
+		document.querySelectorAll(".hero-slide .slide__description p").forEach(function(slide_sub) {
+		   if (slide_sub.innerHTML.length > 65) {
+		   		var result = slide_sub.innerHTML.substring(0, 65) + '...';
+		   		slide_sub.innerHTML = result;
+		   }
+		});
+	}
+
+	if(document.querySelector(".paragraph--type--carousel-container .slide__description") != null) {
+		document.querySelectorAll(".paragraph--type--carousel-container .slide__description p").forEach(function(slide_sub) {
+		   if (slide_sub.innerHTML.length > 120) {
+		   		var result = slide_sub.innerHTML.substring(0, 120) + '...';
+		   		slide_sub.innerHTML = result;
+		   }
+		});
+	}
+
+	if(document.querySelector(".tiled-layout .field--name-field-p-tile-title") != null) {
+		document.querySelectorAll(".tiled-layout .field--name-field-p-tile-title").forEach(function(slide_sub) {
+			if(!slide_sub.parentNode.parentNode.parentNode.parentNode.classList.contains('landingfive') && !slide_sub.parentNode.parentNode.parentNode.parentNode.classList.contains('landingfour') && !slide_sub.parentNode.parentNode.parentNode.parentNode.classList.contains('iconsfour') && !slide_sub.parentNode.parentNode.parentNode.parentNode.classList.contains('strategy') && !slide_sub.parentNode.parentNode.parentNode.parentNode.classList.contains('strategicpriorities')) {
+				if (slide_sub.innerHTML.length > 40) {
+					var result = slide_sub.innerHTML.substring(0, 40) + '...';
+					slide_sub.innerHTML = result;
+				}
+			} else {
+				if(!slide_sub.parentNode.parentNode.parentNode.parentNode.classList.contains('strategicpriorities')) {
+					if (slide_sub.innerHTML.includes("Research Reputation")) {
+						slide_sub.parentNode.classList.add('tile-pillar-research');
+
+					} else if (slide_sub.innerHTML.includes("International Engagement")) {
+						slide_sub.parentNode.classList.add('tile-pillar-engagement');
+
+					} else if (slide_sub.innerHTML.includes("Staff")) {
+						slide_sub.parentNode.classList.add('tile-pillar-staff');
+
+					} else if (slide_sub.innerHTML.includes("Organisational Resilience")) {
+						slide_sub.parentNode.classList.add('tile-pillar-resilience');
+
+					} else if (slide_sub.innerHTML.includes("Student Experience")) {
+						slide_sub.parentNode.classList.add('tile-pillar-student');
+					}				
+				}
+
+			}
+		});
+	}
+
+	if(document.querySelector(".tiled-layout .field--name-field-p-tile-text") != null) {
+		document.querySelectorAll(".tiled-layout .field--name-field-p-tile-text").forEach(function(slide_sub) {
+		   if(!slide_sub.parentNode.parentNode.parentNode.parentNode.parentNode.classList.value.includes('iconsfour') && !slide_sub.parentNode.parentNode.parentNode.parentNode.parentNode.classList.value.includes('strategy') && !slide_sub.parentNode.parentNode.parentNode.parentNode.parentNode.classList.value.includes('strategicpriorities')) {
+			   if (slide_sub.innerHTML.length > 120) {
+			   		var result = slide_sub.innerHTML.substring(0, 120) + '...';
+			   		slide_sub.innerHTML = result;
+			   }
+			}
+		});
+	}
+
+	if(document.querySelector(".views-news-views .field--name-field-event-date") != null) {
+		document.querySelectorAll(".views-news-views .field--name-field-event-date").forEach(function(slide_sub) {
+		   if (slide_sub.innerHTML.length > 65) {
+		   		var result = slide_sub.innerHTML.substring(0, 65) + '...';
+		   		slide_sub.innerHTML = result;
+		   }
+		});
+	}
+
+	if(document.querySelector(".news-card-title") != null) {
+		document.querySelectorAll(".news-card-title a").forEach(function(slide_sub) {
+		   if (slide_sub.innerHTML.length > 70) {
+		   		var result = slide_sub.innerHTML.substring(0, 70) + '...';
+		   		slide_sub.innerHTML = result;
+		   }
+		});
+	}
+
+
+});
+
+</script>
+</div>
+      
+  </section>
+
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/171851","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"addtoany\/addtoany.front,anrt_gdpr\/anrt_gdpr,anrt_gdpr\/anrt_gdpr_cookiebot,blazy\/bio.ajax,blazy\/blazy,blazy\/classlist,blazy\/load,blazy\/polyfill,blazy\/promise,blazy\/raf,blazy\/webp,bootstrap\/popover,bootstrap\/tooltip,cookiebot\/cookiebot,core\/drupal.autocomplete,paragraphs\/drupal.paragraphs.unpublished,slick\/slick.css,slick\/slick.main.grid,slick\/slick.main.split,slick\/slick.theme,superfish\/superfish,superfish\/superfish_hoverintent,superfish\/superfish_smallscreen,superfish\/superfish_supersubs,superfish\/superfish_supposition,system\/base,vidatum\/vidatum,video_embed_field\/responsive-video,views\/views.ajax,views\/views.module,views_autocomplete_filters\/drupal.views-autocomplete-filters,views_autocomplete_filters\/drupal.views-autocomplete-filters-dependent,webform_bootstrap\/webform_bootstrap","theme":"dcuorange","theme_token":null},"ajaxTrustedUrl":{"\/courses\/admin":true},"cookiebot":{"message_placeholder_cookieconsent_optout_marketing_show":false,"message_placeholder_cookieconsent_optout_marketing":"\u003Cdiv class=\u0022cookiebot cookieconsent-optout-marketing\u0022\u003E\n\t\u003Cdiv class=\u0022cookieconsent-optout-marketing__inner\u0022\u003E\n\t\tPlease \u003Ca href=\u0022!cookiebot_renew\u0022 class=\u0022cookieconsent-optout-marketing__cookiebot-renew\u0022\u003Eaccept marketing-cookies\u003C\/a\u003E to view this embedded content from \u003Ca href=\u0022!cookiebot_from_src_url\u0022 target=\u0022_blank\u0022 class=\u0022cookieconsent-optout-marketing__from-src-url\u0022\u003E!cookiebot_from_src_url\u003C\/a\u003E\n\t\u003C\/div\u003E\n\u003C\/div\u003E\n"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"visibleClass":false,"compat":true},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"pauseOnHover":true,"pauseOnDotsHover":false,"pauseOnFocus":true,"autoplaySpeed":3000,"arrows":true,"downArrow":false,"downArrowTarget":"","downArrowOffset":0,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","mouseWheel":false,"randomize":false,"rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.34999999999999998,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","cssEaseBezier":"","cssEaseOverride":"","useTransform":true,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:b149cb2cf397cf0df2a41a19a7d76f3f8c498ef5bdb50984a81ff82c8c278a31":{"view_name":"prospectus","view_display_id":"block_20","view_args":"","view_path":"\/node\/171851","view_base_path":"courses\/admin","view_dom_id":"b149cb2cf397cf0df2a41a19a7d76f3f8c498ef5bdb50984a81ff82c8c278a31","pager_element":0}}},"superfish":{"superfish-main-menu-21":{"id":"superfish-main-menu-21","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast"},"plugins":{"smallscreen":{"mode":"window_width","breakpoint":1023,"accordionButton":0,"title":"\u2630    Main Menu"},"supposition":true,"supersubs":true}}},"csp":{"nonce":"gnEdSzdwnjtmOGE97X4cjQ"},"user":{"uid":0,"permissionsHash":"d97a25143375fdd61c4fd09e3af03a2197ba366694600a769f048686c527a116"}}</script>
+<script src="/sites/default/files/js/js_FUiaa89jJaujXf00HLxOM6VgRzwKWtT0fKl1VTD2ax0.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=dcuorange&amp;include=eJylUkFywyAM_BAxT_IIIyc0gDSSSJu-vsR1nGTinnoRq90VSADEaAT16mEFwyxUzelVDYsPoOg-McwkZQxEpibA_o1xE9E5YSDzG3IPPxPTBeWJMaJsiR2DwLETJ_VRGkMeHszQKreQk54wukvCT_VLHArFlrFTEawVv64uZPi--iWuOBPEFTLl65xyXtMpg2rf2u6yUEl91t9MYF5Rn5RdN05nv8RhUn3J7YQFX5gCqQ5HSbeeI9KIJWAc54Q5ekFlqpoueFjE90LlnO5NhUQDfMDXy_APYoRmNFHhjIb9gGwo2zUujsOz47A6_lV8iMhYI_YvMpHgveDZ6rQxytyfzW9oPN3eP1W7Fe7pWiBnnQSx7uuNmTRZoj_13l0Luqc6qGLjMbL4De1x4_Z3fwCRjzkx"></script>
+<script src="//static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_ybUtNcreHn7eoA5FIQboUxm3NAgswA5BPosoFEU4qgA.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=dcuorange&amp;include=eJylUkFywyAM_BAxT_IIIyc0gDSSSJu-vsR1nGTinnoRq90VSADEaAT16mEFwyxUzelVDYsPoOg-McwkZQxEpibA_o1xE9E5YSDzG3IPPxPTBeWJMaJsiR2DwLETJ_VRGkMeHszQKreQk54wukvCT_VLHArFlrFTEawVv64uZPi--iWuOBPEFTLl65xyXtMpg2rf2u6yUEl91t9MYF5Rn5RdN05nv8RhUn3J7YQFX5gCqQ5HSbeeI9KIJWAc54Q5ekFlqpoueFjE90LlnO5NhUQDfMDXy_APYoRmNFHhjIb9gGwo2zUujsOz47A6_lV8iMhYI_YvMpHgveDZ6rQxytyfzW9oPN3eP1W7Fe7pWiBnnQSx7uuNmTRZoj_13l0Luqc6qGLjMbL4De1x4_Z3fwCRjzkx"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_0KmRNpqiPjJhZz_uRuVnhr5D2uEQbbFxCeA3BwEbVHI.js?scope=footer&amp;delta=4&amp;language=en&amp;theme=dcuorange&amp;include=eJylUkFywyAM_BAxT_IIIyc0gDSSSJu-vsR1nGTinnoRq90VSADEaAT16mEFwyxUzelVDYsPoOg-McwkZQxEpibA_o1xE9E5YSDzG3IPPxPTBeWJMaJsiR2DwLETJ_VRGkMeHszQKreQk54wukvCT_VLHArFlrFTEawVv64uZPi--iWuOBPEFTLl65xyXtMpg2rf2u6yUEl91t9MYF5Rn5RdN05nv8RhUn3J7YQFX5gCqQ5HSbeeI9KIJWAc54Q5ekFlqpoueFjE90LlnO5NhUQDfMDXy_APYoRmNFHhjIb9gGwo2zUujsOz47A6_lV8iMhYI_YvMpHgveDZ6rQxytyfzW9oPN3eP1W7Fe7pWiBnnQSx7uuNmTRZoj_13l0Luqc6qGLjMbL4De1x4_Z3fwCRjzkx"></script>
+
+
+    <!-- ReciteMe Accessability Code -->
+    <!-- <script type="text/plain" data-cookieconsent="preferences" src="https://api.reciteme.com/asset/js?key=9e088e763ab0e699d675959fe85c7ebc754fcfa4"></script>
+<script type="text/plain" data-cookieconsent="preferences">
+Recite.load({
+enableButton: '.reciteme'
+});
+</script> -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8010de0d16","applicationID":"983950717","transactionName":"MldaZUdSVkIABRANDQsde0RGR1dcTgMKEAsRSxZfWlddHwIHCgsMDFFZXQ9fWV8FDwoDPRVTX1Q=","queueTime":11,"applicationTime":1880,"atts":"HhBNEw9IRR1DB0ZeGRhP","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

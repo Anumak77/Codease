@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { clickEvents, unselect } from "../scripts/clickEvents";
+import { clickEvents } from "../scripts/clickEvents";
 
 var id = 0; 
 
@@ -25,20 +24,23 @@ function save(setkey, setElements) {
     .catch(err=>console.log(err))
 }
 
-function load(loadId, setKey, setElements) {
-    const template = document.getElementById("Template");
-    setElements([]);
+function load(loadId, setElements) {
+    if (setElements) {
+        setElements([]);
+    }
 
     fetch("http://127.0.0.1:8000/api/templates/" + loadId + "/") 
     .then(response => response.json())
     .then(data => {
         console.log("Success:", data);
+        const template = document.getElementById("Template");
         id = data.id;
+        template.name = "New template";
         template.innerHTML = data.elements;
         template.style.zIndex = -1;
+        template.setAttribute("data-selected", null);
+        
         var elems = document.getElementsByClassName("element");
-        console.log(elems);
-        setKey(elems.length);
         for (const elem of elems) 
         {
             clickEvents(elem);
@@ -54,7 +56,7 @@ function newPage(setKey, setElements) {
 
     let newTemplate = {
         "name": "New template",
-        "elements": "<div id='Background'></div>",
+        "elements": "<div id='Background' style='width: 100%; height: 100%; z-index: 0;'></div>",
     }
 
     fetch("http://127.0.0.1:8000/api/templates/", {
@@ -72,8 +74,20 @@ function newPage(setKey, setElements) {
         template.name = "New template";
         template.innerHTML = newTemplate.elements;
         template.style = null;
+        template.setAttribute("data-selected", null);
     })
     .catch(err=>console.log(err))
 }
 
-export { save, load, newPage };
+function download() {
+    const template = document.getElementById("Template");
+    const link = document.createElement("a");
+    const content = template.outerHTML;
+    const file = new Blob([content], { type: 'application/html' });
+    link.href = URL.createObjectURL(file);
+    link.download = template.name + ".html";
+    link.click();
+    URL.revokeObjectURL(link.href);
+}
+
+export { save, load, newPage, download };

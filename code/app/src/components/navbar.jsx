@@ -1,11 +1,7 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Editor from './editor';
 import HomePage from './homepage';
-import { newPage } from '../scripts/saveLoad';
 
 function TopNavbar({setComponent}) {
     return (
@@ -14,11 +10,7 @@ function TopNavbar({setComponent}) {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Button onClick={() => setComponent(<HomePage setComponent={setComponent}/>)}>Home</Button>
-                <Button onClick={() => {
-                    newPage();
-                    setComponent(<Editor setComponent={setComponent}/>);
-                }}>Editor</Button>
+                {/* <button onClick={setComponent(<HomePage setComponent={setComponent}/>)}>Home</button> */}
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

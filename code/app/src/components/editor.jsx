@@ -1,17 +1,14 @@
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Element from './element.jsx';
 import Toolbar from './toolbar.jsx';
 import Image from './image.jsx';
-import { clickEvents, unselect } from "../scripts/clickEvents";
-import { changeColor } from "../scripts/changeStyles.js";
 
-function Editor({setComponent}) {
+function Editor() {
     const [key, setKey] = useState(0);
     const [elements, setElements] = useState([]);
-    const template = document.getElementById("Template");
 
     function addElement(elem) {
         setElements(elements.concat(<Element id={key} elem={elem}/>));
@@ -24,8 +21,6 @@ function Editor({setComponent}) {
         setKey(key + 1);
         console.log(elements);
     }
-
-    console.log(elements);
 
     return (
         <div id="Editor">
@@ -54,9 +49,9 @@ function Editor({setComponent}) {
                         variant={"secondary"}
                         title={`${'Navbar'}`}
                     >
-                        <Dropdown.Item eventKey="1"><button className="nav-link" onClick={() => addElement(1)}><img src="Nav1.png"/></button></Dropdown.Item>
+                        <Dropdown.Item eventKey="1"><button className="nav-link" onClick={() => addElement(1)}><img src="Nav1.png" alt="Nav1"/></button></Dropdown.Item>
                         <Dropdown.Divider />
-                        <Dropdown.Item eventKey="2"><button className="nav-link" onClick={() => addElement(2)}><img src="Nav2.png"/></button></Dropdown.Item>
+                        <Dropdown.Item eventKey="2"><button className="nav-link" onClick={() => addElement(2)}><img src="Nav2.png" alt="Nav2"/></button></Dropdown.Item>
                     </DropdownButton>
                 </li>
                 <li className="nav-item">

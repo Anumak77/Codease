@@ -15,6 +15,7 @@ function clickEvents(container) {
         container.setAttribute("data-offsetX", `${event.clientX - container.offsetLeft}`);
         container.setAttribute("data-offsetY", `${event.clientY - container.offsetTop}`);
         template.setAttribute("data-selected", container.id);
+        console.log(template.getAttribute("data-selected"));
 
         colorPicker.style.color = container.style.color;
         colorPicker.value = container.style.color;
@@ -28,15 +29,17 @@ function clickEvents(container) {
 
     function dragAndDrop () {
         template.addEventListener("mousemove", onMouseDrag);
-        template.addEventListener("mousedown", (event) => { 
-            if (!container.contains(event.target)) {
+        template.addEventListener("mousedown", function changeSelected(event) { 
+            if (container !== event.target && !container.contains(event.target)) {
                 unselect(container);
+                template.removeEventListener("mousedown", changeSelected);
             }
         });
     
         template.addEventListener("mouseup", () => {
             container.style.cursor = "move";
             template.removeEventListener("mousemove", onMouseDrag);
+
         });
     
         function onMouseDrag(event) {
