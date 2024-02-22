@@ -36,7 +36,6 @@ def register(request):
 
     return render(request, 'register.html', {'form': form})
 
-
 def verify_otp(request):
     if request.method == 'POST':
         form = OTPVerificationForm(request.POST)
@@ -47,7 +46,7 @@ def verify_otp(request):
                 user.otp = ''
                 user.save()
                 login(request, user)
-                return redirect('http://localhost:3000/') 
+                return redirect('http://localhost:3000/?user=' + str(user.id)) 
             else:
                 return render(request, 'verify_otp.html', {'error': 'Invalid OTP'})
     else:
@@ -64,13 +63,13 @@ def custom_login(request):
 
         if user is not None:
             login(request, user)
-            return redirect('http://localhost:3000/') 
+            return redirect('http://localhost:3000/?user=' + str(user.id)) 
         else:
             return render(request, 'login.html', {'error': 'Invalid login credentials'})
 
     return render(request, 'login.html')
 
-# @login_required
+#@login_required
 def success_page_view(request):
     name = request.user.name if request.user.is_authenticated else ""
     return render(request, 'success_page.html', {'user': request.user}) #, {'name': name}

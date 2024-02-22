@@ -4,6 +4,7 @@ import { changeText } from "./changeStyles";
 var id = 0; 
 
 function save(setkey, setElements, user) {
+    console.log(id);
     const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
     if (container) { unselect(container); }
 

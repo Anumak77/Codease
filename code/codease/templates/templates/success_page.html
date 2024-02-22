@@ -1,8 +1,22 @@
 {% extends 'base.html' %}
 
 {% block title %}Account Information{% endblock %}
-
+{% load static %}
 {% block content %}
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="{% static 'img/logo.jpg' %}" alt="Logo">
+            <a id="Homepage" href="" onclick="setHref()">Home</a>
+            <script>
+                function setHref(id) {
+                    document.getElementById("Homepage").href = 'http://localhost:3000/?user={{user.id}}';
+                }
+            </script>
+        </div>
+        <div class="navbar-right">
+            <a href="{% url 'success_page' %}">Account</a> <!-- Update 'account' to your actual account URL name -->
+        </div>
+    </div>
     <div style="margin: 40px 60px; line-height: 2;">
         {% if user.is_authenticated %}
             <h1>Welcome, {{ user.name }}! </h1>
@@ -11,13 +25,6 @@
             <p>Email: {{ user.email }}</p>
             <!-- Displaying password for testing purposes (remove in production!) -->
             <!-- <p>Password: {{ user.password }}</p> -->
-            
-            <a id="Homepage" href="" onclick="setHref()">Homepage</a>
-            <script>
-                function setHref(id) {
-                    document.getElementById("Homepage").href = 'http://localhost:3000/?user={{user.id}}';
-                }
-            </script>
            
             <!-- Add content specific to the authenticated user -->
             <form action="{% url 'index' %}" method="post">
