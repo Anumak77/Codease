@@ -3,14 +3,19 @@ import { changeText } from "./changeStyles";
 
 var id = 0; 
 
-function save(setkey, setElements) {
+function save(setkey, setElements, user) {
     const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
     if (container) { unselect(container); }
+
+    if (user) { user = JSON.parse(user); }
     
     let template = {
         "name": document.getElementById("template-name").innerText,
         "elements": document.getElementById("Template").innerHTML,
+        "owner": user.id,
     }
+
+    console.log(template);
 
     fetch("http://127.0.0.1:8000/api/templates/" + id + "/", {
         method: "PUT",
@@ -56,15 +61,18 @@ function load(loadId, setElements) {
     }); 
 }
 
-function newPage(setKey, setElements) {
+function newPage(setKey, setElements, user) {
     if (setKey && setElements) {
         setKey(0);
         setElements([]);
     }
 
+    if (user) { user = JSON.parse(user); }
+
     let newTemplate = {
         "name": "New template",
         "elements": "<div id='Background' style='width: 100%; height: 100%; z-index: 0;'></div>",
+        "owner": user.id,
     }
 
     fetch("http://127.0.0.1:8000/api/templates/", {

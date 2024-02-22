@@ -9,6 +9,8 @@ from .models import CustomUser
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 
 
+admin.site.register(Element)
+# admin.site.register(Template)
 
 class CustomUserAdmin(BaseUserAdmin):
     form = CustomUserChangeForm

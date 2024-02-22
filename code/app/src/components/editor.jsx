@@ -6,7 +6,7 @@ import Element from './element.jsx';
 import Toolbar from './toolbar.jsx';
 import Image from './image.jsx';
 
-function Editor() {
+function Editor({setComponent, user}) {
     const [key, setKey] = useState(0);
     const [elements, setElements] = useState([]);
 
@@ -22,7 +22,7 @@ function Editor() {
 
     return (
         <div id="Editor">
-            <Toolbar setKey={setKey} setElements={setElements}/>
+            <Toolbar setKey={setKey} setElements={setElements} user={user}/>
             <ul id = "Editor-nav"  expand="lg" className="p-3 mb-2 nav flex-column navbar-dark" data-bs-theme="dark">
                 <li className="nav-item">
                     <button className="nav-link" onClick={() => addElement(3)}>Text Box</button>

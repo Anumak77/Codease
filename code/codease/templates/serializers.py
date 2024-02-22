@@ -9,15 +9,10 @@ class ElementSerializer(serializers.ModelSerializer):
 class TemplateSerializer(serializers.ModelSerializer):
     class Meta:
         model=Template
-        # fields=('id','name','elements')
-        fields=('name','elements')
-
-class TemplateElementSerializer(serializers.ModelSerializer):
-    class Meta:
-        model=TemplateElement
-        fields=('id','html')
+        # fields=('id','name','elements', 'owner')
+        fields=('name','elements', 'owner')
 
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model=CustomUser
-        fields=('email','is_active', 'is_staff', 'name', 'otp')
+        fields=('id', 'email','is_active', 'is_staff', 'name', 'otp')

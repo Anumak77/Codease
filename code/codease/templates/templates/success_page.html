@@ -3,23 +3,32 @@
 {% block title %}Account Information{% endblock %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-    <h1>Welcome, {{ user.name }}! </h1>
-    <p>Name: {{ user.name }}</p>
-    <p>Email: {{ user.email }}</p>
-    <!-- Displaying password for testing purposes (remove in production!) -->
-    <!-- <p>Password: {{ user.password }}</p> -->
-
-    <!-- <a href="http://localhost:3000/">Editor</a> -->
-    <a href="http://localhost:3000/">Homepage</a>
-
-    <!-- Add content specific to the authenticated user -->
-    <form action="{% url 'index' %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Logout</button>
-    </form>
-    {% else %}
-    <p>You are not logged in. <a href="{% url 'login' %}">Login here</a></p>
-    {% endif %}
+    <div style="margin: 40px 60px; line-height: 2;"></div>
+        {% if user.is_authenticated %}
+            <h1>Welcome, {{ user.name }}! </h1>
+            <!-- <p>ID: {{user.id}}</p> -->
+            <p>Name: {{ user.name }}</p>
+            <p>Email: {{ user.email }}</p>
+            <!-- Displaying password for testing purposes (remove in production!) -->
+            <!-- <p>Password: {{ user.password }}</p> -->
+            
+            <a id="Homepage" href="" onclick="setHref()">Homepage</a>
+            <script>
+                function setHref(id) {
+                    document.getElementById("Homepage").href = 'http://localhost:3000/?user={{user.id}}';
+                }
+            </script>
+           
+            <!-- Add content specific to the authenticated user -->
+            <form action="{% url 'index' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% else %}
+            <p>You are not logged in. <a href="{% url 'login' %}">Login here</a></p>
+        {% endif %}
+    </div>
+    
+    
 {% endblock %}
 
