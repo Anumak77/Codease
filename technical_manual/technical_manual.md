@@ -133,53 +133,53 @@ Both diagrams show the UI and how users will navigate Codease, the main hub and 
 
 ## 4. Problems and Resolution
 
-Problem 1 - Specifying the exact features of the editor 
+_**Problem 1** - Specifying the exact features of the editor_
 
 As there can be countless features we could add to the editor, however, we had to specify which ones to add which proved to be quite a challenge as it was a struggle between the time constraint and also wanted to create a website where users could have endless possibilities.
 
-Solution 
+_Solution_ 
 
 After a lot of discussions and talking to family and friends with no coding experience. We narrowed down the features to the ones we thought were of the utmost importance to have. 
 
-Problem 2 - Displaying information about all the users 
+_**Problem 2**_- _Displaying information about all the users_
 
 After the backend was done, to add users we noticed the only way to do so was by manually letting each user log in one by one and to view their information after they logged in also seemed difficult. 
 
-Solution 
+_Solution_
 
 After a lot of testing and research, we ensured that this was added to the user account settings and viewing all users could only be done through the admin page to increase security.
 
-Problem 3 - Having an email to send out OTPS
+_**Problem 3** - Having an email to send out OTPS_
 
 Most emails such as Gmail, Outlook and Hotmail have a lot of security features to protect however that also means there is only a limited number of how many emails that can go through before the account gets flagged
 
-Solution 
+_Solution_ 
 
 After thoroughly researching and evaluating various email services, we decided to use Gmail for the OTP functionality. To this end, we created a dedicated Gmail account specifically for sending OTPs and adjusted its security settings to enable the dispatch of numerous emails without triggering spam filters.
 
-Problem 4 - Integrating both backend and frontend
+_**Problem 4** - Integrating both backend and frontend_
 
 To be able to save the templates properly we had to integrate Django and react.js, which was a lot more difficult than we originally thought
 
-Solution 
+_Solution_
 
 After a lot of trial and error, we were finally able to integrate both with a lot of research through the admin page.
 
 
-Problem 5 - Using emails for testing
+_**Problem 5** - Using emails for testing_
 
 When it came to testing to ensure the OTP system worked, we found that couldn’t use the same email twice due to security measures and creating a new email every time we needed to see if a feature was working was tiresome.
 
-Solution 
+_Solution_
 
 After some research, we discovered temporary email addresses that last 1-2 hours and were perfect for the type of testing we needed them for, as we only needed to see if our features worked every time we edited or added something new. The use of temporary 
 
 
-Problem 6 - Having too many files and folders in one place.
+_**Problem 6** - Having too many files and folders in one place_.
 
 As the frontend and backend were placed in the same folder, which in itself has many more files and folders. Over time it became difficult to link one file to another, or save photos and call them to other javascript files or python files.
 
-Solution 
+_Solution_
 
 We used static folders to store all images, along with organising all templates into one folder for templates. We also combined all javascript components into one component to avoid confusion and reduce cluttering all files into one folder.  
 
@@ -203,17 +203,19 @@ We used static folders to store all images, along with organising all templates 
 
 
 Hardware: Mac computer with macOS Sonoma version 14.1.2 installed.
+
 Software: Visual Studio Code (VSCode), Python 3.6+, Node.js and npm
-Set-up Instructions
-Install VScode - Download VSCode from the official website and follow the installation instructions.
+
+**Set-up Instructions**
 
 ```
+Install VScode - Download VSCode from the official website and follow the installation instructions.
 Clone the Project Repository - git clone https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator.git
 Set up Django - pip install -r requirements.txt
 Set up React js - npm install
 ```
 
-Start-up Instructions
+**Start-up Instructions**
 ```
 python manage.py makemigrations
 python manage.py migrate
