@@ -12,7 +12,7 @@ function save(setkey, setElements, user) {
     let template = {
         "name": document.getElementById("template-name").innerText,
         "elements": document.getElementById("Template").innerHTML,
-        "owner": user.id,
+        "owner": user?user.id:"null",
     }
 
     console.log(template);
@@ -72,7 +72,7 @@ function newPage(setKey, setElements, user) {
     let newTemplate = {
         "name": "New template",
         "elements": "<div id='Background' style='width: 100%; height: 100%; z-index: 0;'></div>",
-        "owner": user.id,
+        "owner": user?user.id:"null",
     }
 
     fetch("http://127.0.0.1:8000/api/templates/", {
@@ -119,6 +119,7 @@ function download() {
                 font-family: Arial;
             }
             .element {
+                width: 500px;
                 position: absolute;
                 display: inline-block;
                 overflow: visible;

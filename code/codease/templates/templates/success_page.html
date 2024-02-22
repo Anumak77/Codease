@@ -3,7 +3,7 @@
 {% block title %}Account Information{% endblock %}
 
 {% block content %}
-    <div style="margin: 40px 60px; line-height: 2;"></div>
+    <div style="margin: 40px 60px; line-height: 2;">
         {% if user.is_authenticated %}
             <h1>Welcome, {{ user.name }}! </h1>
             <!-- <p>ID: {{user.id}}</p> -->

@@ -22,6 +22,7 @@ function changeText(container) {
                     elem.innerText = val;
                     container.removeAttribute("data-inputMode");
                     elem.removeAttribute("data-inputMode");
+                    template.removeEventListener("click", textOutFocus);
                 }
             }
         }

@@ -9,6 +9,7 @@ import Image from './image.jsx';
 function Editor({setComponent, user}) {
     const [key, setKey] = useState(0);
     const [elements, setElements] = useState([]);
+    // const [loading, setLoading] = useState([<div id="Loading"><img src='Loading.gif'></img></div>])
 
     function addElement(elem) {
         setElements(elements.concat(<Element id={key} elem={elem}/>));
@@ -20,8 +21,13 @@ function Editor({setComponent, user}) {
         setKey(key + 1);
     }
 
+    // setTimeout(function(){
+    //     setLoading([]);
+    // }, 200);
+
     return (
         <div id="Editor">
+            {/* {loading} */}
             <Toolbar setKey={setKey} setElements={setElements} user={user}/>
             <ul id = "Editor-nav"  expand="lg" className="p-3 mb-2 nav flex-column navbar-dark" data-bs-theme="dark">
                 <li className="nav-item">

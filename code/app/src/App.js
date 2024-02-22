@@ -2,8 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { useState, useEffect } from 'react';
 import TopNavbar from './components/navbar';
-import Editor from './components/editor';
-import Element from './components/element';
 import HomePage from './components/homepage';
 
 function App() {

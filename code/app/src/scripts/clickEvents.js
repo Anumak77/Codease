@@ -42,7 +42,6 @@ function clickEvents(container) {
     
         function onMouseDrag(event) {
             if (container.getAttribute("data-inputMode") != null) { 
-                console.log("Writing")
                 return; 
             }
             event.preventDefault();

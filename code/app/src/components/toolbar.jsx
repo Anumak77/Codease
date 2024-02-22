@@ -154,10 +154,9 @@ function Toolbar({ setKey, setElements, user }) {
                         title={<span className="material-symbols-outlined">folder_open</span>}
                         id="bg-vertical-dropdown-1"
                         onClick={() => {
-                            fetch("http://127.0.0.1:8000/api/templates/") 
+                            fetch("http://127.0.0.1:8000/api/templates/?owner=" + JSON.parse(user).id) 
                             .then(response => response.json())
                             .then(data => {
-                                console.log("Success:", data);
                                 setLoads(data.reverse());
                             })}
                         }
