@@ -70,7 +70,7 @@ def custom_login(request):
 
     return render(request, 'login.html')
 
-@login_required
+# @login_required
 def success_page_view(request):
     name = request.user.name if request.user.is_authenticated else ""
     return render(request, 'success_page.html', {'user': request.user}) #, {'name': name}
