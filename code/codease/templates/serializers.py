@@ -15,3 +15,5 @@ class TemplateElementSerializer(serializers.ModelSerializer):
     class Meta:
         model=TemplateElement
         fields=('id','html')
+
+
