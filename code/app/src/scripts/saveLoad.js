@@ -156,4 +156,46 @@ function download() {
     }
 }
 
-export { save, load, newPage, download };
+function clone(elements, user) {
+    if (user) { user = JSON.parse(user); }
+
+    let newTemplate = {
+        "name": "New template",
+        "elements": elements,
+        "owner": user?user.id:"null",
+    }
+    console.log(newTemplate);
+
+    fetch("http://127.0.0.1:8000/api/templates/", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newTemplate),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Success:", data);
+        id = data.id;
+        const template = document.getElementById("Template");
+        template.name = "New template";
+        document.getElementById("template-name").innerText = "New Template";
+        template.innerHTML = newTemplate.elements;
+        template.style = null;
+        template.setAttribute("data-selected", null);
+        document.getElementById("link-input").disabled = true;
+
+        var elems = document.getElementsByClassName("element");
+        for (const elem of elems) 
+        {
+            clickEvents(elem);
+            changeText(elem);
+            disableLink(elem);
+        }
+
+        document.getElementById("link-input").disabled = true;
+    })
+    .catch(err=>console.log(err))
+}
+
+export { save, load, newPage, download, clone };

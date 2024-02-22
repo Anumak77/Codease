@@ -5,6 +5,7 @@ function clickEvents(container) {
     const linkInput = document.getElementById("link-input");
 
     container.addEventListener("mousedown", (event) => {
+        console.log("down");
         container.style.border = "3px solid #1871FF";
         container.setAttribute("data-offsetX", `${event.clientX - container.offsetLeft}`);
         container.setAttribute("data-offsetY", `${event.clientY - container.offsetTop}`);

@@ -17,6 +17,7 @@ function changeText(container) {
             }
     
             function textOutFocus(event) {
+                console.log("outfocus");
                 if (!elem.contains(event.target)) {
                     var val = input.value;
                     elem.innerText = val;
