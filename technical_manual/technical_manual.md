@@ -1,36 +1,34 @@
-**CA326**
-
-**Technical Specification **
-
-**Anushree Umak - 21343003, Ho Yan Woo 20110804**
+# Technical Specification
 
 
+Anushree Umak - 21343003
+
+Ho Yan Woo 20110804
 
 
+## Table of contents
 
+Table of contents	
+1. Introduction	
 
-Table of contents
+   1.1. Overview
 
-Table of contents	2
-1. Introduction	3
-1.1 Overview	3
-1.2 Glossary	4
-2. System Architecture	5
-2.1 Data Flow Diagram	5
-2.2 High-level System Architecture	6
-3. High-Level Design	7
-3.1 User Navigation Flow	7
-4. Problems and Resolution	8
-5. Installation Guide	10
+   1.2. Glossary	
 
+2. System Architecture	
 
+   2.1. Data Flow Diagram	
 
+   2.2. High-level System Architecture
 
+3. High-Level Design	
 
+   3.1. User Navigation Flow
 
+4. Problems and Resolution	
+5. Installation Guide
 
-
-
+	
 
 
 
@@ -39,8 +37,17 @@ Table of contents	2
 
 
 
-1. Introduction
-1.1 Overview
+
+
+
+
+
+
+
+
+
+## 1. Introduction
+### 1.1 Overview
 The product we developed, known as Codease, is a website designed to help users create their web pages for those who have little to no coding experience. Codease simplifies the process of designing webpages through a user-friendly interface. Users can effortlessly edit elements such as navigation bars, text, and media, allowing them to customise the website as they wish.
 Our core feature known as the Template Editor, allows users to create custom designs and manipulate webpage elements to create their desired website. The Template Editor comes with an additional feature where users can select from a repository or already created templates from which they can browse, edit or use as a starting point for their designs.
 Codease is a system that is designed to mainly focus on user-friendliness as it caters to users who lack programming knowledge but still wish to make their interactive web page designs. The system allows users to achieve these features through the Template Editor and the repository filled with already completed templates; aside from these features Codease also consists of a login page which comes along with an OTP verification system for secure access, a main page that acts as a hub for navigation with can also be found on the navigation bar and user account setting for users to manage and personalise their profile. Codease also offers a tutorial for first-time users, to allow a smooth transition into learning the functionalities of the website, however, even if a user were to return after a long period, each feature is clearly labelled so that even long-term users can return and still be comfortable the feature with the help of our labels and easily universally identifiable symbols. 
@@ -54,53 +61,51 @@ Codease is a system that is designed to mainly focus on user-friendliness as it 
 
 
 
-1.2 Glossary
+### 1.2 Glossary
 
 
-User-friendly interface: A software where the user can understand with ease and navigate through the application with little to no problems
+**User-friendly interface**: A software where the user can understand with ease and navigate through the application with little to no problems
 
-Template Editor: Software that lets users create or modify web pages. 
+**Template Editor**: Software that lets users create or modify web pages. 
 
-Repository: A storage location for a collection of pre-designed templates.
+**Repository**: A storage location for a collection of pre-designed templates.
 
-OTP verification system: A security system that sends a One-Time Password to the user's email to verify their identity, which they must input on the website. Once they are confirmed that it is the same the user is verified.
+**OTP verification system**: A security system that sends a One-Time Password to the user's email to verify their identity, which they must input on the website. Once they are confirmed that it is the same the user is verified.
 
-Data flow diagram: A graphical representation of how data transfers/moves/ transitions from one component to another.
+**Data flow diagram**: A graphical representation of how data transfers/moves/ transitions from one component to another.
 
-Frontend: The part of a website that users interact with directly, in this case, it is the template editor. 
+**Frontend**: The part of a website that users interact with directly, in this case, it is the template editor. 
 
-Backend: The backend is the server side that processes data and sends it to the frontend, in this case, is it the user account settings, the OTP, premade templates and its template editors' ability to save and load. 
+**Backend**: The backend is the server side that processes data and sends it to the frontend, in this case, is it the user account settings, the OTP, premade templates and its template editors' ability to save and load. 
 
-React JS: A JavaScript library mainly used for building dynamic user interface web pages.
+**React JS**: A JavaScript library mainly used for building dynamic user interface web pages.
 
-Django: A Python web framework that we used for the backend.
+**Django**: A Python web framework that we used for the backend.
 
-UI (User Interface): The interactions that occur between humans and machines.
+**UI (User Interface)**: The interactions that occur between humans and machines.
 
-Admin page: A webpage that we can access with the help of Django's built-in features which allows us to manage the website, and view user information and settings.
+**Admin page**: A webpage that we can access with the help of Django's built-in features which allows us to manage the website, and view user information and settings.
 
-Visual Studio Code (VSCode): A source-code editor.
+**Visual Studio Code (VSCode)**: A source-code editor.
 
-Clone the Project Repository: Download a copy of the code from an online repository known as GitLab.
+**Clone the Project Repository**: Download a copy of the code from an online repository known as GitLab.
 
-Makemigrations & Migrate: These Django commands are used to prepare and apply changes to the database.
+**Makemigrations & Migrate**: These Django commands are used to prepare and apply changes to the database.
 
-Node.js and npm: Node.js is an environment created for executing JavaScript code server-side, and npm is its package manager, used for installing JavaScript packages.
+**Node.js and np**m: Node.js is an environment created for executing JavaScript code server-side, and npm is its package manager, used for installing JavaScript packages.
 
 
 
-2. System Architecture
-2.1 Data Flow Diagram
+## 2. System Architecture
+### 2.1 Data Flow Diagram
 
-![Alt text](<Data Flow Diagram.png>)
+
 
 
 
 All the components of the system are shown below in the data flow diagram. The diagram depicts in detail how data is transitioned/ translated and moved through each component. We start with the user who inputs data about themselves, for the first time user account verification is required but the user who already has a login is then taken to the main hub. This page links everything together, The user can access the template editor and user account settings through the main hub; while doing so it is all linked to the database that constantly gets updated when users use the template editor. 
 
-2.2 High-level System Architecture  
-
-![Alt text](<High-level System Architecture.png>)
+### 2.2 High-level System Architecture  
 
 This diagram provides a detailed overview of the components, focusing on the software utilized for the front end and backend. The UI aims to offer a user-friendly experience, as detailed in the following section. For the front end, React JS was chosen for its interactive capabilities and ease of use with JavaScript. On the backend, we leveraged Django's robust built-in features to streamline development.
 
@@ -110,19 +115,19 @@ This diagram provides a detailed overview of the components, focusing on the sof
 
 
 
-3. High-Level Design
+## 3. High-Level Design
 
-3.1 User Navigation Flow
+### 3.1 User Navigation Flow
 
 
-![Alt text](<User Navigation FloW.png>)
-![Alt text](UI.png)
+
+
 
 Both diagrams show the UI and how users will navigate Codease, the main hub and the constant navigation bar on the top of most web pages will help users easily go to their desired page with little to no effort.
 
 
 
-4. Problems and Resolution
+## 4. Problems and Resolution
 
 Problem 1 - Specifying the exact features of the editor 
 
@@ -189,23 +194,26 @@ We used static folders to store all images, along with organising all templates 
 
 
 
-5. Installation Guide
+## 5. Installation Guide
 
 
 
 Hardware: Mac computer with macOS Sonoma version 14.1.2 installed.
-Software: 
-Visual Studio Code (VSCode):
-Python 3.6+
-Node.js and npm
+Software: Visual Studio Code (VSCode), Python 3.6+, Node.js and npm
 Set-up Instructions
 Install VScode - Download VSCode from the official website and follow the installation instructions.
+
+```
 Clone the Project Repository - git clone https://gitlab.computing.dcu.ie/wooh2/2024-ca326-aumak-customwebpagegenerator.git
 Set up Django - pip install -r requirements.txt
 Set up React js - npm install
+```
+
 Start-up Instructions
+```
 python manage.py makemigrations
 python manage.py migrate
 python3 manage.py runserver
 npm start
 Open the browser to the link - http://127.0.0.1:8000/
+```
