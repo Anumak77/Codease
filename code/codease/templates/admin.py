@@ -8,9 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from .models import CustomUser
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 
-admin.site.register(Element)
-admin.site.register(Template)
-admin.site.register(TemplateElement)
+
 
 class CustomUserAdmin(BaseUserAdmin):
     form = CustomUserChangeForm
@@ -34,3 +32,20 @@ class CustomUserAdmin(BaseUserAdmin):
     ordering = ('email',)
 
 admin.site.register(CustomUser, CustomUserAdmin)
+
+from django.contrib import admin
+from .models import Template
+
+# Register your models here.
+
+admin.site.register(Element)
+admin.site.register(TemplateElement)
+
+from django.contrib import admin
+from .models import Template
+
+class TemplateAdmin(admin.ModelAdmin):
+    # list_display = ('name', 'id', 'elements') 
+    list_display = ('name', 'elements') # Specify fields to display in the admin list view
+
+admin.site.register(Template, TemplateAdmin)

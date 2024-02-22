@@ -44,7 +44,7 @@ class TemplateElement(models.Model):
     html = models.TextField()
 
 class Template(models.Model):
-    id = models.AutoField(primary_key=True)
+    # id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     elements = models.TextField()
 

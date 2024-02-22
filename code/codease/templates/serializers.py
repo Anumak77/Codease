@@ -9,7 +9,8 @@ class ElementSerializer(serializers.ModelSerializer):
 class TemplateSerializer(serializers.ModelSerializer):
     class Meta:
         model=Template
-        fields=('id','name','elements')
+        # fields=('id','name','elements')
+        fields=('name','elements')
 
 class TemplateElementSerializer(serializers.ModelSerializer):
     class Meta:
