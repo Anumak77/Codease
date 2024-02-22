@@ -1,18 +1,16 @@
-List of contents
-
-List of contents	2
-Log in page	3
-Registering Users	4
-Template Editor	5
+# User Manual
 
 
 
 
 
 
+## List of contents
 
-
-
+1. List of contents	
+1. Log in page	
+1. Registering Users	
+1. Template Editor	
 
 
 
@@ -39,7 +37,17 @@ Template Editor	5
 
 
 
-Log in page 
+
+
+
+
+
+
+
+
+
+
+## Log in page 
 
 The first thing a user will see when they open our website is the option to log in if they already have an account, or register if they do not. 
 ![login](images/login.png)
@@ -62,7 +70,7 @@ For new users who need to register, they will need to select the 'Register' butt
 
 
 
-Registering Users
+## Registering Users
 
 In the user guide, I've utilized a temporary email address and the name 'testing' merely for demonstration purposes. 
 ![otp](images/otp.png)
@@ -91,7 +99,7 @@ Upon successful account creation, users are directed to a page where they can ch
 
 
 
-Template Editor
+## Template Editor
 
 
 The user has the option to either select an existing template or create their own. If they choose to create their own template, they will be directed to a page where they can utilize the elements provided below to design their own web page.
