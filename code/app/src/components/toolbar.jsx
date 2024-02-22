@@ -125,7 +125,7 @@ function Toolbar({ setKey, setElements }) {
             </li>
             <li className="nav-item">
                 <OverlayTrigger overlay={<Tooltip>Double click to change Template Name</Tooltip>}>
-                    <h5 id="template-name" className="writable"></h5>
+                    <h5 id="template-name" className="writable"> </h5>
                 </OverlayTrigger>
             </li>
             <li className="nav-item">

@@ -14,6 +14,7 @@ router = routers.DefaultRouter()
 router.register(r'elements', ElementViewSet)
 router.register(r'templates', TemplateViewSet)
 router.register(r'template_elements', TemplateElementViewSet)
+router.register(r'custom_users', CustomUserViewSet)
 
 
 urlpatterns = [

@@ -3,10 +3,52 @@ body {
   font-family: Arial;
 }
 
-#Top-nav {
-  height: 50px;
-  z-index: 4;
-  background-color: #F95738;
+.navbar {
+  background-color: #f95838; /* Navbar color */
+  overflow: hidden;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between; /* Adjusts navbar items to the left and right */
+  align-items: center;
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+
+.navbar img {
+  /* Adjust the size of your logo image as needed */
+  height: 40px;
+  margin-right: 10px;
+}
+
+.dropdown-menu {
+  height: 150px;
+  overflow-y: scroll;
+}
+
+#HomePage {
+  padding: 20px;
+}
+
+#HomePage button {
+  height: 40px;
+  margin: 20px;
+  align-items: center;
+  background-color: #f95838;
+  border: none;
 }
 
 #Editor {
@@ -53,11 +95,6 @@ body {
   all: unset;
   margin: 0 10px;
   font-size: 20px;
-}
-
-#Toolbar .dropdown-menu {
-  height: 150px;
-  overflow-y: scroll;
 }
 
 #Toolbar .divider {
