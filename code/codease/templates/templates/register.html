@@ -1,8 +1,9 @@
+<!-- register.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register Page</title>
+    <title>User Registration</title>
     <style>
         body {
             display: flex;
@@ -64,15 +65,16 @@
 </head>
 <body>
     <h2>Register</h2>
-<div class="center-container">
-    
+    <div class="center-container">
     <form method="post" action="{% url 'register' %}">
         {% csrf_token %}
         <div class="form-group">
-            {{ form.as_p }}
-        </div>
+        {{ form.as_p }}
+    </div>
         <button type="submit">Register</button>
     </form>
 </div>
 </body>
 </html>
+
+

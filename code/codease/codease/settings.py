@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import os
+from pathlib import Path
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -24,7 +26,7 @@ SECRET_KEY = 'django-insecure-wfxt*$#lg5h(ru@li6@59%uvs6%e*n*6*hpe!ta9=tne76j=_5
 
 DEBUG = True #don't run with debug turned on in production!
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 AUTH_USER_MODEL = 'templates.CustomUser'
 
@@ -49,9 +51,15 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
+import os
+
+# Assuming BASE_DIR is defined as a string
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

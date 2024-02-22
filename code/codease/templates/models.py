@@ -50,3 +50,11 @@ class Template(models.Model):
     name = models.CharField(max_length=255)
     elements = models.TextField()
 
+
+# from django.db import models
+# from django.conf import settings
+
+# class Template(models.Model):
+#     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='templates', null=True, blank=True)
+#     name = models.CharField(max_length=255)
+#     elements = models.TextField()

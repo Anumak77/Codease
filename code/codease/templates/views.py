@@ -11,7 +11,10 @@ from .models import CustomUser
 from .models import *
 from rest_framework import viewsets
 from .serializers import *
-
+from rest_framework import generics
+from .models import Template
+from .serializers import TemplateSerializer
+from rest_framework.permissions import IsAuthenticated
 
 def index(request):
     return render(request, 'index.html')
@@ -75,7 +78,7 @@ def custom_login(request):
 @login_required
 def success_page_view(request):
     name = request.user.name if request.user.is_authenticated else ""
-    return render(request, 'success_page.html', {'name': name})
+    return render(request, 'success_page.html') #, {'name': name}
 
 
 class ElementViewSet(viewsets.ModelViewSet):
@@ -90,3 +93,30 @@ class TemplateElementViewSet(viewsets.ModelViewSet):
     serializer_class = TemplateElementSerializer
     queryset = TemplateElement.objects.all()
 
+
+# from rest_framework.views import APIView
+# from rest_framework.response import Response
+# from rest_framework.permissions import IsAuthenticated
+# from rest_framework.authentication import TokenAuthentication
+# from .models import Template
+# from .serializers import TemplateSerializer
+
+# class TemplateCreateView(APIView):
+#     authentication_classes = [TokenAuthentication]
+#     permission_classes = [IsAuthenticated]
+
+#     def post(self, request):
+#         serializer = TemplateSerializer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save(owner=request.user)  # Assign current user as owner
+#             return Response(serializer.data, status=201)
+#         return Response(serializer.errors, status=400)
+
+# class UserTemplateListView(APIView):
+#     authentication_classes = [TokenAuthentication]
+#     permission_classes = [IsAuthenticated]
+
+#     def get(self, request):
+#         templates = Template.objects.filter(owner=request.user)
+#         serializer = TemplateSerializer(templates, many=True)
+#         return Response(serializer.data)
