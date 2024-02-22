@@ -107,7 +107,7 @@ All the components of the system are shown below in the data flow diagram. The d
 
 ### 2.2 High-level System Architecture  
 
-![Alt text](<High-level System Architecture.png>)
+![Alt text](<images/High-level System Architecture.png>)
 
 This diagram provides a detailed overview of the components, focusing on the software utilized for the front end and backend. The UI aims to offer a user-friendly experience, as detailed in the following section. For the front end, React JS was chosen for its interactive capabilities and ease of use with JavaScript. On the backend, we leveraged Django's robust built-in features to streamline development.
 
@@ -122,8 +122,8 @@ This diagram provides a detailed overview of the components, focusing on the sof
 ### 3.1 User Navigation Flow
 
 
-![Alt text](<User Navigation FloW.png>)
-![Alt text](UI.png)
+![Alt text](<images/User Navigation FloW.png>)
+![Alt text](images/UI.png)
 
 
 
