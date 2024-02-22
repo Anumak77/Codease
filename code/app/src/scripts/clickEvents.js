@@ -2,20 +2,13 @@ function clickEvents(container) {
     const template = document.getElementById("Template");
     const colorPicker = document.getElementById("color-picker");
     const bgColorPicker = document.getElementById("bgcolor-picker");
-    // container.addEventListener("mouseover", (event) => {
-
-    // });
-
-    // container.addEventListener("mouseup", () => {
-    //     container.style.cursor = "move";
-    // });
+    const linkInput = document.getElementById("link-input");
 
     container.addEventListener("mousedown", (event) => {
         container.style.border = "3px solid #1871FF";
         container.setAttribute("data-offsetX", `${event.clientX - container.offsetLeft}`);
         container.setAttribute("data-offsetY", `${event.clientY - container.offsetTop}`);
         template.setAttribute("data-selected", container.id);
-        console.log(template.getAttribute("data-selected"));
 
         colorPicker.style.color = container.style.color;
         colorPicker.value = container.style.color;
@@ -25,6 +18,11 @@ function clickEvents(container) {
         if (!resize(event)) {
             dragAndDrop();
         }
+
+        if (container.getElementsByTagName("a").length > 0) {
+            linkInput.disabled = false;
+        }
+        else { linkInput.disabled = true; }
     });
 
     function dragAndDrop () {
@@ -43,6 +41,10 @@ function clickEvents(container) {
         });
     
         function onMouseDrag(event) {
+            if (container.getAttribute("data-inputMode") != null) { 
+                console.log("Writing")
+                return; 
+            }
             event.preventDefault();
             container.style.left = `${event.clientX - container.getAttribute('data-offsetX')}px`;
             container.style.top = `${event.clientY - container.getAttribute('data-offsetY')}px`;
@@ -64,7 +66,7 @@ function clickEvents(container) {
             side = right - mouseX < 5 ? "r" : "l";
             template.addEventListener("mousemove", onMouseHorizontalDrag);
             template.addEventListener("mouseup", function resizeEnd() {
-                template.style.cursor = "move";
+                template.style.cursor = "default";
                 container.style.borderColor = "#1871FF";
                 template.removeEventListener("mousemove", onMouseHorizontalDrag);
                 template.removeEventListener("mouseup", resizeEnd);
@@ -82,7 +84,7 @@ function clickEvents(container) {
             if (container.classList.contains("image")) {
                 template.addEventListener("mousemove", onMouseVerticalDragWidth);
                 template.addEventListener("mouseup", function resizeEnd() {
-                    template.style.cursor = "move";
+                    template.style.cursor = "default";
                     container.style.borderColor = "#1871FF";
                     template.removeEventListener("mousemove", onMouseVerticalDragWidth);
                     template.removeEventListener("mouseup", resizeEnd);
@@ -91,7 +93,7 @@ function clickEvents(container) {
             else {
                 template.addEventListener("mousemove", onMouseVerticalDrag);
                 template.addEventListener("mouseup", function resizeEnd() {
-                    template.style.cursor = "move";
+                    template.style.cursor = "default";
                     container.style.borderColor = "#1871FF";
                     template.removeEventListener("mousemove", onMouseVerticalDrag);
                     template.removeEventListener("mouseup", resizeEnd);
@@ -140,17 +142,29 @@ function unselect(container) {
     const template = document.getElementById("Template");
     const background = document.getElementById("Background");
     const bgColorPicker = document.getElementById("bgcolor-picker");
-
-    if (template.getAttribute("data-selected") === container.id) {
-        template.setAttribute("data-selected", null);
-        
-        bgColorPicker.style.color = background.style.backgroundColor;
-        bgColorPicker.value = background.style.backgroundColor;
-    }   
+    const linkInput = document.getElementById("link-input");
 
     if (container != null) {
         container.style.borderColor = "transparent";
     }
+
+    if (template.getAttribute("data-selected") === container.id) {
+        template.setAttribute("data-selected", null);
+        linkInput.disabled = true;
+        
+        bgColorPicker.style.color = background.style.backgroundColor;
+        bgColorPicker.value = background.style.backgroundColor;
+    }   
 }
 
-export { clickEvents, unselect };
+function disableLink(container) {
+    console.log("disableLink");
+    const links = [...container.getElementsByTagName("a")];
+    for (const link of links) {
+        link.addEventListener('click', function (event) { event.preventDefault(); });
+        link.addEventListener('mouseup', function (event) { event.preventDefault(); });
+        console.log("link");
+    }
+}
+
+export { clickEvents, unselect, disableLink };

@@ -1,5 +1,6 @@
 body {
   padding: 0;
+  font-family: Arial;
 }
 
 #Top-nav {
@@ -39,6 +40,7 @@ body {
 #Toolbar {
   width: calc(100% - 150px);
   height: 50px;
+  padding-left: 10px;
   left: 150px;
   position: absolute;
   background-color: #CED4DA;
@@ -59,7 +61,26 @@ body {
 }
 
 #Toolbar .divider {
-  color: #6C757D;
+  color: #ADB5BD;
+  margin: 0 10px;
+}
+
+#Toolbar #template-name {
+  max-width: 150px;
+  margin-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+
+#Toolbar textarea {
+  max-width: 150px;
+  height: 30px;
+}
+
+#Toolbar .load-dropdown {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden; 
 }
 
 #Template {
@@ -89,11 +110,19 @@ body {
   user-select: none;
   display: inline-block;
   overflow: visible;
-  /* white-space: nowrap; */
+  white-space: normal;
   z-index: 1;
+}
+
+.element p {
+  margin: 10px 10px;
 }
 
 #color-picker, #bgcolor-picker {
   margin: 0px;
   padding: 0px;
+}
+
+#link-input:disabled {
+  color: #ADB5BD;
 }

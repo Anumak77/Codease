@@ -5,6 +5,7 @@ function changeText(container) {
     for (const elem of elems) {
         elem.ondblclick = function() {
             if (elem.getAttribute("data-inputMode") == null) {
+                container.setAttribute("data-inputMode", "");
                 elem.setAttribute("data-inputMode", "");
                 var val = this.innerText;
                 var input = document.createElement("textarea");
@@ -19,6 +20,7 @@ function changeText(container) {
                 if (!elem.contains(event.target)) {
                     var val = input.value;
                     elem.innerText = val;
+                    container.removeAttribute("data-inputMode");
                     elem.removeAttribute("data-inputMode");
                 }
             }
@@ -80,4 +82,26 @@ function changeBgColor() {
     }
 }
 
-export { changeText, changeColor, changeBgColor };
+function changeLink(elem) {
+    const template = document.getElementById("Template");
+    const links = [...elem.getElementsByTagName("a")];
+
+    template.addEventListener("mousedown", function setLink() {
+        for (const [i, link] of links.entries()) {
+            link.href = document.getElementById("link-input" + i).value;
+        }
+        template.removeEventListener("mousedown", setLink);
+    })
+}
+
+function changeFontSize(size) {
+    const template = document.getElementById("Template");
+
+    const id = template.getAttribute("data-selected");
+    if (!(id == null || id === "null")) {
+        const elem = document.getElementById(id);
+        elem.style.fontSize = size + "px";
+    }
+}
+
+export { changeText, changeColor, changeBgColor, changeLink, changeFontSize };

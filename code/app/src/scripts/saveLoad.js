@@ -1,11 +1,14 @@
-import { clickEvents } from "../scripts/clickEvents";
+import { clickEvents, unselect, disableLink } from "../scripts/clickEvents";
+import { changeText } from "./changeStyles";
 
 var id = 0; 
 
 function save(setkey, setElements) {
-    console.log(document.getElementById("Template").innerHTML);
+    const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
+    if (container) { unselect(container); }
+    
     let template = {
-        "name": document.getElementById("Template").name,
+        "name": document.getElementById("template-name").innerText,
         "elements": document.getElementById("Template").innerHTML,
     }
 
@@ -35,7 +38,8 @@ function load(loadId, setElements) {
         console.log("Success:", data);
         const template = document.getElementById("Template");
         id = data.id;
-        template.name = "New template";
+        template.name = data.name;
+        document.getElementById("template-name").innerText = template.name;
         template.innerHTML = data.elements;
         template.style.zIndex = -1;
         template.setAttribute("data-selected", null);
@@ -44,7 +48,11 @@ function load(loadId, setElements) {
         for (const elem of elems) 
         {
             clickEvents(elem);
+            changeText(elem);
+            disableLink(elem);
         }
+
+        document.getElementById("link-input").disabled = true;
     }); 
 }
 
@@ -72,22 +80,70 @@ function newPage(setKey, setElements) {
         id = data.id;
         const template = document.getElementById("Template");
         template.name = "New template";
+        document.getElementById("template-name").innerText = "New Template";
         template.innerHTML = newTemplate.elements;
         template.style = null;
         template.setAttribute("data-selected", null);
+        document.getElementById("link-input").disabled = true;
     })
     .catch(err=>console.log(err))
 }
 
 function download() {
+    const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
+    if (container) { unselect(container); }
+
     const template = document.getElementById("Template");
+    for (const elem of [...template.getElementsByClassName("element")]) {
+        elem.style.cursor = "auto";
+    }
+
     const link = document.createElement("a");
-    const content = template.outerHTML;
+    var content = template.innerHTML;
+    content = content.concat(
+        `<style>
+            body {
+                margin: 0;
+                padding: 0;
+                zoom: ${1920/(1920 - 150)};
+                -moz-transform: scale${1920/(1920 - 150)};
+                -moz-transform-origin: 0 0;
+                font-family: Arial;
+            }
+            .element {
+                position: absolute;
+                display: inline-block;
+                overflow: visible;
+                white-space: normal;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                margin-top: -${template.offsetTop}px;
+                cursor: auto;
+            }
+            .element p {
+                margin: 10px 10px;
+            }
+            #Background {
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                margin: 0;
+                position: absolute;
+            }
+        </style>`
+    )
     const file = new Blob([content], { type: 'application/html' });
     link.href = URL.createObjectURL(file);
     link.download = template.name + ".html";
+    link.target = "_blank";
     link.click();
     URL.revokeObjectURL(link.href);
+
+    for (const elem of [...template.getElementsByClassName("element")]) {
+        elem.style.cursor = "move";
+    }
 }
 
 export { save, load, newPage, download };
