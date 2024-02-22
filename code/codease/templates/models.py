@@ -20,6 +20,7 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
+    id = models.AutoField(primary_key=True)
     email = models.EmailField(unique=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -32,21 +33,18 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['name']
 
     def __str__(self):
-        return self.email
+        return str(self.id)
 
 class Element(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     html = models.TextField()
 
-class TemplateElement(models.Model):
-    id = models.AutoField(primary_key=True)
-    html = models.TextField()
-
 class Template(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     elements = models.TextField()
+    owner = models.ForeignKey(CustomUser, null=True, blank=True, on_delete=models.CASCADE)
 
 
 # from django.db import models

@@ -10,7 +10,6 @@ from .forms import CustomUserChangeForm, CustomUserCreationForm
 
 admin.site.register(Element)
 admin.site.register(Template)
-admin.site.register(TemplateElement)
 
 class CustomUserAdmin(BaseUserAdmin):
     form = CustomUserChangeForm

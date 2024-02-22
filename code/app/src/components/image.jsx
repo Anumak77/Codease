@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { clickEvents } from "../scripts/clickEvents";
-import { changeText } from "../scripts/changeStyles";
 
 function Image({id}) {
     const [link, setLink] = useState("");

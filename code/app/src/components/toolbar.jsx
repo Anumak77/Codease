@@ -11,7 +11,7 @@ import { unselect } from "../scripts/clickEvents";
 import { changeColor, changeBgColor, changeLink, changeText, changeFontSize } from "../scripts/changeStyles.js";
 import { save, load, newPage, download } from "../scripts/saveLoad.js";
 
-function Toolbar({ setKey, setElements }) {
+function Toolbar({ setKey, setElements, user }) {
     const template = document.getElementById("Template");
     const [loads, setLoads] = useState([]);
     const [links, setLinks] = useState([]);
@@ -34,12 +34,13 @@ function Toolbar({ setKey, setElements }) {
         changeColor();
         changeBgColor();
         changeFontSize();
-        fetch("http://127.0.0.1:8000/api/templates/") 
+
+        fetch("http://127.0.0.1:8000/api/templates/?owner=" + JSON.parse(user).id) 
         .then(response => response.json())
         .then(data => {
             setLoads(data.reverse());
         })
-    }, []);
+    }, [user]);
 
     return (
         <ul id = "Toolbar" className="nav navbar-dark">
@@ -47,7 +48,7 @@ function Toolbar({ setKey, setElements }) {
                 <OverlayTrigger overlay={<Tooltip>Text Color</Tooltip>}>
                     <div>
                         <span className="material-symbols-outlined">format_color_text</span>
-                        <button id="color-picker" type="text" data-coloris>&#9632;</button>
+                        <button id="color-picker" type="text" data-coloris style={{fontSize: "40px", marginRight: "10px"}}>&#9632;</button>
                     </div>     
                 </OverlayTrigger>
             </li>
@@ -55,9 +56,12 @@ function Toolbar({ setKey, setElements }) {
                 <OverlayTrigger overlay={<Tooltip>Background Color</Tooltip>}>
                     <div>
                         <span className="material-symbols-outlined">format_color_fill</span>
-                        <button id="bgcolor-picker" type="text" data-coloris>&#9632;</button>
+                        <button id="bgcolor-picker" type="text" data-coloris style={{fontSize: "40px"}}>&#9632;</button>
                     </div>
                 </OverlayTrigger>
+            </li>
+            <li>
+                <span className="material-symbols-outlined divider">more_vert</span>
             </li>
             <li className="nav-item">
                 <OverlayTrigger overlay={<Tooltip>Font Size</Tooltip>}>
@@ -132,15 +136,15 @@ function Toolbar({ setKey, setElements }) {
                 <OverlayTrigger overlay={<Tooltip>New Template</Tooltip>}>
                     <button className="" onClick={() => {
                         if (window.confirm("Do you want to save the current template?")) {
-                            save(setKey, setElements);
+                            save(setKey, setElements, user);
                         }
-                        newPage(setKey, setElements);
+                        newPage(setKey, setElements, user);
                     }}><span className="material-symbols-outlined">note_add</span></button>
                 </OverlayTrigger>
             </li>
             <li className="nav-item">
                 <OverlayTrigger overlay={<Tooltip>Save</Tooltip>}>
-                    <button className="" onClick={() => save(setKey, setElements)}><span className="material-symbols-outlined">save</span></button>
+                    <button className="" onClick={() => save(setKey, setElements, user)}><span className="material-symbols-outlined">save</span></button>
                 </OverlayTrigger>
             </li>
             <li className="nav-item">
@@ -165,14 +169,14 @@ function Toolbar({ setKey, setElements }) {
                                     className="load-dropdown"
                                     onClick={() => {
                                         if (window.confirm("Do you want to save any changes to the current template?")) {
-                                            save(setKey, setElements);
+                                            save(setKey, setElements, user);
                                         }
                                         load(temp.id, setElements);
                                         var elems = document.getElementsByClassName("element");
                                         setKey(elems.length);
                                     }}
                                 >
-                                    {temp.id}. {temp.name}
+                                    {temp.name}
                                 </Dropdown.Item>
                             ),
                         )}

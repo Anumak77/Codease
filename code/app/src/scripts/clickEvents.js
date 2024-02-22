@@ -158,12 +158,10 @@ function unselect(container) {
 }
 
 function disableLink(container) {
-    console.log("disableLink");
     const links = [...container.getElementsByTagName("a")];
     for (const link of links) {
         link.addEventListener('click', function (event) { event.preventDefault(); });
         link.addEventListener('mouseup', function (event) { event.preventDefault(); });
-        console.log("link");
     }
 }
 

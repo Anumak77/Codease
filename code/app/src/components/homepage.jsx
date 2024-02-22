@@ -6,11 +6,11 @@ import { useState, useEffect } from 'react';
 import Editor from './editor';
 import { load, newPage } from '../scripts/saveLoad';
 
-function HomePage({setComponent}) {
+function HomePage({setComponent, user}) {
     const [loads, setLoads] = useState([]);
 
     useEffect (() => {
-        fetch("http://127.0.0.1:8000/api/templates/") 
+        fetch("http://127.0.0.1:8000/api/templates/?owner=" + JSON.parse(user).id) 
         .then(response => response.json())
         .then(data => {
             console.log("Success:", data);
@@ -22,7 +22,7 @@ function HomePage({setComponent}) {
         <div id="HomePage">
             <h1>Editor</h1>
             <Button onClick={()=>{
-                setComponent(<Editor setComponent={setComponent}/>);
+                setComponent(<Editor setComponent={setComponent} user={user}/>);
                 newPage();
             }}>New Template</Button>
             <DropdownButton
@@ -35,11 +35,11 @@ function HomePage({setComponent}) {
                         <Dropdown.Item 
                             eventKey={load.id} 
                             onClick={() => {
-                                setComponent(<Editor setComponent={setComponent}/>);
+                                setComponent(<Editor setComponent={setComponent} user={user}/>);
                                 load(temp.id);
                             }}
                         >
-                            {temp.id}. {temp.name}
+                            {temp.name}
                         </Dropdown.Item>
                     ),
                 )}

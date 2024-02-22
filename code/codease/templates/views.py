@@ -1,20 +1,16 @@
-from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django_filters import rest_framework as filters
+from rest_framework import viewsets, generics
+from rest_framework.permissions import IsAuthenticated
+from .models import *
+from .serializers import *
 from .forms import CustomRegistrationForm, OTPVerificationForm
 import random
-from django.core.mail import send_mail
-from .models import CustomUser
-from .models import *
-from rest_framework import viewsets
-from .serializers import *
-from rest_framework import generics
-from .models import Template
-from .serializers import TemplateSerializer
-from rest_framework.permissions import IsAuthenticated
 
 def index(request):
     return render(request, 'index.html')
@@ -74,12 +70,10 @@ def custom_login(request):
 
     return render(request, 'login.html')
 
-
 @login_required
 def success_page_view(request):
     name = request.user.name if request.user.is_authenticated else ""
-    return render(request, 'success_page.html') #, {'name': name}
-
+    return render(request, 'success_page.html', {'user': request.user}) #, {'name': name}
 
 class ElementViewSet(viewsets.ModelViewSet):
     serializer_class = ElementSerializer
@@ -87,11 +81,9 @@ class ElementViewSet(viewsets.ModelViewSet):
 
 class TemplateViewSet(viewsets.ModelViewSet):
     serializer_class = TemplateSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filterset_fields = ['owner']
     queryset = Template.objects.all()
-
-class TemplateElementViewSet(viewsets.ModelViewSet):
-    serializer_class = TemplateElementSerializer
-    queryset = TemplateElement.objects.all()
 
 class CustomUserViewSet(viewsets.ModelViewSet):
     serializer_class = CustomUserSerializer
