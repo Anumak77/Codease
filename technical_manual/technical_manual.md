@@ -100,12 +100,14 @@ Codease is a system that is designed to mainly focus on user-friendliness as it 
 ### 2.1 Data Flow Diagram
 
 
-
+![Alt text](<Data Flow Diagram.png>)
 
 
 All the components of the system are shown below in the data flow diagram. The diagram depicts in detail how data is transitioned/ translated and moved through each component. We start with the user who inputs data about themselves, for the first time user account verification is required but the user who already has a login is then taken to the main hub. This page links everything together, The user can access the template editor and user account settings through the main hub; while doing so it is all linked to the database that constantly gets updated when users use the template editor. 
 
 ### 2.2 High-level System Architecture  
+
+![Alt text](<High-level System Architecture.png>)
 
 This diagram provides a detailed overview of the components, focusing on the software utilized for the front end and backend. The UI aims to offer a user-friendly experience, as detailed in the following section. For the front end, React JS was chosen for its interactive capabilities and ease of use with JavaScript. On the backend, we leveraged Django's robust built-in features to streamline development.
 
@@ -120,6 +122,8 @@ This diagram provides a detailed overview of the components, focusing on the sof
 ### 3.1 User Navigation Flow
 
 
+![Alt text](<User Navigation FloW.png>)
+![Alt text](UI.png)
 
 
 
