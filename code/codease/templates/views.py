@@ -93,6 +93,9 @@ class TemplateElementViewSet(viewsets.ModelViewSet):
     serializer_class = TemplateElementSerializer
     queryset = TemplateElement.objects.all()
 
+class CustomUserViewSet(viewsets.ModelViewSet):
+    serializer_class = CustomUserSerializer
+    queryset = CustomUser.objects.all()
 
 # from rest_framework.views import APIView
 # from rest_framework.response import Response

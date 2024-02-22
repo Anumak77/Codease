@@ -114,7 +114,7 @@ function clickEvents(container) {
             
             var difference = side === "r" ? mouseX - (container.offsetLeft + container.clientWidth / 2) : container.offsetLeft - container.clientWidth / 2 - mouseX;
 
-            if (difference + container.clientWidth > template.clientWidth) { return; }
+            if (difference + container.clientWidth > template.offsetWidth + 10) { return; }
             container.style.width = difference + container.clientWidth + "px";
         }
 
@@ -123,7 +123,7 @@ function clickEvents(container) {
             var mouseY = event.clientY - template.offsetTop;
             var difference = side === "b" ? mouseY - (container.offsetTop + container.clientHeight / 2) : container.offsetTop - container.clientHeight / 2 - mouseY;
 
-            if (difference + container.clientHeight > template.clientHeight) { return; }
+            if (difference + container.clientHeight > template.offsetHeight + 10) { return; }
             container.style.height = difference + container.clientHeight + "px";
         }
 

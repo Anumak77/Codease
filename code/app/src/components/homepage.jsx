@@ -1,3 +1,4 @@
+import Button from 'react-bootstrap/esm/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -19,13 +20,14 @@ function HomePage({setComponent}) {
 
     return (
         <div id="HomePage">
-            <button onClick={()=>{
+            <h1>Editor</h1>
+            <Button onClick={()=>{
                 setComponent(<Editor setComponent={setComponent}/>);
                 newPage();
-            }}>New Template</button>
+            }}>New Template</Button>
             <DropdownButton
                 as={ButtonGroup}
-                title={<span className="material-symbols-outlined">folder_open</span>}
+                title="Load Template"
                 id="bg-vertical-dropdown-1"
             >
                 {loads.map(
@@ -42,6 +44,7 @@ function HomePage({setComponent}) {
                     ),
                 )}
             </DropdownButton>
+            <hr/>
         </div>
     )
 }

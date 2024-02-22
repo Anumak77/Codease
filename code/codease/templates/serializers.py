@@ -16,4 +16,7 @@ class TemplateElementSerializer(serializers.ModelSerializer):
         model=TemplateElement
         fields=('id','html')
 
-
+class CustomUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=CustomUser
+        fields=('email','is_active', 'is_staff', 'name', 'otp')

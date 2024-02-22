@@ -105,8 +105,8 @@ function download() {
             body {
                 margin: 0;
                 padding: 0;
-                zoom: ${1920/(1920 - 150)};
-                -moz-transform: scale${1920/(1920 - 150)};
+                zoom: ${1920/(1920 - 160)};
+                -moz-transform: scale${1920/(1920 - 160)};
                 -moz-transform-origin: 0 0;
                 font-family: Arial;
             }
