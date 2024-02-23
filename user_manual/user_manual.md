@@ -76,6 +76,9 @@ In the user guide, I've utilized a temporary email address and the name 'testing
 ![otp](images/otp.png)
 When users register, it is essential they input their own name and email address accurately. While the password requirements may seem stringent, they're intended to prompt users to create a more secure password that they can remember. Upon entering these details and clicking 'register,' users will need to check their email inbox.
 Using a temporary email address online, I received an OTP (One-Time Password) in my inbox. This OTP is a six-digit code and should not be shared with anyone. It's utilized by the website to verify the user's email address. Users will need to copy the OTP sent to them and return to the website to enter it, as demonstrated below.
+
+
+
 ![otp verify](<images/otp verify.png>)
 
 
