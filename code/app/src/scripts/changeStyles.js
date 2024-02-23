@@ -10,20 +10,21 @@ function changeText(container) {
                 var val = this.innerText;
                 var input = document.createElement("textarea");
                 input.value = val;
-                template.addEventListener("click", textOutFocus);
-                this.innerText="";
+                document.addEventListener("click", textOutFocus);
+                this.value = this.innerText;
+                this.innerText = "";
                 this.appendChild(input);
                 input.focus();
             }
     
             function textOutFocus(event) {
-                console.log("outfocus");
                 if (!elem.contains(event.target)) {
                     var val = input.value;
                     elem.innerText = val;
+                    elem.value = val;
                     container.removeAttribute("data-inputMode");
                     elem.removeAttribute("data-inputMode");
-                    template.removeEventListener("click", textOutFocus);
+                    document.removeEventListener("click", textOutFocus);
                 }
             }
         }
@@ -106,4 +107,61 @@ function changeFontSize(size) {
     }
 }
 
-export { changeText, changeColor, changeBgColor, changeLink, changeFontSize };
+function changeFontWeight() {
+    const template = document.getElementById("Template");
+
+    const id = template.getAttribute("data-selected");
+    if (!(id == null || id === "null")) {
+        const elem = document.getElementById(id);
+        const button = document.getElementById("font-weight");
+
+        if (elem.style.fontWeight === "bold") { 
+            elem.style.fontWeight = "normal"; 
+            button.style.backgroundColor = "transparent";
+        }
+        else { 
+            elem.style.fontWeight = "bold";
+            button.style.backgroundColor = "#ADB5BD";
+        }
+    }
+}
+
+function changeFontItalic() {
+    const template = document.getElementById("Template");
+
+    const id = template.getAttribute("data-selected");
+    if (!(id == null || id === "null")) {
+        const elem = document.getElementById(id);
+        const button = document.getElementById("font-italic");
+
+        if (elem.style.fontStyle === "italic") { 
+            elem.style.fontStyle = "normal"; 
+            button.style.backgroundColor = "transparent";
+        }
+        else { 
+            elem.style.fontStyle = "italic";
+            button.style.backgroundColor = "#ADB5BD";
+        }
+    }
+}
+
+function changeFontUnderline() {
+    const template = document.getElementById("Template");
+
+    const id = template.getAttribute("data-selected");
+    if (!(id == null || id === "null")) {
+        const elem = document.getElementById(id);
+        const button = document.getElementById("font-underline");
+
+        if (elem.style.textDecoration === "underline") { 
+            elem.style.textDecoration = ""; 
+            button.style.backgroundColor = "transparent";
+        }
+        else { 
+            elem.style.textDecoration = "underline";
+            button.style.backgroundColor = "#ADB5BD";
+        }
+    }
+}
+
+export { changeText, changeColor, changeBgColor, changeLink, changeFontSize, changeFontWeight, changeFontItalic, changeFontUnderline };

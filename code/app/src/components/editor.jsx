@@ -28,7 +28,7 @@ function Editor({setComponent, user}) {
     return (
         <div id="Editor">
             {/* {loading} */}
-            <Toolbar setKey={setKey} setElements={setElements} user={user}/>
+            <Toolbar setComponent={setComponent} setKey={setKey} setElements={setElements} user={user}/>
             <ul id = "Editor-nav"  expand="lg" className="p-3 mb-2 nav flex-column navbar-dark" data-bs-theme="dark">
                 <li className="nav-item">
                     <button className="nav-link" onClick={() => addElement(3)}>Text Box</button>

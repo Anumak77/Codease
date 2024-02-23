@@ -5,7 +5,6 @@ function clickEvents(container) {
     const linkInput = document.getElementById("link-input");
 
     container.addEventListener("mousedown", (event) => {
-        console.log("down");
         container.style.border = "3px solid #1871FF";
         container.setAttribute("data-offsetX", `${event.clientX - container.offsetLeft}`);
         container.setAttribute("data-offsetY", `${event.clientY - container.offsetTop}`);
@@ -15,6 +14,15 @@ function clickEvents(container) {
         colorPicker.value = container.style.color;
         bgColorPicker.style.color = container.style.backgroundColor;
         bgColorPicker.value = container.style.backgroundColor;
+
+        if (container.style.fontWeight === "bold") { document.getElementById("font-weight").style.backgroundColor = "#ADB5BD"; }
+        else { document.getElementById("font-weight").style.backgroundColor = "transparent"; }
+
+        if (container.style.fontStyle === "italic") { document.getElementById("font-italic").style.backgroundColor = "#ADB5BD"; }
+        else { document.getElementById("font-italic").style.backgroundColor = "transparent"; }
+
+        if (container.style.textDecoration === "underline") { document.getElementById("font-underline").style.backgroundColor = "#ADB5BD"; }
+        else { document.getElementById("font-underline").style.backgroundColor = "transparent"; }
 
         if (!resize(event)) {
             dragAndDrop();
@@ -154,6 +162,9 @@ function unselect(container) {
         
         bgColorPicker.style.color = background.style.backgroundColor;
         bgColorPicker.value = background.style.backgroundColor;
+        document.getElementById("font-weight").style.backgroundColor = "transparent";
+        document.getElementById("font-italic").style.backgroundColor = "transparent";
+        document.getElementById("font-underline").style.backgroundColor = "transparent";
     }   
 }
 

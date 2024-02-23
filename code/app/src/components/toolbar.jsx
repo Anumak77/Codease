@@ -8,10 +8,11 @@ import'../scripts/coloris.js';
 import '../scripts/coloris.css';
 import { useState, useEffect } from 'react';
 import { unselect } from "../scripts/clickEvents";
-import { changeColor, changeBgColor, changeLink, changeText, changeFontSize } from "../scripts/changeStyles.js";
-import { save, load, newPage, download } from "../scripts/saveLoad.js";
+import { changeColor, changeBgColor, changeLink, changeText, changeFontSize, changeFontWeight, changeFontItalic, changeFontUnderline } from "../scripts/changeStyles.js";
+import { save, load, newPage, download, deleteTemplate } from "../scripts/saveLoad.js";
+import HomePage from './homepage.jsx';
 
-function Toolbar({ setKey, setElements, user }) {
+function Toolbar({ setComponent, setKey, setElements, user }) {
     const template = document.getElementById("Template");
     const [loads, setLoads] = useState([]);
     const [links, setLinks] = useState([]);
@@ -33,7 +34,6 @@ function Toolbar({ setKey, setElements, user }) {
         changeText(document.getElementById("Toolbar"));
         changeColor();
         changeBgColor();
-        changeFontSize();
 
         fetch("http://127.0.0.1:8000/api/templates/?owner=" + JSON.parse(user).id) 
         .then(response => response.json())
@@ -84,6 +84,27 @@ function Toolbar({ setKey, setElements, user }) {
                                 ),
                             )}
                         </DropdownButton>
+                    </div>
+                </OverlayTrigger>
+            </li>
+            <li className="nav-item">
+                <OverlayTrigger overlay={<Tooltip>Bold</Tooltip>}>
+                    <div>
+                        <button id="font-weight" onClick={() => {changeFontWeight()}}><span className="material-symbols-outlined">format_bold</span></button>
+                    </div>
+                </OverlayTrigger>
+            </li>
+            <li className="nav-item">
+                <OverlayTrigger overlay={<Tooltip>Italic</Tooltip>}>
+                    <div>
+                        <button id="font-italic" onClick={() => {changeFontItalic()}}><span className="material-symbols-outlined">format_italic</span></button>
+                    </div>
+                </OverlayTrigger>
+            </li>
+            <li className="nav-item">
+                <OverlayTrigger overlay={<Tooltip>Underline</Tooltip>}>
+                    <div>
+                        <button id="font-underline" onClick={() => {changeFontUnderline()}}><span className="material-symbols-outlined">format_underlined</span></button>
                     </div>
                 </OverlayTrigger>
             </li>
@@ -185,6 +206,16 @@ function Toolbar({ setKey, setElements, user }) {
             <li className="nav-item">
                 <OverlayTrigger overlay={<Tooltip>Download</Tooltip>}>
                     <button onClick={() => download()}><span className="material-symbols-outlined">download</span></button>
+                </OverlayTrigger>
+            </li>
+            <li className="nav-item">
+                <OverlayTrigger overlay={<Tooltip>Delete Template</Tooltip>}>
+                    <button onClick={() => {
+                        if (window.confirm("Are you sure you want to delete the current template?")) {
+                            deleteTemplate();
+                            setComponent(<HomePage setComponent={setComponent} user={user}/>)
+                        }
+                    }}><span className="material-symbols-outlined" style={{color: "#D50000"}}>scan_delete</span></button>
                 </OverlayTrigger>
             </li>
         </ul>  

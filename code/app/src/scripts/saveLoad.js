@@ -11,7 +11,7 @@ function save(setkey, setElements, user) {
     if (user) { user = JSON.parse(user); }
     
     let template = {
-        "name": document.getElementById("template-name").innerText,
+        "name": document.getElementById("template-name").value,
         "elements": document.getElementById("Template").innerHTML,
         "owner": user?user.id:"null",
     }
@@ -46,6 +46,7 @@ function load(loadId, setElements) {
         id = data.id;
         template.name = data.name;
         document.getElementById("template-name").innerText = template.name;
+        document.getElementById("template-name").value = template.name;
         template.innerHTML = data.elements;
         template.style.zIndex = -1;
         template.setAttribute("data-selected", null);
@@ -90,6 +91,7 @@ function newPage(setKey, setElements, user) {
         const template = document.getElementById("Template");
         template.name = "New template";
         document.getElementById("template-name").innerText = "New Template";
+        document.getElementById("template-name").value = "New Template";
         template.innerHTML = newTemplate.elements;
         template.style = null;
         template.setAttribute("data-selected", null);
@@ -180,6 +182,7 @@ function clone(elements, user) {
         const template = document.getElementById("Template");
         template.name = "New template";
         document.getElementById("template-name").innerText = "New Template";
+        document.getElementById("template-name").value = "New Template";
         template.innerHTML = newTemplate.elements;
         template.style = null;
         template.setAttribute("data-selected", null);
@@ -198,4 +201,20 @@ function clone(elements, user) {
     .catch(err=>console.log(err))
 }
 
-export { save, load, newPage, download, clone };
+function deleteTemplate() {
+    fetch("http://127.0.0.1:8000/api/templates/" + id + "/", {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: "null",
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Success:", data);
+        alert("The template has been removed from the database.");
+    })
+    .catch(err=>console.log(err))
+}
+
+export { save, load, newPage, download, clone, deleteTemplate };

@@ -92,8 +92,6 @@ function HomePage({setComponent, user}) {
                             </td>
                         </tr>
                     ))}
-                   
-                   
             </table>
             
         </div>
