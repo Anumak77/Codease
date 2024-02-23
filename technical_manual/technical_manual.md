@@ -262,7 +262,8 @@ If the server encounters issues, please follow the instructions displayed in the
 
 ## 6. References
 
-Code References:  
+Code Tutorials and Documentation:  
 - https://www.w3schools.com/
 - https://stackoverflow.com/
 - https://react-bootstrap.netlify.app/
+- https://coloris.js.org/
