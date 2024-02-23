@@ -27,6 +27,7 @@ Table of contents
 
 4. [Problems and Resolution](#4-problems-and-resolution)
 5. [Installation Guide](#5-installation-guide)
+6. [References](#6-references)
 
 	
 
@@ -258,3 +259,10 @@ Navigate to the following link: http://127.0.0.1:8000/
 Please avoid initiating the application directly from the React page at http://127.0.0.1:3000/.  
 If the server encounters issues, please follow the instructions displayed in the terminal and install the required software components.
 ```
+
+## 6. References
+
+Code References:  
+- https://www.w3schools.com/
+- https://stackoverflow.com/
+- https://react-bootstrap.netlify.app/
