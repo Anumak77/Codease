@@ -21,7 +21,7 @@ Table of contents
 
    2.2. [High-level System Architecture](#22-high-level-system-architecture)
 
-3. [High-Level Design](#3-high-devel-design)	
+3. [High Level Design](#3-high-devel-design)	
 
    3.1. [User Navigation Flow](#31-user-navigation-flow)
 
@@ -117,7 +117,7 @@ This diagram provides a detailed overview of the components, focusing on the sof
 
 
 
-## 3. High-Level Design
+## 3. High Level Design
 
 ### 3.1 User Navigation Flow
 
