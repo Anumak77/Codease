@@ -21,7 +21,7 @@ Table of contents
 
    2.2. [High-level System Architecture](#22-high-level-system-architecture)
 
-3. [High Level Design](#3-high-devel-design)	
+3. [High Level Design](#3-high-level-design)	
 
    3.1. [User Navigation Flow](#31-user-navigation-flow)
 
