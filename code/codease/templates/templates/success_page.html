@@ -13,6 +13,21 @@
                 }
             </script>
         </div>
+        <style>
+            .left-align {
+                text-align: left;
+                padding-left: 60%;
+            }
+            .left-align img:hover {
+                /* Make the element significantly larger when hovered */
+                transform: scale(4.0); 
+                transition: transform 0.9s ease-out; /* Slower, more gradual return when mouse leaves */
+            }
+            .left-align img {
+                /* Apply a general transition for scaling down */
+                transition: transform 0.9s ease-out; /* Ensures smooth scaling down after hover */
+            }
+        </style>
         <div class="navbar-right">
             <a href="{% url 'success_page' %}">Account</a> 
         </div>
@@ -31,7 +46,12 @@
         {% else %}
             <p>You are not logged in. <a href="{% url 'custom_login' %}">Login here</a></p>
         {% endif %}
+        <div class="left-align">
+            <img src="{% static 'img/waving.gif' %}" alt="gifs" width="30%">
+        </div>
     </div>
+
+
     
     
 {% endblock %}
