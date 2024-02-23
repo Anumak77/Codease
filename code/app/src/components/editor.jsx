@@ -1,7 +1,7 @@
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Element from './element.jsx';
 import Toolbar from './toolbar.jsx';
 import Image from './image.jsx';
@@ -21,6 +21,12 @@ function Editor({setComponent, user}) {
         setKey(key + 1);
     }
 
+    useEffect (() => {
+        var elems = document.getElementsByClassName("element");
+        setKey(elems.length);
+    }, []);
+    
+
     // setTimeout(function(){
     //     setLoading([]);
     // }, 200);
@@ -32,17 +38,6 @@ function Editor({setComponent, user}) {
             <ul id = "Editor-nav"  expand="lg" className="p-3 mb-2 nav flex-column navbar-dark" data-bs-theme="dark">
                 <li className="nav-item">
                     <button className="nav-link" onClick={() => addElement(3)}>Text Box</button>
-                    {/* <DropdownButton
-                        as={ButtonGroup}
-                        key={'TextArea'}
-                        id={`dropdown-button-drop-${'TextArea'}`}
-                        drop={"end"}
-                        title={`${'TextArea'}`}
-                    >
-                        <Dropdown.Item eventKey="1"><button className="nav-link" onClick={() => addElement(3)}><img src="Nav1.png"/></button></Dropdown.Item>
-                        <Dropdown.Divider />
-                        <Dropdown.Item eventKey="2"><button className="nav-link" onClick={() => addElement(2)}><img src="Nav2.png"/></button></Dropdown.Item>
-                    </DropdownButton> */}
                 </li>
                 <li className="nav-item">
                     <DropdownButton
@@ -73,6 +68,9 @@ function Editor({setComponent, user}) {
                             <button className="nav-link" onClick={() => addImage()}>Add Image</button>
                         </Dropdown.Item>
                     </DropdownButton>
+                </li>
+                <li className="nav-item">
+                    <button className="nav-link" onClick={() => addElement(5)}>Link</button>
                 </li>
             </ul>
 
