@@ -14,19 +14,16 @@
             </script>
         </div>
         <div class="navbar-right">
-            <a href="{% url 'success_page' %}">Account</a> <!-- Update 'account' to your actual account URL name -->
+            <a href="{% url 'success_page' %}">Account</a> 
         </div>
     </div>
     <div style="margin: 40px 60px; line-height: 2;">
         {% if user.is_authenticated %}
             <h1>Welcome, {{ user.name }}! </h1>
-            <!-- <p>ID: {{user.id}}</p> -->
             <p>Name: {{ user.name }}</p>
             <p>Email: {{ user.email }}</p>
-            <!-- Displaying password for testing purposes (remove in production!) -->
-            <!-- <p>Password: {{ user.password }}</p> -->
+
            
-            <!-- Add content specific to the authenticated user -->
             <form action="{% url 'index' %}" method="post">
                 {% csrf_token %}
                 <button type="submit">Logout</button>
