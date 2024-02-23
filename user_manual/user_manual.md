@@ -5,14 +5,12 @@
 
 
 
-## List of contents
+## 1. List of contents
 
-1. List of contents	
-1. Log in page	
-1. Registering Users	
-1. Template Editor	
-
-
+1. [List of contents](#1-list-of-contents)
+2. [Log in page](#2-log-in-page)	
+3. [Registering Users](#3-registering-users)	
+4. [Template Editor](#4-template-editor)
 
 
 
@@ -47,7 +45,9 @@
 
 
 
-## Log in page 
+
+
+## 2. Log in page 
 
 The first thing a user will see when they open our website is the option to log in if they already have an account, or register if they do not. 
 ![login](images/login.png)
@@ -70,12 +70,15 @@ For new users who need to register, they will need to select the 'Register' butt
 
 
 
-## Registering Users
+## 3. Registering Users
 
 In the user guide, I've utilized a temporary email address and the name 'testing' merely for demonstration purposes. 
 ![otp](images/otp.png)
 When users register, it is essential they input their own name and email address accurately. While the password requirements may seem stringent, they're intended to prompt users to create a more secure password that they can remember. Upon entering these details and clicking 'register,' users will need to check their email inbox.
 Using a temporary email address online, I received an OTP (One-Time Password) in my inbox. This OTP is a six-digit code and should not be shared with anyone. It's utilized by the website to verify the user's email address. Users will need to copy the OTP sent to them and return to the website to enter it, as demonstrated below.
+
+
+
 ![otp verify](<images/otp verify.png>)
 
 
@@ -99,7 +102,7 @@ Upon successful account creation, users are directed to a page where they can ch
 
 
 
-## Template Editor
+## 4. Template Editor
 
 
 The user has the option to either select an existing template or create their own. If they choose to create their own template, they will be directed to a page where they can utilize the elements provided below to design their own web page.

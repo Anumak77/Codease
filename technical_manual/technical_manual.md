@@ -9,24 +9,24 @@ Ho Yan Woo 20110804
 ## Table of contents
 
 Table of contents	
-1. Introduction	
+1. [Introduction](#1-introduction)
 
-   1.1. Overview
+   1.1. [Overview](#11-overview)
 
-   1.2. Glossary	
+   1.2. [Glossary](#12-glossary)	
 
-2. System Architecture	
+2. [System Architecture](#2-system-architecture)	
 
-   2.1. Data Flow Diagram	
+   2.1. [Data Flow Diagram](#21-data-flow-diagram)	
 
-   2.2. High-level System Architecture
+   2.2. [High-level System Architecture](#22-high-level-system-architecture)
 
-3. High-Level Design	
+3. [High Level Design](#3-high-devel-design)	
 
-   3.1. User Navigation Flow
+   3.1. [User Navigation Flow](#31-user-navigation-flow)
 
-4. Problems and Resolution	
-5. Installation Guide
+4. [Problems and Resolution](#4-problems-and-resolution)
+5. [Installation Guide](#5-installation-guide)
 
 	
 
@@ -117,7 +117,7 @@ This diagram provides a detailed overview of the components, focusing on the sof
 
 
 
-## 3. High-Level Design
+## 3. High Level Design
 
 ### 3.1 User Navigation Flow
 
