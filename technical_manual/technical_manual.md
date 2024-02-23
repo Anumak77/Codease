@@ -26,7 +26,7 @@ Table of contents
    3.1. User Navigation Flow
 
 4. Problems and Resolution	
-5. Installation Guide
+5. [Installation Guide](#5. Installation Guide)
 
 	
 
