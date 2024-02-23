@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block title %}Codease{% endblock %}
 
@@ -21,9 +23,21 @@
     .btn:hover {
         background-color: #c74630; 
     }
+    .right-align {
+        text-align: right;
+        padding-right: 3%;
+    }
 </style>
 
+
 <div class="center-container">
+    <div class="right-align">
+        <img src="{% static 'img/hang.gif' %}" alt="gifs" width="20%">
+    </div>
+    <br>
+    <br>
+
+
     <br>
     <br>
     <br>
@@ -35,4 +49,9 @@
     <a href="{% url 'custom_login' %}" class="btn">Login</a>
     <a href="{% url 'register' %}" class="btn">Register</a>
 </div>
+
+<img src="{% static 'img/waving.gif' %}" alt="gifs" width="30%">
+
+
+
 {% endblock %}
