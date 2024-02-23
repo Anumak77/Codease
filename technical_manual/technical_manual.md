@@ -188,6 +188,7 @@ _**Problem 7** - Implementing Editor Features
 The implementation of features in the Editor posed several challenges, including drag and drop functionality, resizing, and modifying element styles. Initially, we lacked a clear understanding of how to tackle these issues.
 
 _Solution_  
+
 To solve these issues, we looked at several tutorials and documentation to learn React JS techniques for each feature. For example, we tried different methods from various tutorials to achieve drag and drop, but some were laggy or didn't allow fast movement. Finally, we improved the drag and drop feature to make elements move smoothly.
 
 _**Problem 8** - Enhancing User Experience
@@ -195,6 +196,7 @@ _**Problem 8** - Enhancing User Experience
 Initially, our attention was solely on the functionalities of the editor. However, during a meeting, it came to our attention that the interface lacked clarity for users. Our supervisor expressed difficulty in understanding the purpose of each button.
 
 _Solution_  
+
 To address this concern, we implemented tooltips for the buttons and organized them based on their functions. For instance, we grouped buttons related to creating new projects, saving, loading, and downloading together. This adjustment aimed to enhance the user experience by providing clearer indications of each button's functionality.
 
 _**Problem 9** - Unsuccessful Attempt to Import External Templates
@@ -252,7 +254,7 @@ npm start
 
 Open your preferred web browser (Chrome is recommended)  
 Navigate to the following link: http://127.0.0.1:8000/  
-Please avoid initiating the application directly from the React page at http://127.0.0.1:3000/.
-```
 
+Please avoid initiating the application directly from the React page at http://127.0.0.1:3000/.  
 If the server encounters issues, please follow the instructions displayed in the terminal and install the required software components.
+```
