@@ -159,11 +159,11 @@ After thoroughly researching and evaluating various email services, we decided t
 
 _**Problem 4** - Integrating both backend and frontend_
 
-To be able to save the templates properly we had to integrate Django and react.js, which was a lot more difficult than we originally thought
+To be able to save the templates properly we had to integrate Django and react.js, which was a lot more difficult than we originally thought. We had to figure out a way to navigate between Django and React.js pages seamlessly, including passing essential user data.
 
 _Solution_
 
-After a lot of trial and error, we were finally able to integrate both with a lot of research through the admin page.
+After a lot of trial and error, we were finally able to integrate both with a lot of research through the admin page. We utilized query parameters to transmit data from the Django pages to React pages.
 
 
 _**Problem 5** - Using emails for testing_
@@ -183,19 +183,25 @@ _Solution_
 
 We used static folders to store all images, along with organising all templates into one folder for templates. We also combined all javascript components into one component to avoid confusion and reduce cluttering all files into one folder.  
 
+_**Problem 7** - Implementing Editor Features
 
+The implementation of features in the Editor posed several challenges, including drag and drop functionality, resizing, and modifying element styles. Initially, we lacked a clear understanding of how to tackle these issues.
 
+_Solution_
+To solve these issues, we looked at several tutorials and documentation to learn React JS techniques for each feature. For example, we tried different methods from various tutorials to achieve drag and drop, but some were laggy or didn't allow fast movement. Finally, we improved the drag and drop feature to make elements move smoothly.
 
+_**Problem 8** - Enhancing User Experience
 
+Initially, our attention was solely on the functionalities of the editor. However, during a meeting, it came to our attention that the interface lacked clarity for users. Our supervisor expressed difficulty in understanding the purpose of each button.
 
+_Solution_
+To address this concern, we implemented tooltips for the buttons and organized them based on their functions. For instance, we grouped buttons related to creating new projects, saving, loading, and downloading together. This adjustment aimed to enhance the user experience by providing clearer indications of each button's functionality.
 
+_**Problem 9** - Unsuccessful Attempt to Import External Templates
 
+Our system currently has preset elements in the database, each with predefined IDs and class names to enable specific features in the editor. We attempted to incorporate the functionality of loading external templates into the editor, allowing users to modify the positions and styles of their elements. However, upon investigating various sources, such as the DCU official page, we realized that this task was more complex than anticipated and would demand a considerable amount of time.
 
-
-
-
-
-
+After attempting to download the external page, we encountered numerous HTML, CSS, and JavaScript files. Determining which code to extract from which files to import the elements with their original styles and properties posed a significant challenge. Due to time constraints, regrettably, we had to abandon the implementation of this feature.
 
 
 ## 5. Installation Guide
