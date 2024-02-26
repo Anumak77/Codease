@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Element from './element.jsx';
 import Toolbar from './toolbar.jsx';
 import Image from './image.jsx';
+import { findKey } from '../scripts/saveLoad.js';
 
 function Editor({setComponent, user}) {
     const [key, setKey] = useState(0);
@@ -12,6 +13,7 @@ function Editor({setComponent, user}) {
     // const [loading, setLoading] = useState([<div id="Loading"><img src='Loading.gif'></img></div>])
 
     function addElement(elem) {
+        console.log("key: " + key);
         setElements(elements.concat(<Element id={key} elem={elem}/>));
         setKey(key + 1);
     }
@@ -20,16 +22,15 @@ function Editor({setComponent, user}) {
         setElements(elements.concat(<Image id={key}/>));
         setKey(key + 1);
     }
-
-    useEffect (() => {
-        var elems = document.getElementsByClassName("element");
-        setKey(elems.length);
-    }, []);
     
+    setTimeout(function(){
+        //setLoading([]);
+        var newKey = findKey();
+        if (newKey > key) {
+            setKey(findKey());
 
-    // setTimeout(function(){
-    //     setLoading([]);
-    // }, 200);
+        }
+    }, 500);
 
     return (
         <div id="Editor">

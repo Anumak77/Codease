@@ -199,6 +199,8 @@ function clone(elements, user) {
         document.getElementById("link-input").disabled = true;
     })
     .catch(err=>console.log(err))
+
+    return document.getElementsByClassName("element").length
 }
 
 function deleteTemplate() {
@@ -217,4 +219,17 @@ function deleteTemplate() {
     .catch(err=>console.log(err))
 }
 
-export { save, load, newPage, download, clone, deleteTemplate };
+function findKey() {
+    const elements = document.getElementsByClassName('element');
+    console.log(elements);
+    if (elements.length == 0) { return 0; }
+    const elementIds = Array.from(elements).map(element => element.id);
+    console.log(elementIds);
+    const lastId = elementIds[elementIds.length - 1];
+
+    const firstDigit = lastId.search(/\d/);
+    console.log(parseInt(lastId.substring(firstDigit), 10) + 1);
+    return parseInt(lastId.substring(firstDigit), 10) + 1;
+}
+
+export { save, load, newPage, download, clone, deleteTemplate, findKey };
