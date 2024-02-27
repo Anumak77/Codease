@@ -24,6 +24,13 @@ function clickEvents(container) {
         if (container.style.textDecoration === "underline") { document.getElementById("font-underline").style.backgroundColor = "#ADB5BD"; }
         else { document.getElementById("font-underline").style.backgroundColor = "transparent"; }
 
+        template.addEventListener("mousedown", function changeSelected(event) { 
+            if (container !== event.target && !container.contains(event.target)) {
+                unselect(container);
+                template.removeEventListener("mousedown", changeSelected);
+            }
+        });
+
         if (!resize(event)) {
             dragAndDrop();
         }
@@ -36,12 +43,6 @@ function clickEvents(container) {
 
     function dragAndDrop () {
         template.addEventListener("mousemove", onMouseDrag);
-        template.addEventListener("mousedown", function changeSelected(event) { 
-            if (container !== event.target && !container.contains(event.target)) {
-                unselect(container);
-                template.removeEventListener("mousedown", changeSelected);
-            }
-        });
     
         template.addEventListener("mouseup", () => {
             container.style.cursor = "move";
@@ -102,7 +103,7 @@ function clickEvents(container) {
                 template.addEventListener("mousemove", onMouseVerticalDrag);
                 template.addEventListener("mouseup", function resizeEnd() {
                     template.style.cursor = "default";
-                    container.style.borderColor = "#1871FF";
+                    if (container.id == template.getAttribute("data-selected")) { container.style.borderColor = "#1871FF"; }
                     template.removeEventListener("mousemove", onMouseVerticalDrag);
                     template.removeEventListener("mouseup", resizeEnd);
                 });

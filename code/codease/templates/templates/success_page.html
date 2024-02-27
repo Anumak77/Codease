@@ -1,7 +1,76 @@
 {% extends 'base.html' %}
-
-{% block title %}Account Information{% endblock %}
 {% load static %}
+
+{% block style %}
+    <style>
+        body {
+            background-color: white;
+        }
+        body, h1, p, ul {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .left-align {
+            text-align: left;
+            padding-left: 60%;
+        }
+        .left-align img:hover {
+            /* Make the element significantly larger when hovered */
+            transform: scale(3.0); 
+            transition: transform 0.9s ease-out; /* Slower, more gradual return when mouse leaves */
+        }
+        .left-align img {
+            margin-top: 50px;
+            /* Apply a general transition for scaling down */
+            transition: transform 0.9s ease-out; /* Ensures smooth scaling down after hover */
+            z-index: 1;
+        }
+        .navbar {
+            height: 50px;
+            background-color: #f95838; 
+            overflow: hidden;
+            color: white;
+            padding: 0px 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .navbar-left, .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .navbar a:hover {
+            color: #ddd;
+        }
+        .navbar img {
+            height: 35px;
+            margin-right: 10px;
+        }
+        .btn {
+            display: inline-block; 
+            margin: 10px; 
+            padding: 10px 20px; 
+            background-color: #f95838; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            transition: background-color 0.3s; 
+            border: none;
+        }
+        .btn:hover {
+            background-color: #c74630; 
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
     <div class="navbar">
         <div class="navbar-left">
@@ -13,21 +82,6 @@
                 }
             </script>
         </div>
-        <style>
-            .left-align {
-                text-align: left;
-                padding-left: 60%;
-            }
-            .left-align img:hover {
-                /* Make the element significantly larger when hovered */
-                transform: scale(4.0); 
-                transition: transform 0.9s ease-out; /* Slower, more gradual return when mouse leaves */
-            }
-            .left-align img {
-                /* Apply a general transition for scaling down */
-                transition: transform 0.9s ease-out; /* Ensures smooth scaling down after hover */
-            }
-        </style>
         <div class="navbar-right">
             <a href="{% url 'success_page' %}">Account</a> 
         </div>
@@ -41,18 +95,13 @@
            
             <form action="{% url 'index' %}" method="post">
                 {% csrf_token %}
-                <button type="submit">Logout</button>
+                <button type="submit" class="btn">Logout</button>
             </form>
         {% else %}
             <p>You are not logged in. <a href="{% url 'custom_login' %}">Login here</a></p>
         {% endif %}
         <div class="left-align">
-            <img src="{% static 'img/waving.gif' %}" alt="gifs" width="30%">
+            <img src="{% static 'img/wave.gif' %}" alt="gifs" width="30%">
         </div>
     </div>
-
-
-    
-    
 {% endblock %}
-

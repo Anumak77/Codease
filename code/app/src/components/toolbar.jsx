@@ -157,7 +157,7 @@ function Toolbar({ setComponent, setKey, setElements, user }) {
                 <OverlayTrigger overlay={<Tooltip>New Template</Tooltip>}>
                     <button className="" onClick={() => {
                         if (window.confirm("Do you want to save the current template?")) {
-                            save(setKey, setElements, user);
+                            save(user);
                         }
                         newPage(setKey, setElements, user);
                     }}><span className="material-symbols-outlined">note_add</span></button>
@@ -165,7 +165,7 @@ function Toolbar({ setComponent, setKey, setElements, user }) {
             </li>
             <li className="nav-item">
                 <OverlayTrigger overlay={<Tooltip>Save</Tooltip>}>
-                    <button className="" onClick={() => save(setKey, setElements, user)}><span className="material-symbols-outlined">save</span></button>
+                    <button className="" onClick={() => save(user)}><span className="material-symbols-outlined">save</span></button>
                 </OverlayTrigger>
             </li>
             <li className="nav-item">
@@ -189,7 +189,7 @@ function Toolbar({ setComponent, setKey, setElements, user }) {
                                     className="load-dropdown"
                                     onClick={() => {
                                         if (window.confirm("Do you want to save any changes to the current template?")) {
-                                            save(setKey, setElements, user);
+                                            save(user);
                                         }
                                         load(temp.id, setElements);
                                         var elems = document.getElementsByClassName("element");

@@ -4,41 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Default Title{% endblock %}</title>
+    <title>Codease</title>
 
-    <style>
-        body, h1, p, ul {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            height: 50px;
-            background-color: #f95838; 
-            overflow: hidden;
-            color: white;
-            padding: 0px 20px;
-            display: flex;
-            justify-content: space-between; 
-            align-items: center;
-        }
-        .navbar-left, .navbar-right {
-            display: flex;
-            align-items: center;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 0 15px;
-        }
-        .navbar a:hover {
-            color: #ddd;
-        }
-        .navbar img {
-            height: 35px;
-            margin-right: 10px;
-        }
-    </style>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+
+    {% block style %}{% endblock %}
 </head>
 <body>
     {% block content %}

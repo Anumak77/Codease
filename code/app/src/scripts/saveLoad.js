@@ -3,34 +3,33 @@ import { changeText } from "./changeStyles";
 
 var id = 0; 
 
-function save(setkey, setElements, user) {
-    console.log(id);
-    const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
-    if (container) { unselect(container); }
+function save(user) {
+    setTimeout(function(){
+        const container = document.getElementById(document.getElementById("Template").getAttribute("data-selected"));
+        if (container) { unselect(container); }
 
-    if (user) { user = JSON.parse(user); }
-    
-    let template = {
-        "name": document.getElementById("template-name").value,
-        "elements": document.getElementById("Template").innerHTML,
-        "owner": user?user.id:"null",
-    }
+        if (user) { user = JSON.parse(user); }
+        
+        let template = {
+            "name": document.getElementById("template-name").value,
+            "elements": document.getElementById("Template").innerHTML,
+            "owner": user?user.id:"null",
+        }
 
-    console.log(template);
-
-    fetch("http://127.0.0.1:8000/api/templates/" + id + "/", {
-        method: "PUT",
-        headers: {
-        "Content-Type": "application/json",
-        },
-        body: JSON.stringify(template),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Success:", data);
-        alert("Saved!")
-    })
-    .catch(err=>console.log(err))
+        fetch("http://127.0.0.1:8000/api/templates/" + id + "/", {
+            method: "PUT",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify(template),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Success:", data);
+            alert("Saved " + template.name + "!")
+        })
+        .catch(err=>console.log(err))
+    }, 200);
 }
 
 function load(loadId, setElements) {

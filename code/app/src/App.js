@@ -10,6 +10,9 @@ function App() {
 
     useEffect (() => {
         var id = new URLSearchParams(window.location.search).get('user');
+        if (id == null) {
+            window.location.replace("http://127.0.0.1:8000/");
+        }
         fetch("http://127.0.0.1:8000/api/custom_users/" + id + "/") 
         .then(response => response.json())
         .then(data => {

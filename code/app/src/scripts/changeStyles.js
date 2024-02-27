@@ -1,5 +1,4 @@
 function changeText(container) {
-    const template = document.getElementById("Template");
     const elems = container.getElementsByClassName("writable");
 
     for (const elem of elems) {

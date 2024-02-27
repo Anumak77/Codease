@@ -52,6 +52,44 @@ body {
   border: none;
 }
 
+#HomePage .Cards {
+  margin-bottom: 50px;
+  padding-top: 30px;
+  width: 700px;
+  border: none;
+  border-radius: 20px;
+  background-color: #FAF0CA;
+  text-align: center;
+  position: relative;
+}
+
+#HomePage h4 {
+  font-weight: bold;
+  color: #0D3B66;
+}
+
+#HomePage .Preview {
+  zoom: 0.3; 
+  position: relative; 
+  width: 1740px; 
+  height: 950px; 
+  overflow: hidden;
+  border: 10px solid #ADB5BD;
+  cursor: zoom-in;
+  transition: transform 0.9s ease-out;
+  margin: 0 auto;
+}
+
+#HomePage .Preview * {
+  cursor: zoom-in;
+}
+
+#HomePage .Preview:hover {
+  transform: scale(1.8); 
+  transition: transform 0.9s ease-out;
+  z-index: 3;
+}
+
 #Editor {
   width: 100%;
   height: 100%;
@@ -143,8 +181,8 @@ body {
 }
 
 #Background {
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 150px);
+  height: calc(100% - 51px);
   z-index: 0;
   background-color: white;
 }

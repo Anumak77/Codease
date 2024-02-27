@@ -25,7 +25,7 @@ class CustomRegistrationForm(UserCreationForm):
 
     class Meta:
         model = CustomUser
-        fields = ['email', 'password1', 'password2']
+        fields = ['email', 'password1', 'password2', 'name']
 
 
 class OTPVerificationForm(forms.Form):

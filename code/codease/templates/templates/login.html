@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Page</title>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
     <style>
         body {
             display: flex;
@@ -66,8 +65,9 @@
             all: unset;
         }
     </style>
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
     <h1>Login</h1>
     <div class="center-container">
        
@@ -89,6 +89,4 @@
         <br>
         <button class="btn"><a href="{% url 'register' %}">No account? No problem! Register now</a></button>
     </div>
-</body>
-</html>
-
+{% endblock %}

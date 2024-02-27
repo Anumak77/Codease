@@ -1,9 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User Registration</title>
+{% block style %}
     <style>
         body {
             display: flex;
@@ -62,19 +60,17 @@
             background-color: #c74630; 
         }
     </style>
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
     <h2>Register</h2>
     <div class="center-container">
-    <form method="post" action="{% url 'register' %}">
-        {% csrf_token %}
-        <div class="form-group">
-        {{ form.as_p }}
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <div class="form-group">
+            {{ form.as_p }}
+        </div>
+            <button type="submit">Register</button>
+        </form>
     </div>
-        <button type="submit">Register</button>
-    </form>
-</div>
-</body>
-</html>
-
-
+{% endblock %}
