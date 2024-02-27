@@ -1,3 +1,8 @@
+html, body {
+  margin: 0; 
+  overflow-y: hidden;
+}
+
 body {
   padding: 0;
   font-family: Arial;
@@ -191,9 +196,7 @@ body {
   position: absolute;
   background-color: white;
   z-index: -1;
-  border: 10px solid #CED4DA;
-  border-top: none;
-  border-left: none;
+  border-right: 10px solid #CED4DA;
 }
 
 #Background {
