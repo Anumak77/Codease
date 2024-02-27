@@ -202,8 +202,8 @@ function clone(elements, user) {
     return document.getElementsByClassName("element").length
 }
 
-function deleteTemplate() {
-    fetch("http://127.0.0.1:8000/api/templates/" + id + "/", {
+function deleteTemplate(delId = id) {
+    fetch("http://127.0.0.1:8000/api/templates/" + delId + "/", {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
@@ -220,14 +220,11 @@ function deleteTemplate() {
 
 function findKey() {
     const elements = document.getElementsByClassName('element');
-    console.log(elements);
-    if (elements.length == 0) { return 0; }
+    if (elements.length === 0) { return 0; }
     const elementIds = Array.from(elements).map(element => element.id);
-    console.log(elementIds);
     const lastId = elementIds[elementIds.length - 1];
 
     const firstDigit = lastId.search(/\d/);
-    console.log(parseInt(lastId.substring(firstDigit), 10) + 1);
     return parseInt(lastId.substring(firstDigit), 10) + 1;
 }
 

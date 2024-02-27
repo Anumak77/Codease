@@ -26,7 +26,7 @@ function App() {
             console.log(user);
             setComponent(<HomePage setComponent={setComponent} user={user}/>)
         }
-    }, [user])
+    }, [component, user])
 
     return (
         <div className="App">

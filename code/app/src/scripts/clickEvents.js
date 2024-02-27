@@ -103,7 +103,7 @@ function clickEvents(container) {
                 template.addEventListener("mousemove", onMouseVerticalDrag);
                 template.addEventListener("mouseup", function resizeEnd() {
                     template.style.cursor = "default";
-                    if (container.id == template.getAttribute("data-selected")) { container.style.borderColor = "#1871FF"; }
+                    if (container.id === template.getAttribute("data-selected")) { container.style.borderColor = "#1871FF"; }
                     template.removeEventListener("mousemove", onMouseVerticalDrag);
                     template.removeEventListener("mouseup", resizeEnd);
                 });

@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { useState, useEffect } from 'react';
 import Editor from './editor';
-import { load, newPage, clone } from '../scripts/saveLoad';
+import { load, newPage, clone, deleteTemplate } from '../scripts/saveLoad';
 
 function HomePage({setComponent, user}) {
     const [loads, setLoads] = useState([]);
@@ -34,7 +34,6 @@ function HomePage({setComponent, user}) {
     useEffect (() => {
         for (const template of templates) {
             try {
-                console.log(document.getElementById(template.id));
                 document.getElementById("Preview" + template.id).innerHTML = template.elements;
             }
             catch {}
@@ -67,59 +66,57 @@ function HomePage({setComponent, user}) {
                     ),
                 )}
             </DropdownButton>
-            <hr/>
-            <h1>All Templates</h1>
-            <br/>
-            
-            <Row xs={1} md={2} className="g-4" style={{margin: "0 80px", textAlign: "center"}}>
-            {templates.map(
-                    (template, id) => (
-                        <Col key={id}>
-                            <Card className='Cards'>
-                                <Card.Body>
-                                    <Card.Text>
-                                        <div id={"Preview" + template.id} className="Preview"></div> 
-                                    </Card.Text>
-                                    <Card.Title><h4>{template.name}</h4></Card.Title>
-                                    <Button
-                                        onClick={() => {
-                                            setComponent(<Editor setComponent={setComponent} user={user}/>);
-                                            clone(template.elements, user);
-                                        }}
-                                    >Clone Template</Button>
-                                    </Card.Body>
-                            </Card>
-                        </Col>
-            ))}
-            </Row>
-            {/* <>
+            <br/><br/><br/>
+            <div id='Library'>
+                <h1>All Templates</h1>
+                
+                <Row xs={1} md={3} className="g-5" style={{margin: "0 30px"}}>
                 {templates.map(
-                    (template) => (
-                        <tr>
-                            <td width={"500px"} style={{border:"1px solid black", padding:"50px"}}>
-                                <h5>{template.name}</h5>
-                                <Button
-                                    eventKey={template.id}
-                                    id={template.id}
-                                    onClick={() => {
-                                        var preview = document.getElementById("Preview" + template.id);
-                                        preview.innerHTML = template.elements;
-                                    }}
-                                >Preview</Button>
-                                <Button
-                                    onClick={() => {
-                                        setComponent(<Editor setComponent={setComponent} user={user}/>);
-                                        clone(template.elements, user);
-                                    }}
-                                >Clone Template</Button>
-                            </td>
-                            <td style={{ width: "1000px", height: "300px", border:"1px solid black", verticalAlign: "top", overflow: "hidden"}}>
-                                <div id={"Preview" + template.id} style={{zoom: "0.3", position: "relative"}}></div>
-                            </td>
-                        </tr>
-                    ))}
-            </table> */}
-            
+                        (template, id) => (
+                            <Col key={id}>
+                                <Card className='Cards'>
+                                    <Card.Body>
+                                        <Card.Text>
+                                            <div id={"Preview" + template.id} className="Preview"></div> 
+                                        </Card.Text>
+                                        <Card.Title><h4>{template.name}</h4></Card.Title>
+                                        {template.owner === JSON.parse(user).id ?
+                                            <div>
+                                                <Button
+                                                    onClick={() => {
+                                                        setComponent(<Editor setComponent={setComponent} user={user}/>);
+                                                        load(template.id);
+                                                    }}
+                                                >
+                                                    Load Template 
+                                                </Button>
+                                                <Button
+                                                    onClick={() => {
+                                                        if (window.confirm("Are you sure you want to delete " + template.name + "?")) {
+                                                            deleteTemplate(template.id);
+                                                            window.location.reload();
+                                                        }
+                                                    }}
+                                                >
+                                                    Delete Template 
+                                                </Button>
+                                            </div>
+                                        : 
+                                            <Button
+                                                onClick={() => {
+                                                    setComponent(<Editor setComponent={setComponent} user={user}/>);
+                                                    clone(template.elements, user);
+                                                }}
+                                            >
+                                                Clone Template
+                                            </Button>
+                                        }
+                                        </Card.Body>
+                                </Card>
+                            </Col>
+                ))}
+                </Row>
+            </div>
         </div>
     )
 }
