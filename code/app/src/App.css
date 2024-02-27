@@ -40,11 +40,6 @@ body {
   margin-right: 10px;
 }
 
-#Toolbar .dropdown-menu {
-  height: 150px;
-  overflow-y: scroll;
-}
-
 #HomePage {
   padding: 20px;
 }
@@ -151,6 +146,11 @@ body {
   align-items: center;
 }
 
+#Toolbar .dropdown-menu {
+  height: 150px;
+  overflow-y: scroll;
+}
+
 #Toolbar button {
   background-color: transparent;
   border: none;
@@ -197,6 +197,7 @@ body {
   background-color: white;
   z-index: -1;
   border-right: 10px solid #CED4DA;
+  border-bottom: 10px solid #CED4DA;
 }
 
 #Background {
